@@ -27,11 +27,12 @@ public class HibernateConfig {
             props.put("hibernate.connection.url", System.getenv("CONNECTION_STR") + System.getenv("DB_NAME"));
             props.put("hibernate.connection.username", System.getenv("DB_USERNAME"));
             props.put("hibernate.connection.password", System.getenv("DB_PASSWORD"));
-            props.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect"); // dialect for postgresql
-            props.put("hibernate.connection.driver_class", "org.postgresql.Driver"); // driver class for postgresql
-            props.put("hibernate.archive.autodetection", "class"); // hibernate scans for annotated classes
-            props.put("hibernate.current_session_context_class", "thread"); // hibernate current session context
-            props.put("hibernate.hbm2ddl.auto", "update"/*"create-drop"*/); // hibernate creates tables based on entities
+            props.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
+            props.put("hibernate.connection.driver_class", "org.postgresql.Driver");
+            props.put("hibernate.archive.autodetection", "class");
+            props.put("hibernate.current_session_context_class", "thread");
+            props.put("hibernate.hbm2ddl.auto", "update");
+
             return getEntityManagerFactory(configuration, props);
         } catch (Throwable ex) {
             System.err.println("Initial SessionFactory creation failed." + ex);
@@ -40,7 +41,6 @@ public class HibernateConfig {
     }
 
     private static EntityManagerFactory buildEntityFactoryConfig() {
-
         try {
             Configuration configuration = new Configuration();
 
@@ -49,16 +49,14 @@ public class HibernateConfig {
             props.put("hibernate.connection.url", "jdbc:postgresql://localhost:5432/hoteldb?currentSchema=public");
             props.put("hibernate.connection.username", "postgres");
             props.put("hibernate.connection.password", "postgres");
-            props.put("hibernate.show_sql", "true"); // show sql in console
-            props.put("hibernate.format_sql", "true"); // format sql in console
-            props.put("hibernate.use_sql_comments", "true"); // show sql comments in console
-
-            props.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect"); // dialect for postgresql
-            props.put("hibernate.connection.driver_class", "org.postgresql.Driver"); // driver class for postgresql
-            props.put("hibernate.archive.autodetection", "class"); // hibernate scans for annotated classes
-            props.put("hibernate.current_session_context_class", "thread"); // hibernate current session context
-            props.put("hibernate.hbm2ddl.auto", "update"); // hibernate creates tables based on entities
-
+            props.put("hibernate.show_sql", "true");
+            props.put("hibernate.format_sql", "true");
+            props.put("hibernate.use_sql_comments", "true");
+            props.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
+            props.put("hibernate.connection.driver_class", "org.postgresql.Driver");
+            props.put("hibernate.archive.autodetection", "class");
+            props.put("hibernate.current_session_context_class", "thread");
+            props.put("hibernate.hbm2ddl.auto", "update");
 
             return getEntityManagerFactory(configuration, props);
         } catch (Throwable ex) {
@@ -99,15 +97,12 @@ public class HibernateConfig {
     }
 
     private static void getAnnotationConfiguration(Configuration configuration) {
-        // add annotated classes
-        // configuration.addAnnotatedClass(<YOUR ENTITY>.class);
         configuration.addAnnotatedClass(Hotel.class);
         configuration.addAnnotatedClass(Room.class);
         configuration.addAnnotatedClass(User.class);
         configuration.addAnnotatedClass(Role.class);
     }
 
-    //Singleton princippet
     private static EntityManagerFactory getEntityManagerFactoryConfigDevelopment() {
         if (entityManagerFactory == null) entityManagerFactory = buildEntityFactoryConfig();
         return entityManagerFactory;

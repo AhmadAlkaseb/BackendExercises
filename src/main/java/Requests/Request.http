@@ -95,3 +95,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzd
 ### Få adgang via Json Web Token
 GET http://localhost:7007/api/hotels/2/rooms
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzdWIiOiJBaG1hZFRlc3QiLCJleHAiOjE3MTA4NDMyNTUsInJvbGVzIjoiLGFkbWluIiwidXNlcm5hbWUiOiJBaG1hZFRlc3QifQ.auKgZmK3L6r90A6a0lWDrMsVD5EZzcGhKE8GhdHvteU
+
+
+
+###
+GET 46.101.127.82:7007/api
