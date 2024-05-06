@@ -173,7 +173,7 @@
                                 <!-- The plugin needs to know which class has the main method  -->
                                 <!-- therefore we need to specify the path to the main class   -->
                                 <!-- ========================================================= -->
-                                Application/App
+                                src/main/java/Application/App
                             </mainClass>
                         </transformer>
                     </transformers>
