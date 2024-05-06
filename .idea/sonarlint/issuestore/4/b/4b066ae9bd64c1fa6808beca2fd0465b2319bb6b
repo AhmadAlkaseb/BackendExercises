@@ -1,10 +1,35 @@
 
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‘¢€èúÿÿÿÿJ$90a735d4-c7e4-4b7e-b42a-7d233e02b4bd
-f
-java:S1181+"%Catch Exception instead of Throwable.(À˜§üÿÿÿÿJ$210292bb-9ca1-4fb5-986f-17b477d21e2f
-k	java:S106,"+Replace this use of System.err by a logger.(Ô˜ÒòıÿÿÿÿJ$41b4df0b-4e71-455e-b4d3-04f036b3bf08
-f
-java:S1181>"%Catch Exception instead of Throwable.(À˜§üÿÿÿÿJ$c1d3d76b-1d87-4550-aa24-4942bd11e4f4
-k	java:S106?"+Replace this use of System.err by a logger.(Ô˜ÒòıÿÿÿÿJ$94aad2b2-8d66-4720-9fc7-b71ebfb417a9
-k	java:S106J"+Replace this use of System.out by a logger.(ˆ†ÓÏşÿÿÿÿJ$b590e4f6-9869-4917-a6dd-7a613e30551c
-w	java:S125R"<This block of commented-out lines of code should be removed.(…œÉJ$6694f754-450f-40f5-a17d-383867c50934
+š
+java:S1192""WDefine a constant instead of duplicating this literal "hibernate.hbm2ddl.auto" 3 times.(÷…†8¯Õ¯çô1J$4ac65682-d8fd-4190-95e1-de4c999be44e
+°
+java:S1192%"hDefine a constant instead of duplicating this literal "Initial SessionFactory creation failed." 3 times.(Ô˜Òòıÿÿÿÿ8¯Õ¯çô1J$f71743c3-3176-4b3d-9fad-6ced97a62e19
+•
+java:S1192"RDefine a constant instead of duplicating this literal "hibernate.dialect" 3 times.(¯Ñã›8°Õ¯çô1J$662dd04b-fc4a-40a5-a65c-e6f1ecd8a603
+¦
+java:S1192"^Define a constant instead of duplicating this literal "hibernate.connection.username" 3 times.(Åñç™ıÿÿÿÿ8°Õ¯çô1J$d23ea7ec-b92f-4bb4-874c-54f876affce3
+¨
+java:S1192 "`Define a constant instead of duplicating this literal "hibernate.archive.autodetection" 3 times.(ÅÒ…ƒüÿÿÿÿ8°Õ¯çô1J$dd7ac5e6-9530-405f-93e2-39c1e2038232
+œ
+java:S1192"YDefine a constant instead of duplicating this literal "hibernate.connection.url" 3 times.(Òå¾ğ8°Õ¯çô1J$b00d76b1-0fb6-4dd2-a249-34329a42286e
+«
+java:S1192"hDefine a constant instead of duplicating this literal "org.hibernate.dialect.PostgreSQLDialect" 3 times.(¯Ñã›8±Õ¯çô1J$0ba62f74-8e82-4053-86da-1485f5491eb3
+
+java:S1192 "FDefine a constant instead of duplicating this literal "class" 3 times.(ÅÒ…ƒüÿÿÿÿ8±Õ¯çô1J$322d809c-a1f4-4fd5-86c6-dc5ed02c8968
+‘
+java:S11922"IDefine a constant instead of duplicating this literal "postgres" 4 times.(ÎÕ™şÿÿÿÿ8±Õ¯çô1J$fdad7e7e-ab91-474d-870f-1d2bf0b325af
+¥
+java:S1192"bDefine a constant instead of duplicating this literal "hibernate.connection.driver_class" 3 times.(•âØÕ8±Õ¯çô1J$7357dd36-d74b-44a0-905d-88c63531434b
+¡
+java:S1192"^Define a constant instead of duplicating this literal "hibernate.connection.password" 3 times.(Š¨Õ8²Õ¯çô1J$dfd45e7e-7118-4257-aadd-40669def00d3
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‘¢€èúÿÿÿÿ8µÕ¯çô1J$f4c0e42f-27ed-40de-a8ac-fe953b93fc2c
+m
+java:S1181$"%Catch Exception instead of Throwable.(À˜§üÿÿÿÿ8ÛÕ¯çô1J$2e74bce8-b3b3-4460-b506-1c59b618253f
+r	java:S106%"+Replace this use of System.err by a logger.(Ô˜Òòıÿÿÿÿ8êÕ¯çô1J$5a262c7f-d532-4703-869b-433d88551d92
+m
+java:S1181@"%Catch Exception instead of Throwable.(À˜§üÿÿÿÿ8ìÕ¯çô1J$90f420fd-6a8e-4eb5-8260-510bb5c01a15
+r	java:S106A"+Replace this use of System.err by a logger.(Ô˜Òòıÿÿÿÿ8òÕ¯çô1J$b417d0b8-986d-412d-9048-2c0adc873efa
+m
+java:S1181S"%Catch Exception instead of Throwable.(À˜§üÿÿÿÿ8óÕ¯çô1J$a7c1e821-cb8c-41d4-86d3-fab2dac6e7c9
+r	java:S106T"+Replace this use of System.err by a logger.(Ô˜Òòıÿÿÿÿ8÷Õ¯çô1J$2da01371-a010-4a99-94c3-d6576acf54a0
+r	java:S106_"+Replace this use of System.out by a logger.(ˆ†ÓÏşÿÿÿÿ8şÕ¯çô1J$8b06ac5d-1f87-4bcc-90c5-a02541e6d59c
+~	java:S125g"<This block of commented-out lines of code should be removed.(…œÉ8Ö¯çô1J$f0c37e37-485b-4bcc-8ab3-fd0b1b88844e

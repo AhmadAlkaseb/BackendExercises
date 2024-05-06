@@ -13,3 +13,8 @@ N
 .github/workflows/workflow.yml,a\5\a5af269aff4ed66e52c6b268d1c25ddf0116617b
 9
 	Readme.md,0\c\0c1945d7443c2e154bd3e421c0d438bd4086d8c3
+:
+
+Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
+J
+dependency-reduced-pom.xml,8\a\8a88dfd5af6f2db5a5431581b56e901f5f143d92
