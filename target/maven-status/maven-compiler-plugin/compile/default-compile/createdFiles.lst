@@ -24,7 +24,7 @@ DTOs\HotelDTO$HotelDTOBuilder.class
 DTOs\UserDTO.class
 Controllers\ISecurityController.class
 Controllers\HotelController.class
-Application\App.class
+application\App.class
 DAOs\InterfaceDAO.class
 DTOs\RoomDTO$RoomDTOBuilder.class
 Persistence\HibernateConfig.class

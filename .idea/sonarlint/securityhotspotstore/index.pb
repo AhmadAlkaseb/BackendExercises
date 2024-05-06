@@ -18,3 +18,5 @@ N
 Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
 J
 dependency-reduced-pom.xml,8\a\8a88dfd5af6f2db5a5431581b56e901f5f143d92
+R
+"src/main/java/application/App.java,4\c\4cb71d5dc0dadb4ceaad3433e81d1ba02999d24e

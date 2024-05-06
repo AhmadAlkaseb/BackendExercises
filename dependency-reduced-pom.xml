@@ -41,7 +41,7 @@
         <configuration>
           <transformers>
             <transformer>
-              <mainClass>src/main/java/Application/App</mainClass>
+              <mainClass>java/application/App</mainClass>
             </transformer>
           </transformers>
           <filters>
