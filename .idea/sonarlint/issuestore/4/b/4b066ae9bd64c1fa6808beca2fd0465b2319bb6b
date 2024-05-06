@@ -1,35 +1,35 @@
 
 š
-java:S1192""WDefine a constant instead of duplicating this literal "hibernate.hbm2ddl.auto" 3 times.(÷…†8¯Õ¯çô1J$4ac65682-d8fd-4190-95e1-de4c999be44e
+java:S1192""WDefine a constant instead of duplicating this literal "hibernate.hbm2ddl.auto" 3 times.(÷…†8¯Õ¯çô1J$75a17a51-ab29-41e6-987a-e6a3de9ed79d
 °
-java:S1192%"hDefine a constant instead of duplicating this literal "Initial SessionFactory creation failed." 3 times.(Ô˜Òòıÿÿÿÿ8¯Õ¯çô1J$f71743c3-3176-4b3d-9fad-6ced97a62e19
+java:S1192%"hDefine a constant instead of duplicating this literal "Initial SessionFactory creation failed." 3 times.(Ô˜Òòıÿÿÿÿ8¯Õ¯çô1J$87c3a3b5-eb62-4e13-941c-42571ca1204b
 •
-java:S1192"RDefine a constant instead of duplicating this literal "hibernate.dialect" 3 times.(¯Ñã›8°Õ¯çô1J$662dd04b-fc4a-40a5-a65c-e6f1ecd8a603
+java:S1192"RDefine a constant instead of duplicating this literal "hibernate.dialect" 3 times.(¯Ñã›8°Õ¯çô1J$97a643e8-c7b8-452c-86a4-63fd16c7f386
 ¦
-java:S1192"^Define a constant instead of duplicating this literal "hibernate.connection.username" 3 times.(Åñç™ıÿÿÿÿ8°Õ¯çô1J$d23ea7ec-b92f-4bb4-874c-54f876affce3
+java:S1192"^Define a constant instead of duplicating this literal "hibernate.connection.username" 3 times.(Åñç™ıÿÿÿÿ8°Õ¯çô1J$021f6cf2-e76a-43b4-b2eb-f8bcf58471d4
 ¨
-java:S1192 "`Define a constant instead of duplicating this literal "hibernate.archive.autodetection" 3 times.(ÅÒ…ƒüÿÿÿÿ8°Õ¯çô1J$dd7ac5e6-9530-405f-93e2-39c1e2038232
+java:S1192 "`Define a constant instead of duplicating this literal "hibernate.archive.autodetection" 3 times.(ÅÒ…ƒüÿÿÿÿ8°Õ¯çô1J$82735aee-a3d8-498c-8f95-d8d1272b99e1
 œ
-java:S1192"YDefine a constant instead of duplicating this literal "hibernate.connection.url" 3 times.(Òå¾ğ8°Õ¯çô1J$b00d76b1-0fb6-4dd2-a249-34329a42286e
+java:S1192"YDefine a constant instead of duplicating this literal "hibernate.connection.url" 3 times.(Òå¾ğ8°Õ¯çô1J$fce1d290-1571-4d32-975e-315a963cd2aa
 «
-java:S1192"hDefine a constant instead of duplicating this literal "org.hibernate.dialect.PostgreSQLDialect" 3 times.(¯Ñã›8±Õ¯çô1J$0ba62f74-8e82-4053-86da-1485f5491eb3
+java:S1192"hDefine a constant instead of duplicating this literal "org.hibernate.dialect.PostgreSQLDialect" 3 times.(¯Ñã›8±Õ¯çô1J$98f599ab-97c1-4903-8a0e-60f9171c58be
 
-java:S1192 "FDefine a constant instead of duplicating this literal "class" 3 times.(ÅÒ…ƒüÿÿÿÿ8±Õ¯çô1J$322d809c-a1f4-4fd5-86c6-dc5ed02c8968
+java:S1192 "FDefine a constant instead of duplicating this literal "class" 3 times.(ÅÒ…ƒüÿÿÿÿ8±Õ¯çô1J$6aca942e-a6b4-49f7-ac54-ed9aa5258523
 ‘
-java:S11922"IDefine a constant instead of duplicating this literal "postgres" 4 times.(ÎÕ™şÿÿÿÿ8±Õ¯çô1J$fdad7e7e-ab91-474d-870f-1d2bf0b325af
+java:S11922"IDefine a constant instead of duplicating this literal "postgres" 4 times.(ÎÕ™şÿÿÿÿ8±Õ¯çô1J$fa14845d-8519-4bd6-ad2d-79d67c932b21
 ¥
-java:S1192"bDefine a constant instead of duplicating this literal "hibernate.connection.driver_class" 3 times.(•âØÕ8±Õ¯çô1J$7357dd36-d74b-44a0-905d-88c63531434b
+java:S1192"bDefine a constant instead of duplicating this literal "hibernate.connection.driver_class" 3 times.(•âØÕ8±Õ¯çô1J$40110529-4c0d-4539-8f3c-b62cd9bc4491
 ¡
-java:S1192"^Define a constant instead of duplicating this literal "hibernate.connection.password" 3 times.(Š¨Õ8²Õ¯çô1J$dfd45e7e-7118-4257-aadd-40669def00d3
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‘¢€èúÿÿÿÿ8µÕ¯çô1J$f4c0e42f-27ed-40de-a8ac-fe953b93fc2c
+java:S1192"^Define a constant instead of duplicating this literal "hibernate.connection.password" 3 times.(Š¨Õ8²Õ¯çô1J$bc908a4f-134b-44f6-ba58-8d633cbf4291
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‘¢€èúÿÿÿÿ8µÕ¯çô1J$a52aeb31-4623-4d28-9a57-9cb9e60d9bc2
 m
-java:S1181$"%Catch Exception instead of Throwable.(À˜§üÿÿÿÿ8ÛÕ¯çô1J$2e74bce8-b3b3-4460-b506-1c59b618253f
-r	java:S106%"+Replace this use of System.err by a logger.(Ô˜Òòıÿÿÿÿ8êÕ¯çô1J$5a262c7f-d532-4703-869b-433d88551d92
+java:S1181$"%Catch Exception instead of Throwable.(À˜§üÿÿÿÿ8ÛÕ¯çô1J$56f07654-ea23-43a6-8197-2dd4255f8496
+r	java:S106%"+Replace this use of System.err by a logger.(Ô˜Òòıÿÿÿÿ8êÕ¯çô1J$9bb491d7-c4d4-4eb5-9794-6158b556c056
 m
-java:S1181@"%Catch Exception instead of Throwable.(À˜§üÿÿÿÿ8ìÕ¯çô1J$90f420fd-6a8e-4eb5-8260-510bb5c01a15
-r	java:S106A"+Replace this use of System.err by a logger.(Ô˜Òòıÿÿÿÿ8òÕ¯çô1J$b417d0b8-986d-412d-9048-2c0adc873efa
+java:S1181@"%Catch Exception instead of Throwable.(À˜§üÿÿÿÿ8ìÕ¯çô1J$a3ca5dff-3544-49ff-9da6-b7f69d994fc8
+r	java:S106A"+Replace this use of System.err by a logger.(Ô˜Òòıÿÿÿÿ8òÕ¯çô1J$bb8e1c5b-d240-4f9b-aa4e-9f26b9578cc5
 m
-java:S1181S"%Catch Exception instead of Throwable.(À˜§üÿÿÿÿ8óÕ¯çô1J$a7c1e821-cb8c-41d4-86d3-fab2dac6e7c9
-r	java:S106T"+Replace this use of System.err by a logger.(Ô˜Òòıÿÿÿÿ8÷Õ¯çô1J$2da01371-a010-4a99-94c3-d6576acf54a0
-r	java:S106_"+Replace this use of System.out by a logger.(ˆ†ÓÏşÿÿÿÿ8şÕ¯çô1J$8b06ac5d-1f87-4bcc-90c5-a02541e6d59c
-~	java:S125g"<This block of commented-out lines of code should be removed.(…œÉ8Ö¯çô1J$f0c37e37-485b-4bcc-8ab3-fd0b1b88844e
+java:S1181S"%Catch Exception instead of Throwable.(À˜§üÿÿÿÿ8óÕ¯çô1J$480e2cbf-bc16-45dd-8285-82b7a03dadeb
+r	java:S106T"+Replace this use of System.err by a logger.(Ô˜Òòıÿÿÿÿ8÷Õ¯çô1J$2c0dc512-5654-414c-902b-d4b384d4e490
+r	java:S106_"+Replace this use of System.out by a logger.(ˆ†ÓÏşÿÿÿÿ8şÕ¯çô1J$5fe91b51-7c29-4ab5-a19f-6620bf2974e8
+~	java:S125g"<This block of commented-out lines of code should be removed.(…œÉ8Ö¯çô1J$03d0ecfb-8a87-40b2-bf63-897a02752d85
