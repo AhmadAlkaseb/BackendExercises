@@ -1,6 +1,5 @@
 ### Henter alle hoteller
 GET http://localhost:7007/api/hotels
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzdWIiOiJUZXN0MTIiLCJleHAiOjE3MTA4NDUxNTgsInJvbGVzIjoiLHVzZXIiLCJ1c2VybmFtZSI6IlRlc3QxMiJ9.XoTU1hYfUfn7Aptpvd5Lz3h5WHk7eJZz06PT3RK-qd8
 
 ### Henter et specifikt hotel udfra id'et
 GET http://localhost:7007/api/hotels/1

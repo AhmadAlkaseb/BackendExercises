@@ -25,7 +25,7 @@ public class RouteHotel {
     public EndpointGroup hotelRoutes() {
         return () -> {
             before(securityController.authenticate());
-            get("/hotels", HotelController.getAll(hotelDAO), Role.USER);
+            get("/hotels", HotelController.getAll(hotelDAO), Role.ANYONE);
             get("/hotels/{id}", HotelController.getHotelById(hotelDAO), Role.ADMIN);
             get("/hotels/{id}/rooms", HotelController.getHotelWithRooms(hotelDAO, roomDAO), Role.ANYONE);
             post("/hotels", HotelController.create(hotelDAO), Role.ANYONE);

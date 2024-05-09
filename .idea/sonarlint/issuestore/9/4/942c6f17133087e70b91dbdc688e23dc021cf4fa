@@ -1,18 +1,18 @@
 
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Öº½‚øÿÿÿÿJ$c5955467-cf38-45fa-9636-26fce8222a15
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Öº½‚øÿÿÿÿJ$f18f3510-514b-4267-a8ef-da9be1e9d815
 Ô
-java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(Ğá™_J$55756826-1399-4f0c-92d9-a35599cb30d9
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(Ğá™_J$5bac72e3-c9bb-4d59-94c9-cba3eb0e4ca4
 w
-java:S1117"6Rename "om" which hides the field declared at line 21.(´ØÍ­úÿÿÿÿJ$29e58d8d-3637-4448-aef2-21ebf3560084
+java:S1117"6Rename "om" which hides the field declared at line 21.(´ØÍ­úÿÿÿÿJ$f98b3a1e-6b1d-4443-857b-7efca585d622
 h
-java:S1481"'Remove this unused "om" local variable.(´ØÍ­úÿÿÿÿJ$edf31664-178d-46b7-aff0-181bd6dd226f
+java:S1481"'Remove this unused "om" local variable.(´ØÍ­úÿÿÿÿJ$6926d4c6-9d38-45be-9751-ddf4e1a68ae3
 ‚
-java:S1075 "ARefactor your code to get this URI from a customizable parameter.(®â±ÉøÿÿÿÿJ$174e5903-98ce-4572-a8b6-60899370e08b
+java:S1075 "ARefactor your code to get this URI from a customizable parameter.(®â±ÉøÿÿÿÿJ$45431d6c-26b1-49ae-a14e-ab25eb6328e4
 m
-java:S1602@",Remove useless curly braces around statement(î¹äÅûÿÿÿÿJ$bf631e47-31c5-4ecc-8ada-d006676c9a7e
+java:S1602@",Remove useless curly braces around statement(î¹äÅûÿÿÿÿJ$6059faad-ab07-4241-ad38-40a5096e2e8c
 m
-java:S1602D",Remove useless curly braces around statement(­´Î£şÿÿÿÿJ$d22dd2b7-dd9b-4407-ac03-12c48a0b14b8
+java:S1602D",Remove useless curly braces around statement(­´Î£şÿÿÿÿJ$801838f0-5123-4345-93c6-669b902980f6
 m
-java:S1602M",Remove useless curly braces around statement(šÍÜÿÿÿÿÿJ$b9aabec7-a8ed-4653-abf1-1d467af03dda
-|	java:S125P"<This block of commented-out lines of code should be removed.(˜İÕüÿÿÿÿJ$f4ab1e5d-bc9e-477d-bf44-26838b6d5972
-k	java:S106Z"+Replace this use of System.out by a logger.(ÅÈÂ½şÿÿÿÿJ$32b73d3e-26da-4a06-8754-896f922119eb
+java:S1602M",Remove useless curly braces around statement(šÍÜÿÿÿÿÿJ$e3921db6-fded-41d5-8712-d74f61726606
+|	java:S125P"<This block of commented-out lines of code should be removed.(˜İÕüÿÿÿÿJ$19d90244-3577-417b-8e6a-3e5624c68a2d
+k	java:S106Z"+Replace this use of System.out by a logger.(ÅÈÂ½şÿÿÿÿJ$d36dd766-2a7d-40a8-bacb-635d06828d04

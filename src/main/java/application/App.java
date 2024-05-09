@@ -10,6 +10,7 @@ public class App {
                 .startServer(7007)
                 .setExceptionHandlers()
                 .checkSecurityRoles()
-                .setRoute(Route.addRoutes());
+                .setRoute(Route.addRoutes())
+                .configureCors();
     }
 }
