@@ -1,5 +1,6 @@
 package Persistence.Model;
 
+import com.nimbusds.jose.shaded.json.annotate.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,6 +21,7 @@ public class Role {
     @Column(name = "name", nullable = false)
     private String name;
 
+    @JsonIgnore
     @ManyToMany(mappedBy = "roles")
     Set<User> users = new HashSet<>();
 

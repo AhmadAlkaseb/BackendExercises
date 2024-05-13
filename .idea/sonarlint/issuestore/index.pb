@@ -22,3 +22,17 @@ R
 "src/main/java/application/App.java,4\c\4cb71d5dc0dadb4ceaad3433e81d1ba02999d24e
 T
 $src/main/java/Routes/RouteHotel.java,c\4\c46094d36a83bff15a510497d491959ea1b35236
+S
+#src/main/java/Routes/RouteUser.java,e\6\e65086700d2261371a2679f1308cd870861e8880
+a
+1src/main/java/Controllers/SecurityController.java,c\0\c0879f6dfd70d247c7d5de84a71dd3dfa780bed9
+O
+src/main/java/Routes/Route.java,b\f\bf84db7341d2adf1a2fae6136fc96c863fa679d0
+O
+src/main/java/DTOs/UserDTO.java,8\b\8bc2246a8e5d898a80de11afd42cd28d36d1cf29
+Y
+)src/main/java/Persistence/Model/User.java,6\0\606880ff27081f130a33f7aca8e8e7c9d5b988f5
+P
+ src/main/java/DTOs/TokenDTO.java,3\0\3033cf79f57a2cf04809774f1d79c013fd405ba6
+Y
+)src/main/java/Persistence/Model/Role.java,1\a\1ab2e523d73172191ab4d66f65a0ccc79a7f2140

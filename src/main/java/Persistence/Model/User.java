@@ -1,5 +1,6 @@
 package Persistence.Model;
 
+import com.nimbusds.jose.shaded.json.annotate.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,7 @@ public class User implements ISecurityUser {
     private String username;
     private String password;
 
+    @JsonIgnore
     @JoinTable(name = "user_roles", joinColumns = {
             @JoinColumn(name = "user_name", referencedColumnName = "username")},
             inverseJoinColumns = {
@@ -50,7 +52,7 @@ public class User implements ISecurityUser {
         }
         Set<String> rolesAsStrings = new HashSet<>();
         roles.forEach((role) -> {
-            rolesAsStrings.add(role.getName());
+            rolesAsStrings.add(role.getName().toString());
         });
         return rolesAsStrings;
     }

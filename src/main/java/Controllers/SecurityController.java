@@ -48,7 +48,7 @@ public class SecurityController implements ISecurityController {
                 User created = userDAO.createUser(userInput.getUsername(), userInput.getPassword());
 
                 String token = createToken(new UserDTO(created));
-                ctx.status(HttpStatus.CREATED).json(new TokenDTO(token, userInput.getUsername()));
+                ctx.status(HttpStatus.CREATED).json(new TokenDTO(token, created));
             } catch (EntityExistsException e) {
                 ctx.status(HttpStatus.UNPROCESSABLE_CONTENT);
                 ctx.json(returnObject.put("msg", "User already exists"));
@@ -63,11 +63,10 @@ public class SecurityController implements ISecurityController {
             ObjectNode returnObject = objectMapper.createObjectNode(); // for sending json messages back to the client
             try {
                 UserDTO user = ctx.bodyAsClass(UserDTO.class);
-                System.out.println("USER IN LOGIN: " + user);
 
                 User verifiedUserEntity = userDAO.verifyUser(user.getUsername(), user.getPassword());
                 String token = createToken(new UserDTO(verifiedUserEntity));
-                ctx.status(200).json(new TokenDTO(token, user.getUsername()));
+                ctx.status(200).json(new TokenDTO(token, verifiedUserEntity));
 
             } catch (EntityNotFoundException | ValidationException e) {
                 ctx.status(401);
@@ -102,6 +101,7 @@ public class SecurityController implements ISecurityController {
         AtomicBoolean hasAccess = new AtomicBoolean(false); // Since we update this in a lambda expression, we need to use an AtomicBoolean
         if (user != null) {
             user.getRoles().stream().forEach(role -> {
+                System.out.println(role);
                 if (allowedRoles.contains(role.toUpperCase())) {
                     hasAccess.set(true);
                 }
@@ -111,23 +111,38 @@ public class SecurityController implements ISecurityController {
     }
 
     private String createToken(UserDTO user, String ISSUER, String TOKEN_EXPIRE_TIME, String SECRET_KEY) {
-        // https://codecurated.com/blog/introduction-to-jwt-jws-jwe-jwa-jwk/
         try {
-            JWTClaimsSet claimsSet = new JWTClaimsSet.Builder()
+            JWTClaimsSet.Builder claimsSetBuilder = new JWTClaimsSet.Builder()
                     .subject(user.getUsername())
                     .issuer(ISSUER)
-                    .claim("username", user.getUsername())
-                    .claim("roles", user.getRoles().stream().reduce("", (s1, s2) -> s1 + "," + s2))
+                    .claim("username", user.getUsername());
+
+            // Add roles to claims
+            Set<String> roles = user.getRoles();
+            for (String role : roles) {
+                roles.add(role);
+                claimsSetBuilder.claim("role", role);
+            }
+
+            JWTClaimsSet claimsSet = claimsSetBuilder
                     .expirationTime(new Date(new Date().getTime() + Integer.parseInt(TOKEN_EXPIRE_TIME)))
                     .build();
+
             Payload payload = new Payload(claimsSet.toJSONObject());
 
             JWSSigner signer = new MACSigner(SECRET_KEY);
             JWSHeader jwsHeader = new JWSHeader(JWSAlgorithm.HS256);
             JWSObject jwsObject = new JWSObject(jwsHeader, payload);
             jwsObject.sign(signer);
-            return jwsObject.serialize();
+            String serializedToken = jwsObject.serialize();
 
+            // Print roles
+            System.out.println("Roles in token:");
+            for (String role : roles) {
+                System.out.println(role);
+            }
+
+            return serializedToken;
         } catch (JOSEException e) {
             e.printStackTrace();
             throw new ApiException(500, "Could not create token");
