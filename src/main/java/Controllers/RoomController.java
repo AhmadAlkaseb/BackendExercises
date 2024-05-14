@@ -1,8 +1,8 @@
 package Controllers;
 
-import DAOs.RoomDAO;
-import DTOs.RoomDTO;
-import Persistence.Model.Room;
+import daos.RoomDAO;
+import dtos.RoomDTO;
+import persistence.Model.Room;
 import io.javalin.http.Handler;
 import io.javalin.http.HttpStatus;
 

@@ -1,7 +1,7 @@
 package Controllers;
 
-import DTOs.UserDTO;
-import Exceptions.NotAuthorizedException;
+import dtos.UserDTO;
+import exceptions.NotAuthorizedException;
 import com.nimbusds.jose.JOSEException;
 import io.javalin.http.Handler;
 

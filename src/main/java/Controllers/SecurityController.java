@@ -1,11 +1,11 @@
 package Controllers;
 
-import DAOs.UserDAO;
-import DTOs.TokenDTO;
-import DTOs.UserDTO;
-import Exceptions.ApiException;
-import Exceptions.NotAuthorizedException;
-import Persistence.Model.User;
+import daos.UserDAO;
+import dtos.TokenDTO;
+import dtos.UserDTO;
+import exceptions.ApiException;
+import exceptions.NotAuthorizedException;
+import persistence.Model.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.nimbusds.jose.*;

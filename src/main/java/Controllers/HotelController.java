@@ -1,11 +1,11 @@
 package Controllers;
 
-import DAOs.HotelDAO;
-import DAOs.RoomDAO;
-import DTOs.HotelDTO;
-import DTOs.RoomDTO;
-import Persistence.Model.Hotel;
-import Persistence.Model.Room;
+import daos.HotelDAO;
+import daos.RoomDAO;
+import dtos.HotelDTO;
+import dtos.RoomDTO;
+import persistence.Model.Hotel;
+import persistence.Model.Room;
 import io.javalin.http.Handler;
 import io.javalin.http.HttpStatus;
 

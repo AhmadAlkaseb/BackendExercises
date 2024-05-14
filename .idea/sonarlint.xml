@@ -3,7 +3,7 @@
   <component name="SonarLintProjectSettings">
     <option name="moduleMapping">
       <map>
-        <entry key="BackendMay" value="ThirdSemesterExercises" />
+        <entry key="WebShopBackend" value="ThirdSemesterExercises" />
       </map>
     </option>
   </component>
