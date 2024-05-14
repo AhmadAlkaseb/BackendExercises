@@ -16,6 +16,12 @@ Github: @Lassekh
 Skolemail: cph-yb48@cphbusiness.dk
 Github: @Badranyoussef
 
+**Backend repository**
+[Link til hjemmesiden:](https://github.com/AhmadAlkaseb/WebShopBackend)
+
+**Frontend repository**
+[Link til hjemmesiden:]()
+
 **Hjemmesiden**
 [Link til hjemmesiden:]()
 
