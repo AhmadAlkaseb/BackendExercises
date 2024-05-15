@@ -1,12 +1,0 @@
-
-Ž
-java:S1192"MDefine a constant instead of duplicating this literal "/hotels/{id}" 3 times.(žõµ¡ýÿÿÿÿJ$1f430a28-9194-4630-a871-cf5e8028286e
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¶ø¥ÇûÿÿÿÿJ$52f9ec95-b919-4f26-a6de-1a48beea193d
-a
-java:S3010"%Remove this assignment of "hotelDAO".(·Ÿ†åJ$e15e59e6-a2f2-49c5-be64-1452c3cd3b5c
-`
-java:S3010"$Remove this assignment of "roomDAO".(¤Úµ±J$16dae45e-985f-41f3-b47f-83e9f4aefa9d
-q
-java:S2209"5Change this instance-reference to a static reference.(·Ÿ†åJ$f1db01b1-aedd-478d-822a-3bb21a5a4646
-q
-java:S2209"5Change this instance-reference to a static reference.(¤Úµ±J$fe1a79a7-6db1-49b2-8d65-6b50194bc57b

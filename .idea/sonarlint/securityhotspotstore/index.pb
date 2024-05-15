@@ -20,8 +20,6 @@ J
 dependency-reduced-pom.xml,8\a\8a88dfd5af6f2db5a5431581b56e901f5f143d92
 R
 "src/main/java/application/App.java,4\c\4cb71d5dc0dadb4ceaad3433e81d1ba02999d24e
-T
-$src/main/java/Routes/RouteHotel.java,c\4\c46094d36a83bff15a510497d491959ea1b35236
 S
 #src/main/java/Routes/RouteUser.java,e\6\e65086700d2261371a2679f1308cd870861e8880
 a
@@ -38,12 +36,8 @@ Y
 )src/main/java/Persistence/Model/Role.java,1\a\1ab2e523d73172191ab4d66f65a0ccc79a7f2140
 S
 #src/main/java/requests/Request.http,a\9\a952bea372e0ef3b7125688854677a4b0f7bd893
-T
-$src/main/java/routes/RouteHotel.java,2\9\295c5913beb33a931257fd44fb4c94d7ff4761e7
 b
 2src/main/java/persistence/Model/ISecurityUser.java,f\c\fc8b34bcde04acd1f0e333054bff250e36dd781e
-S
-#src/main/java/routes/RoomRoute.java,3\b\3bcddfdf71605d4b1b0252fced4126f8743b4691
 S
 #src/main/java/routes/RouteUser.java,f\8\f8eed3800019fea4b3ab2801569c1e0f9502cc3e
 O
@@ -54,8 +48,6 @@ S
 -src/main/java/Controllers/ItemController.java,b\6\b6a9b8d35522f1e200bbe3604155b87dc5a6ccf0
 Y
 )src/main/java/persistence/Model/Item.java,9\f\9fb8b7bee271ba903d0780a687d067dc4120c53f
-P
- src/main/java/dtos/HotelDTO.java,7\9\795a8c7601f99370d6aa61166f386f6ccaaa87f4
 O
 src/main/java/daos/ItemDAO.java,3\e\3e2105febfcea3a330e160fc5b5b395af634bba0
 Y
@@ -64,3 +56,5 @@ O
 src/main/java/daos/UserDAO.java,1\6\167230c874bd75e9b1c86c28c6ca435a9fb3c851
 b
 2src/main/java/Controllers/ISecurityController.java,a\d\adad0700a3f1f96546c117c6403ebf2d2a090925
+^
+.src/main/java/persistence/HibernateConfig.java,4\0\4018b07443740ec2a11b41d0c61b7ba73b2e8b0a
