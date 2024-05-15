@@ -1,6 +1,7 @@
 package dtos;
 
 import lombok.*;
+import persistence.Model.User;
 
 @Getter
 @Setter
@@ -16,5 +17,6 @@ public class ItemDTO {
     private String fullName;
     private String address;
     private int phoneNr;
+    private User user; //har vi brug for en user også???
 
 }

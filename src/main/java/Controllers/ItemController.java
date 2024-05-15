@@ -53,6 +53,7 @@ public class ItemController {
                         .fullName(foundItem.getFullName())
                         .address(foundItem.getAddress())
                         .phoneNr(foundItem.getPhoneNr())
+                        .user(foundItem.getUser()) //har vi brug for en user også???
                         .build();
                 ctx.status(HttpStatus.OK).json(itemDTO);
             } else {
