@@ -38,3 +38,19 @@ Y
 )src/main/java/Persistence/Model/Role.java,1\a\1ab2e523d73172191ab4d66f65a0ccc79a7f2140
 S
 #src/main/java/requests/Request.http,a\9\a952bea372e0ef3b7125688854677a4b0f7bd893
+T
+$src/main/java/routes/RouteHotel.java,2\9\295c5913beb33a931257fd44fb4c94d7ff4761e7
+b
+2src/main/java/persistence/Model/ISecurityUser.java,f\c\fc8b34bcde04acd1f0e333054bff250e36dd781e
+S
+#src/main/java/routes/RoomRoute.java,3\b\3bcddfdf71605d4b1b0252fced4126f8743b4691
+S
+#src/main/java/routes/RouteUser.java,f\8\f8eed3800019fea4b3ab2801569c1e0f9502cc3e
+O
+src/main/java/routes/Route.java,6\2\623a855d8af03aff347d1cce47ec3da6e95582b7
+S
+#src/main/java/routes/RouteItem.java,b\5\b5070b7559f8fdc98753ff42035828b7fec52511
+]
+-src/main/java/Controllers/ItemController.java,b\6\b6a9b8d35522f1e200bbe3604155b87dc5a6ccf0
+Y
+)src/main/java/persistence/Model/Item.java,9\f\9fb8b7bee271ba903d0780a687d067dc4120c53f

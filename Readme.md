@@ -16,6 +16,56 @@ cph-lh225@cphbusiness.dk
 cph-yb48@cphbusiness.dk  
 @Badranyoussef  
 
+### Beskrivelse for hjemmesiden
+Brugere kan oprette sig og logge på hjemmesiden. Hver bruger har mulighed for at oprette et salg af et produkt. Man kan kun opdatere og slette ens egne salg. Alle brugere på hjemmesiden kan se andres produkter som er til salg. Herfra kan man kontakte personen via sælgerens kontaktoplysninger. En simpel udgave af DBA. Det tænker jeg kan være en fin lille opgave.  
+
+### Endpoints documentation 
+
+<details>
+ <summary><code>GET</code> <code><b>/api/auth/login</b></code> <code>get all cars from the carshop</code></summary>
+
+##### Parameters
+None
+##### Response
+application/json
+
+
+##### Exceptions
+- Exception: APIException
+- Status: 404
+
+</details>
+
+<details>
+ <summary><code>GET</code> <code><b>/api/auth/register</b></code> <code>get all cars from the carshop</code></summary>
+
+##### Parameters
+None
+##### Response
+application/json
+
+
+##### Exceptions
+- Exception: APIException
+- Status: 404
+
+</details>
+
+<details>
+ <summary><code>GET</code> <code><b>/api/register</b></code> <code>get all cars from the carshop</code></summary>
+
+##### Parameters
+None
+##### Response
+application/json
+
+
+##### Exceptions
+- Exception: APIException
+- Status: 404
+
+</details>
+
 **Backend repository**  
 [Tryk her](https://github.com/AhmadAlkaseb/WebShopBackend)  
 

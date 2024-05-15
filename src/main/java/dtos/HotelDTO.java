@@ -1,6 +1,5 @@
 package dtos;
 
-import persistence.Model.Room;
 import lombok.*;
 
 import java.util.List;

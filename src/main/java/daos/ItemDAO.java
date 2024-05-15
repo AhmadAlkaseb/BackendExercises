@@ -1,34 +1,33 @@
 package daos;
 
-import persistence.Model.Hotel;
-import persistence.Model.Room;
+import persistence.Model.Item;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.TypedQuery;
 
 import java.util.List;
 
-public class HotelDAO extends AbstractDAO<Hotel> {
+public class ItemDAO extends AbstractDAO<Item> {
 
-    private static HotelDAO instance;
+    private static ItemDAO instance;
     private static EntityManagerFactory emf;
 
-    private HotelDAO(EntityManagerFactory _emf, Class<Hotel> entityClass) {
+    private ItemDAO(EntityManagerFactory _emf, Class<Item> entityClass) {
         super(_emf, entityClass);
     }
 
-    public static HotelDAO getInstance(EntityManagerFactory _emf) {
+    public static ItemDAO getInstance(EntityManagerFactory _emf) {
         if (instance == null) {
             emf = _emf;
-            instance = new HotelDAO(emf, Hotel.class);
+            instance = new ItemDAO(emf, Item.class);
         }
         return instance;
     }
 
-    public List<Hotel> getAll() {
+    public List<Item> getAll() {
         EntityManager em = emf.createEntityManager();
         try {
-            TypedQuery<Hotel> query = em.createQuery("SELECT h FROM Hotel h", Hotel.class);
+            TypedQuery<Item> query = em.createQuery("SELECT h FROM Item h", Item.class);
             return query.getResultList();
         } finally {
             em.close();
@@ -41,16 +40,16 @@ public class HotelDAO extends AbstractDAO<Hotel> {
         try {
             em.getTransaction().begin();
 
-            Hotel hotelFound = em.find(Hotel.class, id);
+            Item itemFound = em.find(Item.class, id);
 
-            if (hotelFound != null) {
+            if (itemFound != null) {
                 // Remove all associated rooms first
-                for (Room room : hotelFound.getRooms()) {
+                for (Room room : itemFound.getRooms()) {
                     em.remove(room);
                 }
 
                 // Remove the hotel itself
-                em.remove(hotelFound);
+                em.remove(itemFound);
 
                 em.getTransaction().commit();
                 return 1;

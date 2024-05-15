@@ -23,16 +23,6 @@ public class RouteUser {
             });
         };
     }
-
-    public EndpointGroup securedRoutes() {
-        return () -> {
-            path("/protected", () -> {
-                before(securityController.authenticate());
-                get("/user_demo", (ctx) -> ctx.json(jsonMapper.createObjectNode().put("msg", "Hello from USER Protected")), Role.USER, Role.ADMIN);
-                get("/admin_demo", (ctx) -> ctx.json(jsonMapper.createObjectNode().put("msg", "Hello from ADMIN Protected")), Role.ADMIN);
-            });
-        };
-    }
 }
 
 enum Role implements RouteRole {ANYONE, USER, ADMIN}

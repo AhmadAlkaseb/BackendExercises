@@ -1,8 +1,7 @@
 package persistence;
 
-import persistence.Model.Hotel;
+import persistence.Model.Item;
 import persistence.Model.Role;
-import persistence.Model.Room;
 import persistence.Model.User;
 import jakarta.persistence.EntityManagerFactory;
 import lombok.NoArgsConstructor;
@@ -97,7 +96,7 @@ public class HibernateConfig {
     }
 
     private static void getAnnotationConfiguration(Configuration configuration) {
-        configuration.addAnnotatedClass(Hotel.class);
+        configuration.addAnnotatedClass(Item.class);
         configuration.addAnnotatedClass(Room.class);
         configuration.addAnnotatedClass(User.class);
         configuration.addAnnotatedClass(Role.class);

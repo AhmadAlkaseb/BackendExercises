@@ -12,8 +12,8 @@ import java.util.List;
 @Setter
 @ToString
 @Entity
-@Table(name = "hotels")
-public class Hotel {
+@Table(name = "items")
+public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -23,16 +23,16 @@ public class Hotel {
     private String address;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST, mappedBy = "hotel")
-    private List<Room> rooms = new ArrayList<>();
+    private Set<Item> rooms = new Hash<>();
 
     public void addRoom(Room room) {
         if (room != null) {
             rooms.add(room);
-            room.setHotel(this);
+            room.setItem(this);
         }
     }
 
-    public Hotel(String name, String address) {
+    public Item(String name, String address) {
         this.name = name;
         this.address = address;
     }
