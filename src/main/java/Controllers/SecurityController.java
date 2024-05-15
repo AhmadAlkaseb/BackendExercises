@@ -45,7 +45,7 @@ public class SecurityController implements ISecurityController {
             ObjectNode returnObject = objectMapper.createObjectNode();
             try {
                 UserDTO userInput = ctx.bodyAsClass(UserDTO.class);
-                User created = userDAO.createUser(userInput.getUsername(), userInput.getPassword());
+                User created = userDAO.createUser(userInput.getEmail(), userInput.getPassword());
 
                 String token = createToken(new UserDTO(created));
                 ctx.status(HttpStatus.CREATED).json(new TokenDTO(token, created));
@@ -64,7 +64,7 @@ public class SecurityController implements ISecurityController {
             try {
                 UserDTO user = ctx.bodyAsClass(UserDTO.class);
 
-                User verifiedUserEntity = userDAO.verifyUser(user.getUsername(), user.getPassword());
+                User verifiedUserEntity = userDAO.verifyUser(user.getEmail(), user.getPassword());
                 String token = createToken(new UserDTO(verifiedUserEntity));
                 ctx.status(200).json(new TokenDTO(token, verifiedUserEntity));
 
@@ -113,9 +113,9 @@ public class SecurityController implements ISecurityController {
     private String createToken(UserDTO user, String ISSUER, String TOKEN_EXPIRE_TIME, String SECRET_KEY) {
         try {
             JWTClaimsSet.Builder claimsSetBuilder = new JWTClaimsSet.Builder()
-                    .subject(user.getUsername())
+                    .subject(user.getEmail())
                     .issuer(ISSUER)
-                    .claim("username", user.getUsername());
+                    .claim("username", user.getEmail());
 
             // Add roles to claims
             Set<String> roles = user.getRoles();

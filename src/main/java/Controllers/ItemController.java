@@ -24,7 +24,7 @@ public class ItemController {
             if (foundItem != null) {
                 HotelDTO hotelDTO = HotelDTO.builder()
                         .id(foundItem.getId())
-                        .name(foundItem.getName())
+                        .name(foundItem.getTitle())
                         .address(foundItem.getAddress())
                         .rooms(foundItem.getRooms())
                         .build();
@@ -46,7 +46,7 @@ public class ItemController {
                 Item foundItem = dao.getById(id);
                 HotelDTO hotelDTO = HotelDTO.builder()
                         .id(foundItem.getId())
-                        .name(foundItem.getName())
+                        .name(foundItem.getTitle())
                         .address(foundItem.getAddress())
                         .rooms(foundItem.getRooms())
                         .build();
@@ -79,7 +79,7 @@ public class ItemController {
             updatedHotelDTO.setRooms(foundItem.getRooms());
 
             if (foundItem != null) {
-                foundItem.setName(updatedHotelDTO.getName());
+                foundItem.setTitle(updatedHotelDTO.getName());
                 foundItem.setAddress(updatedHotelDTO.getAddress());
 
                 // Save the updated hotel to the database

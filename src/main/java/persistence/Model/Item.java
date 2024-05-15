@@ -3,9 +3,6 @@ package persistence.Model;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -18,22 +15,19 @@ public class Item {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
+    private String title;
+    private String description;
+    private double price;
 
-    private String name;
+    private String fullName;
     private String address;
+    private int phoneNr;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST, mappedBy = "hotel")
-    private Set<Item> rooms = new Hash<>();
+    @ManyToOne()
+    private User user;
 
-    public void addRoom(Room room) {
-        if (room != null) {
-            rooms.add(room);
-            room.setItem(this);
-        }
-    }
-
-    public Item(String name, String address) {
-        this.name = name;
+    public Item(String title, String address) {
+        this.title = title;
         this.address = address;
     }
 }

@@ -11,18 +11,18 @@ import java.util.Set;
 @AllArgsConstructor
 @ToString
 public class UserDTO {
-    private String username;
+    private String email;
     private String password;
     private Set<String> roles;
 
     public UserDTO(User user) {
-        this.username = user.getUsername();
+        this.email = user.getEmail();
         this.password = user.getPassword();
         this.roles = user.getRolesAsStrings();
     }
 
-    public UserDTO(String username, Set<String> roleSet) {
-        this.username = username;
+    public UserDTO(String email, Set<String> roleSet) {
+        this.email = email;
         this.roles = roleSet;
     }
 }

@@ -2,6 +2,7 @@ package persistence.Model;
 
 import com.nimbusds.jose.shaded.json.annotate.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.Generated;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -17,7 +18,11 @@ import java.util.Set;
 @Table(name = "users") //User is a reserved keyword
 public class User implements ISecurityUser {
     @Id
-    private String username;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    @Column(unique = true, nullable = false)
+    private String email;
+    @Column(nullable = false)
     private String password;
 
     @JsonIgnore
@@ -28,11 +33,20 @@ public class User implements ISecurityUser {
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Role> roles = new HashSet<>();
 
-    public User(String username, String password) {
-        this.username = username;
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private Set<Item> items = new HashSet<>();
+
+    public User(String email, String password) {
+        this.email = email;
         this.password = password;
         String salt = BCrypt.gensalt();
         this.password = BCrypt.hashpw(password, salt);
+    }
+
+
+    public void addItem(Item item) {
+        items.add(item);
+        item.setUser(this);
     }
 
     public void addRole(Role role) {
