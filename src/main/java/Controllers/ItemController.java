@@ -2,6 +2,7 @@ package Controllers;
 
 import daos.ItemDAO;
 import dtos.HotelDTO;
+import dtos.ItemDTO;
 import persistence.Model.Item;
 import io.javalin.http.Handler;
 import io.javalin.http.HttpStatus;
@@ -44,13 +45,16 @@ public class ItemController {
             int id = Integer.parseInt(ctx.pathParam("id"));
             if (dao.getById(id) != null) {
                 Item foundItem = dao.getById(id);
-                HotelDTO hotelDTO = HotelDTO.builder()
+                ItemDTO itemDTO = ItemDTO.builder()
                         .id(foundItem.getId())
-                        .name(foundItem.getTitle())
+                        .title(foundItem.getTitle())
+                        .description(foundItem.getDescription())
+                        .price(foundItem.getPrice())
+                        .fullName(foundItem.getFullName())
                         .address(foundItem.getAddress())
-                        .rooms(foundItem.getRooms())
+                        .phoneNr(foundItem.getPhoneNr())
                         .build();
-                ctx.status(HttpStatus.OK).json(hotelDTO);
+                ctx.status(HttpStatus.OK).json(itemDTO);
             } else {
                 ctx.status(HttpStatus.NOT_FOUND).result("The hotel id you are looking for does not exist.");
             }
