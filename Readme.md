@@ -59,12 +59,27 @@ None
 ##### Response
 application/json
 
+##### Exceptions
+- Exception: APIException
+- Status: 404
+
+</details>
+
+
+<details>
+ <summary><code>GET</code> <code><b>/api/items/{id}</b></code> <code>get item by id</code></summary>
+
+##### Parameters
+item id
+##### Response
+application/json
 
 ##### Exceptions
 - Exception: APIException
 - Status: 404
 
 </details>
+
 
 **Backend repository**  
 [Tryk her](https://github.com/AhmadAlkaseb/WebShopBackend)  

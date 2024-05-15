@@ -57,7 +57,7 @@ public class ItemController {
                         .build();
                 ctx.status(HttpStatus.OK).json(itemDTO);
             } else {
-                ctx.status(HttpStatus.NOT_FOUND).result("The hotel id you are looking for does not exist.");
+                ctx.status(HttpStatus.NOT_FOUND).result("The item you are looking for does not exist.");
             }
         };
     }
