@@ -54,3 +54,13 @@ S
 -src/main/java/Controllers/ItemController.java,b\6\b6a9b8d35522f1e200bbe3604155b87dc5a6ccf0
 Y
 )src/main/java/persistence/Model/Item.java,9\f\9fb8b7bee271ba903d0780a687d067dc4120c53f
+P
+ src/main/java/dtos/HotelDTO.java,7\9\795a8c7601f99370d6aa61166f386f6ccaaa87f4
+O
+src/main/java/daos/ItemDAO.java,3\e\3e2105febfcea3a330e160fc5b5b395af634bba0
+Y
+)src/main/java/persistence/Model/User.java,3\6\361e224c20581ee358a6ca842b7d3af64377de55
+O
+src/main/java/daos/UserDAO.java,1\6\167230c874bd75e9b1c86c28c6ca435a9fb3c851
+b
+2src/main/java/Controllers/ISecurityController.java,a\d\adad0700a3f1f96546c117c6403ebf2d2a090925

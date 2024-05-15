@@ -1,0 +1,12 @@
+
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‚ÌıÿÿÿÿJ$2457c2a2-ada5-405d-ab6c-43b4f7226598
+g
+java:S1168?"+Return an empty collection instead of null.(¥¹ïJ$c2eb18ac-9b6d-4915-8d78-c37e3b89069d
+s
+java:S1611B"2Remove the parentheses around the "role" parameter(·½ÛƒıÿÿÿÿJ$012e4807-f434-458e-84a1-69096c47368b
+m
+java:S1602B",Remove useless curly braces around statement(·½ÛƒıÿÿÿÿJ$d6b5197d-99b1-4aa4-a021-a86f8fd30fbe
+}
+java:S1858C"A"getName" returns a string, there's no need to call "toString()".(®âŠŞJ$67131739-fa91-4437-8dd0-331e40233ed7
+p
+java:S1128"-Remove this unused import 'lombok.Generated'.(ÿÇ¶º8¾ÇÛ÷1J$b2f21242-85d2-457f-b220-4e4fbb7fe258

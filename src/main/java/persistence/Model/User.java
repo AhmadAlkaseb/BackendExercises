@@ -18,22 +18,20 @@ import java.util.Set;
 @Table(name = "users") //User is a reserved keyword
 public class User implements ISecurityUser {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     private String email;
     @Column(nullable = false)
     private String password;
 
     @JsonIgnore
     @JoinTable(name = "user_roles", joinColumns = {
-            @JoinColumn(name = "user_name", referencedColumnName = "username")},
+            @JoinColumn(name = "user_email", referencedColumnName = "email")},
             inverseJoinColumns = {
                     @JoinColumn(name = "role_name", referencedColumnName = "name")})
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Role> roles = new HashSet<>();
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "user")
     private Set<Item> items = new HashSet<>();
 
     public User(String email, String password) {

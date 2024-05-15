@@ -1,0 +1,9 @@
+
+‘	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïà™ÈþÿÿÿÿJ$f4411469-702d-4595-b8fe-b1bdc5cbcdae
+‡
+java:S2095`"KUse try-with-resources or close this "EntityManager" in a "finally" clause.(ì¶žÐJ$db2e336d-94f6-455a-9662-64dc59d699bb
+Õ
+java:S6548
+"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ýÑ±¯J$4f5dba88-4f98-4239-a700-1246e0900e1e
+z
+java:S1172["9Remove these unused method parameters "username", "role".(«§±öúÿÿÿÿJ$c8ec709e-dfc6-4ce0-96e7-37fb6709654d

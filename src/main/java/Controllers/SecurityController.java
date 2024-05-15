@@ -115,13 +115,13 @@ public class SecurityController implements ISecurityController {
             JWTClaimsSet.Builder claimsSetBuilder = new JWTClaimsSet.Builder()
                     .subject(user.getEmail())
                     .issuer(ISSUER)
-                    .claim("username", user.getEmail());
+                    .claim("email", user.getEmail());
 
             // Add roles to claims
             Set<String> roles = user.getRoles();
             for (String role : roles) {
                 roles.add(role);
-                claimsSetBuilder.claim("role", role);
+                claimsSetBuilder.claim("roles", role);
             }
 
             JWTClaimsSet claimsSet = claimsSetBuilder
@@ -219,7 +219,7 @@ public class SecurityController implements ISecurityController {
         // Return a user with Set of roles as strings
         SignedJWT jwt = SignedJWT.parse(token);
         String roles = jwt.getJWTClaimsSet().getClaim("roles").toString();
-        String username = jwt.getJWTClaimsSet().getClaim("username").toString();
+        String username = jwt.getJWTClaimsSet().getClaim("email").toString();
 
         Set<String> rolesSet = Arrays
                 .stream(roles.split(","))
