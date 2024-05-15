@@ -58,3 +58,5 @@ b
 2src/main/java/Controllers/ISecurityController.java,a\d\adad0700a3f1f96546c117c6403ebf2d2a090925
 ^
 .src/main/java/persistence/HibernateConfig.java,4\0\4018b07443740ec2a11b41d0c61b7ba73b2e8b0a
+Y
+)src/main/java/persistence/Model/Role.java,d\7\d78a33fa0f495cf322b4ffbc2c6e26f65e2b34c8

@@ -16,7 +16,7 @@ Content-Type: application/json
   "password": "1234"
 }
 
-### Get all items
+### Get all items - VIRKER FINT
 GET http://localhost:7007/api/items
 
 ### Get item by id

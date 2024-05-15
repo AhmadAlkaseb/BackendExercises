@@ -1,11 +1,9 @@
 package persistence.Model;
 
-import com.nimbusds.jose.shaded.json.annotate.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.Generated;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
 import org.mindrot.jbcrypt.BCrypt;
 
 import java.util.HashSet;
@@ -15,22 +13,25 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "users") //User is a reserved keyword
+@Table(name = "users")
 public class User implements ISecurityUser {
     @Id
     @Column(nullable = false)
     private String email;
+
     @Column(nullable = false)
+    @JsonIgnore // Breaks the serialization loop
     private String password;
 
-    @JsonIgnore
+    @JsonIgnore // Breaks the serialization loop
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_roles", joinColumns = {
             @JoinColumn(name = "user_email", referencedColumnName = "email")},
             inverseJoinColumns = {
                     @JoinColumn(name = "role_name", referencedColumnName = "name")})
-    @ManyToMany(fetch = FetchType.EAGER)
     private Set<Role> roles = new HashSet<>();
 
+    @JsonIgnore // Breaks the serialization loop
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "user")
     private Set<Item> items = new HashSet<>();
 
