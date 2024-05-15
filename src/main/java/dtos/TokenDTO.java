@@ -19,7 +19,7 @@ public class TokenDTO {
 
     public TokenDTO(String token, User user) {
         this.token = token;
-        this.username = user.getUsername();
+        this.username = user.getEmail();
         this.roles = user.getRolesAsStrings(); // Assuming you have a method to get role names as strings
     }
 }
