@@ -19,6 +19,23 @@ cph-yb48@cphbusiness.dk
 ### Beskrivelse for hjemmesiden
 Brugere kan oprette sig og logge på hjemmesiden. Hver bruger har mulighed for at oprette et salg af et produkt. Man kan kun opdatere og slette ens egne salg. Alle brugere på hjemmesiden kan se andres produkter som er til salg. Herfra kan man kontakte personen via sælgerens kontaktoplysninger.
 
+### Krav til hjemmesiden
+
+- [ ] Components
+- [ ] A facade for data fetching etc
+- [ ] React Router
+- [ ] Hooks: useState, useEffect, useParams
+- [ ] Props
+- [ ] Conditional Rendering
+- [ ] Lifting state
+- [ ] Controlled input forms
+- [ ] Callbacks
+- [ ] Authentication and Authorization (Login/Logout/Register/JWT handling)
+- [ ] Error handling (Show error messages from the backend)
+- [ ] Loading indicators
+- [ ] Use of a CSS framework (styled-components, react-icons etc.)
+- [ ] All CRUD operations
+
 ### Endpoints documentation 
 
 ### Path: .../api/auth
