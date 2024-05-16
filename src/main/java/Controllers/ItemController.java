@@ -25,7 +25,7 @@ public class ItemController {
             if (foundItem != null) {
                 ItemDTO itemDTO = ItemDTO.builder()
                         .id(foundItem.getId())
-                        .name(foundItem.getTitle())
+                        .fullName(foundItem.getTitle())
                         .address(foundItem.getAddress())
                         //.rooms(foundItem.getRooms())
                         .build();
@@ -87,7 +87,7 @@ public class ItemController {
             //updatedItemDTO.setRooms(foundItem.getRooms());
 
             if (foundItem != null) {
-                foundItem.setTitle(updatedItemDTO.getName());
+                foundItem.setTitle(updatedItemDTO.getFullName());
                 foundItem.setAddress(updatedItemDTO.getAddress());
 
                 // Save the updated hotel to the database
