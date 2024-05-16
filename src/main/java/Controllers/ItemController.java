@@ -1,6 +1,7 @@
 package Controllers;
 
 import daos.ItemDAO;
+
 import dtos.ItemDTO;
 import persistence.Model.Item;
 import io.javalin.http.Handler;
@@ -46,13 +47,20 @@ public class ItemController {
                 Item foundItem = dao.getById(id);
                 ItemDTO itemDTO = ItemDTO.builder()
                         .id(foundItem.getId())
-                        .name(foundItem.getTitle())
+                        .title(foundItem.getTitle())
+                        .description(foundItem.getDescription())
+                        .price(foundItem.getPrice())
+                        .fullName(foundItem.getFullName())
                         .address(foundItem.getAddress())
+                        .phoneNr(foundItem.getPhoneNr())
+                        .user(foundItem.getUser()) //har vi brug for en user også???
+
                        // .rooms(foundItem.getRooms())
+
                         .build();
                 ctx.status(HttpStatus.OK).json(itemDTO);
             } else {
-                ctx.status(HttpStatus.NOT_FOUND).result("The hotel id you are looking for does not exist.");
+                ctx.status(HttpStatus.NOT_FOUND).result("The item you are looking for does not exist.");
             }
         };
     }

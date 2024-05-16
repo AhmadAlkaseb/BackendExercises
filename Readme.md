@@ -12,7 +12,7 @@ cph-ha186@cphbusiness.dk
 cph-lh225@cphbusiness.dk  
 @Lassekh  
 
-**Youssef**
+**Youssef**  
 cph-yb48@cphbusiness.dk  
 @Badranyoussef  
 
@@ -59,6 +59,20 @@ None
 ##### Response
 application/json
 
+##### Exceptions
+- Exception: APIException
+- Status: 404
+
+</details>
+
+
+<details>
+ <summary><code>GET</code> <code><b>/api/items/{id}</b></code> <code>get item by id</code></summary>
+
+##### Parameters
+item id
+##### Response
+application/json
 
 ##### Exceptions
 - Exception: APIException
@@ -67,6 +81,7 @@ application/json
 </details>
 
 ### Links
+
 
 **Backend repository**  
 [Tryk her](https://github.com/AhmadAlkaseb/WebShopBackend)  
