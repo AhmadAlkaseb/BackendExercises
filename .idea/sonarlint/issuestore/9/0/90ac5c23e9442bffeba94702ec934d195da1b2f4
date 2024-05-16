@@ -1,23 +1,20 @@
 
-Ô
-java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(Ğá™_J$1b3cff1d-9377-48c5-97e6-f6e7c109c0a9
-w
-java:S1117"6Rename "om" which hides the field declared at line 21.(´ØÍ­úÿÿÿÿJ$da087e7d-8251-4436-9f67-fa1721a9d589
-h
-java:S1481"'Remove this unused "om" local variable.(´ØÍ­úÿÿÿÿJ$56f03a83-9fd0-4c2b-a001-ea28ea4b5ca9
-‚
-java:S1075 "ARefactor your code to get this URI from a customizable parameter.(®â±ÉøÿÿÿÿJ$5c7e12b4-499c-417b-814a-c3a66e557f37
-h
-java:S1602!",Remove useless curly braces around statement(ÛŒÔÀJ$e1831558-e809-4ceb-ac21-66d95baa2792
-m
-java:S1602"",Remove useless curly braces around statement(Ôˆ–¾şÿÿÿÿJ$13ce0b6c-d073-400a-91ad-63c230e275de
-‡
-java:S1612""FReplace this lambda with method reference 'CorsPluginConfig::anyHost'.(Ôˆ–¾şÿÿÿÿJ$ba0586e1-5a05-478b-bf5f-c6aafdd8099f
-m
-java:S1602F",Remove useless curly braces around statement(î¹äÅûÿÿÿÿJ$9b908506-a763-4709-afb7-08679c9c9922
-m
-java:S1602J",Remove useless curly braces around statement(­´Î£şÿÿÿÿJ$f0cd03d8-7bb2-44f2-963f-5b17dff2b520
-m
-java:S1602S",Remove useless curly braces around statement(šÍÜÿÿÿÿÿJ$894164ae-4b68-40ec-aebe-5f53e2d6cdb1
-|	java:S125V"<This block of commented-out lines of code should be removed.(˜İÕüÿÿÿÿJ$4d4c1772-ec03-4351-af36-1ac7664c9514
-k	java:S106`"+Replace this use of System.out by a logger.(ÅÈÂ½şÿÿÿÿJ$59f372f6-3811-49b5-8fec-dbb449a910ee
+Û
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(Ğá™_8ûà¸ø1J$8cede1df-3a21-441d-9e35-938fa46d5e6b
+~
+java:S1117"6Rename "om" which hides the field declared at line 21.(´ØÍ­úÿÿÿÿ8›á¸ø1J$702964ad-8e76-479e-ab0b-bccd0f43eca4
+o
+java:S1481"'Remove this unused "om" local variable.(´ØÍ­úÿÿÿÿ8›á¸ø1J$5e06d62c-e204-4ac2-8f6b-6eb55c308fdf
+‰
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(®â±Éøÿÿÿÿ8›á¸ø1J$3e2060c5-cd1a-4a4d-b934-35fc0cc1bbdf
+o
+java:S1602",Remove useless curly braces around statement(ÛŒÔÀ8›á¸ø1J$033565c5-389e-4dfe-a57e-b13bc2af4cd6
+t
+java:S1602",Remove useless curly braces around statement(Ôˆ–¾şÿÿÿÿ8«á¸ø1J$b82bee09-2d9b-42b4-853b-b53a2ae5fafa
+t
+java:S1602A",Remove useless curly braces around statement(î¹äÅûÿÿÿÿ8«á¸ø1J$64794ee6-958f-4444-998e-1d0488767b10
+t
+java:S1602E",Remove useless curly braces around statement(­´Î£şÿÿÿÿ8«á¸ø1J$17949807-4298-4c8d-b5db-ca01c5048d6b
+t
+java:S1602L",Remove useless curly braces around statement(šÍÜÿÿÿÿÿ8ì¾ø1J$9ed955b7-03d7-4fb1-8cc4-fd2110e1eae5
+r	java:S106U"+Replace this use of System.out by a logger.(ÅÈÂ½şÿÿÿÿ8»á¸ø1J$066684cc-02a4-4a51-a268-ffbdf01ae710
