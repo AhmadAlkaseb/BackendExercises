@@ -1,0 +1,23 @@
+
+®
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(Ğá™_
+Q
+java:S1117"6Rename "om" which hides the field declared at line 21.(´ØÍ­úÿÿÿÿ
+B
+java:S1481"'Remove this unused "om" local variable.(´ØÍ­úÿÿÿÿ
+\
+java:S1075 "ARefactor your code to get this URI from a customizable parameter.(®â±Éøÿÿÿÿ
+B
+java:S1602!",Remove useless curly braces around statement(ÛŒÔÀ
+G
+java:S1602"",Remove useless curly braces around statement(Ôˆ–¾şÿÿÿÿ
+a
+java:S1612""FReplace this lambda with method reference 'CorsPluginConfig::anyHost'.(Ôˆ–¾şÿÿÿÿ
+G
+java:S1602F",Remove useless curly braces around statement(î¹äÅûÿÿÿÿ
+G
+java:S1602J",Remove useless curly braces around statement(­´Î£şÿÿÿÿ
+G
+java:S1602S",Remove useless curly braces around statement(šÍÜÿÿÿÿÿ
+V	java:S125V"<This block of commented-out lines of code should be removed.(˜İÕüÿÿÿÿ
+E	java:S106`"+Replace this use of System.out by a logger.(ÅÈÂ½şÿÿÿÿ

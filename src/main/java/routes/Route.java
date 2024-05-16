@@ -10,7 +10,7 @@ public class Route {
     private static EntityManagerFactory emf = HibernateConfig.getEntityManagerFactoryConfig(false);
     private static ItemDAO itemDAO = ItemDAO.getInstance(emf);
     private static UserDAO userDAO = UserDAO.getInstance(emf);
-    private static RouteItem routeItem = new RouteItem(itemDAO);
+    private static RouteItem routeItem = new RouteItem(itemDAO, userDAO);
     private static RouteUser routeUser = new RouteUser();
 
     // Declare a public static method named addRoutes which returns an EndpointGroup

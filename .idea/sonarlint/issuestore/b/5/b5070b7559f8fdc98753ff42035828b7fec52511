@@ -1,7 +1,11 @@
 
 l
-java:S3010"$Remove this assignment of "itemDAO".(Æ©¹ùÿÿÿÿ8º³úÙ÷1J$8b5c3077-b5da-4479-b42f-6d854590c9c8
-v
-java:S2209"5Change this instance-reference to a static reference.(Æ©¹ùÿÿÿÿJ$90a87c97-b4d9-4a58-96db-fd4fbff2827d
+java:S3010"$Remove this assignment of "itemDAO".(Æ©¹ùÿÿÿÿ8ì·Ùƒø1J$989dce50-3db3-48ea-a41f-893942c7e3fd
+g
+java:S3010"$Remove this assignment of "userDAO".(ŸÎÿò8í·Ùƒø1J$4523d733-2521-4efd-ad2e-4cfe0015ea5e
+}
+java:S2209"5Change this instance-reference to a static reference.(Æ©¹ùÿÿÿÿ8î·Ùƒø1J$6074b148-af94-4f7c-99be-78c63ba48904
+x
+java:S2209"5Change this instance-reference to a static reference.(ŸÎÿò8î·Ùƒø1J$383305a1-c1db-40bc-9e7c-4f12ef3129cd
 t
-java:S1602",Remove useless curly braces around statement(‚“‘Ôûÿÿÿÿ8º³úÙ÷1J$a1e989aa-bba2-4938-b24d-fecf50e08706
+java:S1602",Remove useless curly braces around statement(‚“‘Ôûÿÿÿÿ8ğ·Ùƒø1J$9b6e09fb-c47e-4579-aef6-6359e6ee5a16

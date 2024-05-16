@@ -22,12 +22,38 @@ GET http://localhost:7007/api/items
 ### Get item by id - VIRKER FINT
 GET http://localhost:7007/api/items/1
 
-### Upload item
+### Upload item - VIRKER FINT
 POST http://localhost:7007/api/items/
-
-### Update item
-PUT http://localhost:7007/api/items/ahmad@email.dk
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzdWIiOiJhaG1hZEBlbWFpbC5kayIsImV4cCI6MTcxNTg0Njg1MSwiZW1haWwiOiJhaG1hZEBlbWFpbC5kayIsInJvbGVzIjoidXNlciJ9.hm8w17oxP5ZXd9CzkEq-wgZkeNLzuHqCizZC1gx53J0
 
+{
+  "title": "Vintage Chair",
+  "description": "A great vintage chair",
+  "price": 150.0,
+  "fullName": "John Doe",
+  "address": "123 Elm St",
+  "phoneNr": 12345678,
+  "user": {
+     "email": "ahmad@email.dk"
+  }
+}
+
+### Update item - VIRKER FINT
+PUT http://localhost:7007/api/items/ahmad@email.dk
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzdWIiOiJhaG1hZEBlbWFpbC5kayIsImV4cCI6MTcxNTg0OTA3NSwiZW1haWwiOiJhaG1hZEBlbWFpbC5kayIsInJvbGVzIjoidXNlciJ9.mKMBElaIf3e7EQB5t43J0Afv5pk5zor_RRqCt7KSfz8
+
+{
+  "id": 11,
+  "title": "Vintage Chairr",
+  "description": "A great vintage chair",
+  "price": 150.0,
+  "fullName": "John Doe",
+  "address": "123 Elm St",
+  "phoneNr": 12345678
+}
+
 ### Delete item
-DELETE http://localhost:7007/api/items/{user_id}
+DELETE http://localhost:7007/api/items/ahmad@email.dk
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzdWIiOiJhaG1hZEBlbWFpbC5kayIsImV4cCI6MTcxNTg1MDk5NSwiZW1haWwiOiJhaG1hZEBlbWFpbC5kayIsInJvbGVzIjoidXNlciJ9.dyooOOgu33PlURNv2OyVQ11cBGhko86t5y-KUbJ72SU
+
+11

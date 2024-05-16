@@ -1,11 +1,8 @@
 package daos;
 
+import jakarta.persistence.*;
 import persistence.Model.Role;
 import persistence.Model.User;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.EntityNotFoundException;
-import jakarta.persistence.TypedQuery;
 
 public class UserDAO implements ISecurityDAO {
 
@@ -98,6 +95,20 @@ public class UserDAO implements ISecurityDAO {
         if (user == null) throw new EntityNotFoundException("No user found");
         if (!user.verifyPassword(password)) throw new EntityNotFoundException("Wrong password");
         return user;
+    }
+
+
+    public User getByString(String email) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            TypedQuery<User> query = em.createQuery("SELECT u FROM User u WHERE u.email = :email", User.class);
+            query.setParameter("email", email);
+            return query.getSingleResult();
+        } catch (NoResultException e) {
+            return null;
+        } finally {
+            em.close();
+        }
     }
 }
 

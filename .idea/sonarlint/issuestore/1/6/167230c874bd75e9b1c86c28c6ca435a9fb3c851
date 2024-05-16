@@ -1,9 +1,8 @@
 
-‘	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïà™ÈşÿÿÿÿJ$f4411469-702d-4595-b8fe-b1bdc5cbcdae
-‡
-java:S2095`"KUse try-with-resources or close this "EntityManager" in a "finally" clause.(ì¶ĞJ$db2e336d-94f6-455a-9662-64dc59d699bb
-Õ
-java:S6548
-"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ıÑ±¯J$4f5dba88-4f98-4239-a700-1246e0900e1e
-z
-java:S1172["9Remove these unused method parameters "username", "role".(«§±öúÿÿÿÿJ$c8ec709e-dfc6-4ce0-96e7-37fb6709654d
+˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïà™Èşÿÿÿÿ8ë™Îƒø1J$077a319c-fa5a-4a02-98c6-078d1d9100c5
+
+java:S2095]"KUse try-with-resources or close this "EntityManager" in a "finally" clause.(ì¶Ğ8ø™Îƒø1J$e2eca86c-6543-48b9-9745-e7cc0c929879
+Ü
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ıÑ±¯8û™Îƒø1J$eab4cf7a-33c3-4073-a3d0-6c7a11b4d33b
+
+java:S1172X"9Remove these unused method parameters "username", "role".(«§±öúÿÿÿÿ8…šÎƒø1J$4b3b333e-1442-4dc2-86c7-cdfd138ddd3a

@@ -62,3 +62,7 @@ Y
 )src/main/java/persistence/Model/Role.java,d\7\d78a33fa0f495cf322b4ffbc2c6e26f65e2b34c8
 O
 src/main/java/dtos/ItemDTO.java,9\0\90fd35f3fe53f9eceb5e209fd014c586d624f9d3
+S
+#src/main/java/daos/AbstractDAO.java,a\8\a80b1f377d0f34a116bf7e32bbd58445cfb7e901
+Y
+)src/main/java/rest/ApplicationConfig.java,9\0\90ac5c23e9442bffeba94702ec934d195da1b2f4

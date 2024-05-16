@@ -1,4 +1,13 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ü‚ùıúÿÿÿÿ8ª˜¤‚ø1J$8a34e5a9-56cf-4a42-9497-a3dae1c16ce6
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ü‚ùıúÿÿÿÿ8¤õ»„ø1J$7661b1c3-9146-4a89-b889-08e9b4bfe341
 }
-java:S1118":Add a private constructor to hide the implicit public one.(Ì½ÍÒ8³˜¤‚ø1J$4833bcb1-3074-4bbb-b0d4-bad9db4fabac
+java:S1118":Add a private constructor to hide the implicit public one.(Ì½ÍÒ8­õ»„ø1J$9729e5bf-ea1f-4a93-9a4d-28c4e12b1c43
+m
+java:S14811"*Remove this unused "email" local variable.(ñç“Ç8´õ»„ø1J$b2960f1a-3e5f-4503-97b1-72e909d45f89
+†
+java:S1128">Remove this unused import 'jakarta.persistence.EntityManager'.(·ïŸéúÿÿÿÿ8†²¼„ø1J$a13d8ad8-11e8-47da-ab6f-9eb656a0d357
+
+java:S1128	"ERemove this unused import 'jakarta.persistence.EntityManagerFactory'.(‹ ñºûÿÿÿÿ8†²¼„ø1J$5a230311-e127-4811-b27d-e7444d71a675
+{
+java:S1128
+"8Remove this unused import 'persistence.HibernateConfig'.(µóµ…8‡²¼„ø1J$5140701a-cef9-4760-b9cc-697320b53f7a

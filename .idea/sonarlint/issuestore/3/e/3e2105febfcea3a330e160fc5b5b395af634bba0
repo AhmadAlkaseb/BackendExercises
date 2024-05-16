@@ -1,6 +1,5 @@
 
-r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ý¨æÃþÿÿÿÿ8òï°í÷1
-r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†ß×¼ûÿÿÿÿ8óï°í÷1
-K
-java:S2387"."emf" is the name of a field in "AbstractDAO".(™àŽö8Ùð°í÷1
-~	java:S125/"<This block of commented-out lines of code should be removed.(öª‡Ü8œúÄÛ÷1J$bf2ea375-70e6-4e6e-af61-741c1c662b25
+˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ý¨æÃþÿÿÿÿ8Û«É„ø1J$a1e9b8d7-4383-4a77-aa9b-9cd088f19d1f
+˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†ß×¼ûÿÿÿÿ8Ü«É„ø1J$653e08c0-ea08-427f-b1ed-3b658db1be8e
+q
+java:S2387"."emf" is the name of a field in "AbstractDAO".(™àŽö8ä«É„ø1J$3626878a-2c0d-423d-8d0b-d7b8441a57f8

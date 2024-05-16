@@ -4,6 +4,7 @@ import persistence.Model.Item;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.TypedQuery;
+import persistence.Model.User;
 
 import java.util.List;
 
@@ -39,20 +40,18 @@ public class ItemDAO extends AbstractDAO<Item> {
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
-
             Item itemFound = em.find(Item.class, id);
 
             if (itemFound != null) {
-                // Remove all associated rooms first
-               /* for (Room room : itemFound.getRooms()) {
-                    em.remove(room);
+                // Clear associations
+                User user = itemFound.getUser();
+                if (user != null) {
+                    user.getItems().remove(itemFound);
                 }
-
-                // Remove the hotel itself
+                itemFound.setUser(null);
                 em.remove(itemFound);
-
                 em.getTransaction().commit();
-                return 1;*/
+                return 1;
             }
             return 0;
         } finally {
