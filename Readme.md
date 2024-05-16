@@ -21,65 +21,6 @@ Brugere kan oprette sig og logge på hjemmesiden. Hver bruger har mulighed for a
 
 ### Endpoints documentation 
 
-<details>
- <summary><code>GET</code> <code><b>/api/auth/login</b></code> <code>get all cars from the carshop</code></summary>
-
-##### Parameters
-None
-##### Response
-application/json
-
-
-##### Exceptions
-- Exception: APIException
-- Status: 404
-
-</details>
-
-<details>
- <summary><code>GET</code> <code><b>/api/auth/register</b></code> <code>get all cars from the carshop</code></summary>
-
-##### Parameters
-None
-##### Response
-application/json
-
-
-##### Exceptions
-- Exception: APIException
-- Status: 404
-
-</details>
-
-<details>
- <summary><code>GET</code> <code><b>/api/register</b></code> <code>get all cars from the carshop</code></summary>
-
-##### Parameters
-None
-##### Response
-application/json
-
-##### Exceptions
-- Exception: APIException
-- Status: 404
-
-</details>
-
-
-<details>
- <summary><code>GET</code> <code><b>/api/items/{id}</b></code> <code>get item by id</code></summary>
-
-##### Parameters
-item id
-##### Response
-application/json
-
-##### Exceptions
-- Exception: APIException
-- Status: 404
-
-</details>
-
 ### Links
 
 
@@ -90,7 +31,7 @@ application/json
 [Tryk her](https://github.com/AhmadAlkaseb/WebShopFrontend)  
 
 **Hjemmesiden**  
-[Tryk her](cphbusinessproject.dk)  
+[Tryk her](https://cphbusinessprojekt.dk/)  
 
 **Projektbeskrivelsen**  
 [Se projektbeskrivelsen på Moodle](https://github.com/dat3Cph/material/blob/sem2024spring/flowFrontend/week5-project/miniproject.md)  
