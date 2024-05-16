@@ -1,19 +1,40 @@
 package Controllers;
 
 import daos.ItemDAO;
-
 import dtos.ItemDTO;
-import persistence.Model.Item;
 import io.javalin.http.Handler;
 import io.javalin.http.HttpStatus;
+import persistence.Model.Item;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ItemController {
+
+    public static ItemDTO convertToDTO(Item item) {
+        return ItemDTO.builder()
+                .id(item.getId())
+                .title(item.getTitle())
+                .description(item.getDescription())
+                .price(item.getPrice())
+                .fullName(item.getFullName())
+                .address(item.getAddress())
+                .phoneNr(item.getPhoneNr())
+                .userEmail(item.getUser().getEmail())
+                .build();
+    }
+
     public static Handler getAll(ItemDAO dao) {
         return ctx -> {
-            if (dao.getAll().isEmpty()) {
-                ctx.status(HttpStatus.NOT_FOUND).result("No hotels were found.");
+            List<Item> itemList = dao.getAll();
+            List<ItemDTO> dtoList = new ArrayList<>();
+            for (Item i : itemList) {
+                dtoList.add(convertToDTO(i));
+            }
+            if (dtoList.isEmpty()) {
+                ctx.status(HttpStatus.NOT_FOUND).result("No items were found.");
             } else {
-                ctx.status(HttpStatus.OK).json(dao.getAll());
+                ctx.status(HttpStatus.OK).json(dtoList);
             }
         };
     }
@@ -23,16 +44,9 @@ public class ItemController {
             int id = Integer.parseInt(ctx.pathParam("user_id"));
             Item foundItem = dao.getById(id);
             if (foundItem != null) {
-                ItemDTO itemDTO = ItemDTO.builder()
-                        .id(foundItem.getId())
-                        .name(foundItem.getTitle())
-                        .address(foundItem.getAddress())
-                        //.rooms(foundItem.getRooms())
-                        .build();
-
+                ItemDTO dto = convertToDTO(foundItem);
                 dao.delete(foundItem.getId());
-
-                ctx.status(HttpStatus.OK).json(itemDTO);
+                ctx.status(HttpStatus.OK).json(dto);
             } else {
                 ctx.status(HttpStatus.NOT_FOUND).result("Item was not found.");
             }
@@ -43,22 +57,10 @@ public class ItemController {
     public static Handler getById(ItemDAO dao) {
         return ctx -> {
             int id = Integer.parseInt(ctx.pathParam("id"));
-            if (dao.getById(id) != null) {
-                Item foundItem = dao.getById(id);
-                ItemDTO itemDTO = ItemDTO.builder()
-                        .id(foundItem.getId())
-                        .title(foundItem.getTitle())
-                        .description(foundItem.getDescription())
-                        .price(foundItem.getPrice())
-                        .fullName(foundItem.getFullName())
-                        .address(foundItem.getAddress())
-                        .phoneNr(foundItem.getPhoneNr())
-                        .user(foundItem.getUser()) //har vi brug for en user også???
-
-                       // .rooms(foundItem.getRooms())
-
-                        .build();
-                ctx.status(HttpStatus.OK).json(itemDTO);
+            Item foundItem = dao.getById(id);
+            ItemDTO dto = convertToDTO(foundItem);
+            if (dto != null) {
+                ctx.status(HttpStatus.OK).json(dto);
             } else {
                 ctx.status(HttpStatus.NOT_FOUND).result("The item you are looking for does not exist.");
             }
@@ -68,9 +70,10 @@ public class ItemController {
     public static Handler create(ItemDAO dao) {
         return ctx -> {
             Item item = ctx.bodyAsClass(Item.class);
-            if (item != null) {
-                dao.create(item);
-                ctx.status(HttpStatus.OK).json(item);
+            Item createdItem = dao.create(item);
+            ItemDTO dto = convertToDTO(createdItem);
+            if (dto != null) {
+                ctx.status(HttpStatus.OK).json(dto);
             } else {
                 ctx.status(HttpStatus.INTERNAL_SERVER_ERROR).result("Couldn't create the item with the given data.");
             }
@@ -81,23 +84,13 @@ public class ItemController {
         return ctx -> {
             int id = Integer.parseInt(ctx.pathParam("user_id"));
             ItemDTO updatedItemDTO = ctx.bodyAsClass(ItemDTO.class);
-
-            // Fetch the hotel from the database
             Item foundItem = dao.getById(id);
-            //updatedItemDTO.setRooms(foundItem.getRooms());
-
             if (foundItem != null) {
-                foundItem.setTitle(updatedItemDTO.getName());
-                foundItem.setAddress(updatedItemDTO.getAddress());
-
-                // Save the updated hotel to the database
+                ItemDTO dto = convertToDTO(foundItem);
                 dao.update(foundItem);
                 updatedItemDTO.setId(id);
-
-                // Return the updated hotelDTO object as JSON response
-                ctx.json(updatedItemDTO);
+                ctx.json(dto);
             } else {
-                // Item with the provided ID not found
                 ctx.status(HttpStatus.NOT_FOUND).result("Item not found.");
             }
         };

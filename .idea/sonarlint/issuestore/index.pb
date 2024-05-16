@@ -60,3 +60,5 @@ b
 .src/main/java/persistence/HibernateConfig.java,4\0\4018b07443740ec2a11b41d0c61b7ba73b2e8b0a
 Y
 )src/main/java/persistence/Model/Role.java,d\7\d78a33fa0f495cf322b4ffbc2c6e26f65e2b34c8
+O
+src/main/java/dtos/ItemDTO.java,9\0\90fd35f3fe53f9eceb5e209fd014c586d624f9d3
