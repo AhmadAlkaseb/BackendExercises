@@ -24,7 +24,9 @@ public class ItemController {
                 .price(item.getPrice())
                 .fullName(item.getFullName())
                 .address(item.getAddress())
-                .phoneNr(item.getPhoneNr())
+                .phoneNr(item.getPhoneNumber())
+                .postalCode(item.getPostalCode())
+                .status(item.isStatus())
                 .userEmail(item.getUser().getEmail())
                 .build();
     }

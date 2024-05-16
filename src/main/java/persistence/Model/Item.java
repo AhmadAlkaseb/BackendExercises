@@ -3,6 +3,7 @@ package persistence.Model;
 import com.nimbusds.jose.shaded.json.annotate.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,7 +23,10 @@ public class Item {
 
     private String fullName;
     private String address;
-    private int phoneNr;
+    private int postalCode;
+    private int phoneNumber;
+    @ColumnDefault("false")
+    private boolean status;
 
     @JsonIgnore
     @ManyToOne()

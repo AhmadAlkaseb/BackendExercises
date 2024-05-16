@@ -1,30 +1,30 @@
-### Log ind med en bruger - VIRKER FINT
+### Log ind med en bruger
 POST http://localhost:7007/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "ahmad@email.dk",
+  "email": "ahmad@email.dkk",
   "password": "1234"
 }
 
-### Registrering af en bruger - VIRKER FINT
+### Registrering af en bruger
 POST http://localhost:7007/api/auth/register
 Content-Type: application/json
 
 {
-  "email": "ahmad@email.dk",
+  "email": "ahmad@email.dkk",
   "password": "1234"
 }
 
-### Get all items - VIRKER FINT
+### Get all items
 GET http://localhost:7007/api/items
 
-### Get item by id - VIRKER FINT
+### Get item by id
 GET http://localhost:7007/api/items/1
 
-### Upload item - VIRKER FINT
+### Upload item
 POST http://localhost:7007/api/items/
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzdWIiOiJhaG1hZEBlbWFpbC5kayIsImV4cCI6MTcxNTg0Njg1MSwiZW1haWwiOiJhaG1hZEBlbWFpbC5kayIsInJvbGVzIjoidXNlciJ9.hm8w17oxP5ZXd9CzkEq-wgZkeNLzuHqCizZC1gx53J0
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzdWIiOiJhaG1hZEBlbWFpbC5ka2siLCJleHAiOjE3MTU4NTg4NjAsImVtYWlsIjoiYWhtYWRAZW1haWwuZGtrIiwicm9sZXMiOiJ1c2VyIn0.-DTEgPPXHt3NXGuri2OkwnkeI3th6V2BAoFlBLD01aQ
 
 {
   "title": "Vintage Chair",
@@ -32,24 +32,27 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzd
   "price": 150.0,
   "fullName": "John Doe",
   "address": "123 Elm St",
-  "phoneNr": 12345678,
+  "postalCode": 2800,
+  "phoneNumber": 12345678,
   "user": {
      "email": "ahmad@email.dk"
   }
 }
 
-### Update item - VIRKER FINT
+### Update item
 PUT http://localhost:7007/api/items/ahmad@email.dk
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzdWIiOiJhaG1hZEBlbWFpbC5kayIsImV4cCI6MTcxNTg0OTA3NSwiZW1haWwiOiJhaG1hZEBlbWFpbC5kayIsInJvbGVzIjoidXNlciJ9.mKMBElaIf3e7EQB5t43J0Afv5pk5zor_RRqCt7KSfz8
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzdWIiOiJhaG1hZEBlbWFpbC5ka2siLCJleHAiOjE3MTU4NTg4NjAsImVtYWlsIjoiYWhtYWRAZW1haWwuZGtrIiwicm9sZXMiOiJ1c2VyIn0.-DTEgPPXHt3NXGuri2OkwnkeI3th6V2BAoFlBLD01aQ
 
 {
-  "id": 11,
+  "id": 2,
   "title": "Vintage Chairr",
   "description": "A great vintage chair",
   "price": 150.0,
   "fullName": "John Doe",
   "address": "123 Elm St",
-  "phoneNr": 12345678
+  "postalCode": 2800,
+  "status": true,
+  "phoneNumber": 12345678
 }
 
 ### Delete item

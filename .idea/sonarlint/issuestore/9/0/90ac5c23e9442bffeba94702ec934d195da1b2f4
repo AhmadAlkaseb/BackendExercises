@@ -1,23 +1,23 @@
 
-®
-java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(Ğá™_
-Q
-java:S1117"6Rename "om" which hides the field declared at line 21.(´ØÍ­úÿÿÿÿ
-B
-java:S1481"'Remove this unused "om" local variable.(´ØÍ­úÿÿÿÿ
-\
-java:S1075 "ARefactor your code to get this URI from a customizable parameter.(®â±Éøÿÿÿÿ
-B
-java:S1602!",Remove useless curly braces around statement(ÛŒÔÀ
-G
-java:S1602"",Remove useless curly braces around statement(Ôˆ–¾şÿÿÿÿ
-a
-java:S1612""FReplace this lambda with method reference 'CorsPluginConfig::anyHost'.(Ôˆ–¾şÿÿÿÿ
-G
-java:S1602F",Remove useless curly braces around statement(î¹äÅûÿÿÿÿ
-G
-java:S1602J",Remove useless curly braces around statement(­´Î£şÿÿÿÿ
-G
-java:S1602S",Remove useless curly braces around statement(šÍÜÿÿÿÿÿ
-V	java:S125V"<This block of commented-out lines of code should be removed.(˜İÕüÿÿÿÿ
-E	java:S106`"+Replace this use of System.out by a logger.(ÅÈÂ½şÿÿÿÿ
+Ô
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(Ğá™_J$1b3cff1d-9377-48c5-97e6-f6e7c109c0a9
+w
+java:S1117"6Rename "om" which hides the field declared at line 21.(´ØÍ­úÿÿÿÿJ$da087e7d-8251-4436-9f67-fa1721a9d589
+h
+java:S1481"'Remove this unused "om" local variable.(´ØÍ­úÿÿÿÿJ$56f03a83-9fd0-4c2b-a001-ea28ea4b5ca9
+‚
+java:S1075 "ARefactor your code to get this URI from a customizable parameter.(®â±ÉøÿÿÿÿJ$5c7e12b4-499c-417b-814a-c3a66e557f37
+h
+java:S1602!",Remove useless curly braces around statement(ÛŒÔÀJ$e1831558-e809-4ceb-ac21-66d95baa2792
+m
+java:S1602"",Remove useless curly braces around statement(Ôˆ–¾şÿÿÿÿJ$13ce0b6c-d073-400a-91ad-63c230e275de
+‡
+java:S1612""FReplace this lambda with method reference 'CorsPluginConfig::anyHost'.(Ôˆ–¾şÿÿÿÿJ$ba0586e1-5a05-478b-bf5f-c6aafdd8099f
+m
+java:S1602F",Remove useless curly braces around statement(î¹äÅûÿÿÿÿJ$9b908506-a763-4709-afb7-08679c9c9922
+m
+java:S1602J",Remove useless curly braces around statement(­´Î£şÿÿÿÿJ$f0cd03d8-7bb2-44f2-963f-5b17dff2b520
+m
+java:S1602S",Remove useless curly braces around statement(šÍÜÿÿÿÿÿJ$894164ae-4b68-40ec-aebe-5f53e2d6cdb1
+|	java:S125V"<This block of commented-out lines of code should be removed.(˜İÕüÿÿÿÿJ$4d4c1772-ec03-4351-af36-1ac7664c9514
+k	java:S106`"+Replace this use of System.out by a logger.(ÅÈÂ½şÿÿÿÿJ$59f372f6-3811-49b5-8fec-dbb449a910ee

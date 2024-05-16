@@ -15,5 +15,7 @@ public class ItemDTO {
     private String fullName;
     private String address;
     private int phoneNr;
+    private int postalCode;
+    private boolean status;
     private String userEmail;
 }
