@@ -219,7 +219,10 @@ User & Admin
 [Tryk her](https://github.com/AhmadAlkaseb/WebShopBackend)  
 
 **Frontend repository**  
-[Tryk her](https://github.com/AhmadAlkaseb/WebShopFrontend)  
+[Tryk her](https://github.com/AhmadAlkaseb/WebShopFrontend)
+
+**PowerPoint Design**  
+[Tryk her](https://docs.google.com/presentation/d/1tMKkrRPzy8CNIkY6ZMPVO2yr8kHRrLsOsiXY3-lI6dY/edit#slide=id.p) 
 
 **Hjemmesiden**  
 [Tryk her](https://cphbusinessprojekt.dk/)  
