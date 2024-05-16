@@ -1,22 +1,22 @@
-### Log ind med en bruger
+### Log ind med en bruger - VIRKER FINT
 POST http://localhost:7007/api/auth/login
 Content-Type: application/json
 
 {
-  "username": "Ahmad",
+  "email": "AhmadTest",
   "password": "1234"
 }
 
-### Registrering af en bruger
+### Registrering af en bruger - VIRKER FINT
 POST http://localhost:7007/api/auth/register
 Content-Type: application/json
 
 {
-  "username": "Youssef",
+  "email": "AhmadTest",
   "password": "1234"
 }
 
-### Get all items
+### Get all items - VIRKER FINT
 GET http://localhost:7007/api/items
 
 ### Get item by id

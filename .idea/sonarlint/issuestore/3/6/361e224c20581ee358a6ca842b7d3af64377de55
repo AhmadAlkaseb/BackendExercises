@@ -1,0 +1,10 @@
+
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‚ÌıÿÿÿÿJ$f811e17a-1be2-4a4e-9949-a9598c204e00
+g
+java:S1168@"+Return an empty collection instead of null.(¥¹ïJ$30dff675-8c7a-4cd3-bad4-fc2a9df15531
+s
+java:S1611C"2Remove the parentheses around the "role" parameter(·½ÛƒıÿÿÿÿJ$fa04b295-9dcb-45ec-a96a-ef27340f0d88
+m
+java:S1602C",Remove useless curly braces around statement(·½ÛƒıÿÿÿÿJ$cc318177-830f-442d-b7ef-2b8277fbd4d1
+}
+java:S1858D"A"getName" returns a string, there's no need to call "toString()".(®âŠŞJ$462803af-3a09-4273-b8f3-cea5c967e3d1

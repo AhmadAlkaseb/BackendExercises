@@ -1,7 +1,9 @@
 package dtos;
 
 import lombok.*;
+
 import persistence.Model.User;
+
 
 @Getter
 @Setter
@@ -9,6 +11,7 @@ import persistence.Model.User;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ItemDTO {
+
 
     private Integer id;
     private String title;

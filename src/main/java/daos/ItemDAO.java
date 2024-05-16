@@ -44,7 +44,7 @@ public class ItemDAO extends AbstractDAO<Item> {
 
             if (itemFound != null) {
                 // Remove all associated rooms first
-                for (Room room : itemFound.getRooms()) {
+               /* for (Room room : itemFound.getRooms()) {
                     em.remove(room);
                 }
 
@@ -52,7 +52,7 @@ public class ItemDAO extends AbstractDAO<Item> {
                 em.remove(itemFound);
 
                 em.getTransaction().commit();
-                return 1;
+                return 1;*/
             }
             return 0;
         } finally {

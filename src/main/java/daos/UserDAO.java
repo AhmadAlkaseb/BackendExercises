@@ -92,9 +92,9 @@ public class UserDAO implements ISecurityDAO {
         return null;
     }
 
-    public User verifyUser(String username, String password) {
+    public User verifyUser(String email, String password) {
         EntityManager em = emf.createEntityManager();
-        User user = em.find(User.class, username);
+        User user = em.find(User.class, email);
         if (user == null) throw new EntityNotFoundException("No user found");
         if (!user.verifyPassword(password)) throw new EntityNotFoundException("Wrong password");
         return user;

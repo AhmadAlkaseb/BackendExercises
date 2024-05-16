@@ -1,7 +1,7 @@
 package Controllers;
 
 import daos.ItemDAO;
-import dtos.HotelDTO;
+
 import dtos.ItemDTO;
 import persistence.Model.Item;
 import io.javalin.http.Handler;
@@ -23,16 +23,16 @@ public class ItemController {
             int id = Integer.parseInt(ctx.pathParam("user_id"));
             Item foundItem = dao.getById(id);
             if (foundItem != null) {
-                HotelDTO hotelDTO = HotelDTO.builder()
+                ItemDTO itemDTO = ItemDTO.builder()
                         .id(foundItem.getId())
                         .name(foundItem.getTitle())
                         .address(foundItem.getAddress())
-                        .rooms(foundItem.getRooms())
+                        //.rooms(foundItem.getRooms())
                         .build();
 
                 dao.delete(foundItem.getId());
 
-                ctx.status(HttpStatus.OK).json(hotelDTO);
+                ctx.status(HttpStatus.OK).json(itemDTO);
             } else {
                 ctx.status(HttpStatus.NOT_FOUND).result("Item was not found.");
             }
@@ -54,6 +54,9 @@ public class ItemController {
                         .address(foundItem.getAddress())
                         .phoneNr(foundItem.getPhoneNr())
                         .user(foundItem.getUser()) //har vi brug for en user også???
+
+                       // .rooms(foundItem.getRooms())
+
                         .build();
                 ctx.status(HttpStatus.OK).json(itemDTO);
             } else {
@@ -77,22 +80,22 @@ public class ItemController {
     public static Handler update(ItemDAO dao) {
         return ctx -> {
             int id = Integer.parseInt(ctx.pathParam("user_id"));
-            HotelDTO updatedHotelDTO = ctx.bodyAsClass(HotelDTO.class);
+            ItemDTO updatedItemDTO = ctx.bodyAsClass(ItemDTO.class);
 
             // Fetch the hotel from the database
             Item foundItem = dao.getById(id);
-            updatedHotelDTO.setRooms(foundItem.getRooms());
+            //updatedItemDTO.setRooms(foundItem.getRooms());
 
             if (foundItem != null) {
-                foundItem.setTitle(updatedHotelDTO.getName());
-                foundItem.setAddress(updatedHotelDTO.getAddress());
+                foundItem.setTitle(updatedItemDTO.getName());
+                foundItem.setAddress(updatedItemDTO.getAddress());
 
                 // Save the updated hotel to the database
                 dao.update(foundItem);
-                updatedHotelDTO.setId(id);
+                updatedItemDTO.setId(id);
 
                 // Return the updated hotelDTO object as JSON response
-                ctx.json(updatedHotelDTO);
+                ctx.json(updatedItemDTO);
             } else {
                 // Item with the provided ID not found
                 ctx.status(HttpStatus.NOT_FOUND).result("Item not found.");

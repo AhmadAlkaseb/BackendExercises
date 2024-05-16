@@ -80,15 +80,17 @@ application/json
 
 </details>
 
+### Links
+
 
 **Backend repository**  
 [Tryk her](https://github.com/AhmadAlkaseb/WebShopBackend)  
 
 **Frontend repository**  
-[Tryk her]()  
+[Tryk her](https://github.com/AhmadAlkaseb/WebShopFrontend)  
 
 **Hjemmesiden**  
-[Tryk her]()  
+[Tryk her](cphbusinessproject.dk)  
 
 **Projektbeskrivelsen**  
 [Se projektbeskrivelsen på Moodle](https://github.com/dat3Cph/material/blob/sem2024spring/flowFrontend/week5-project/miniproject.md)  

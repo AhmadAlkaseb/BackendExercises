@@ -1,5 +1,6 @@
 package persistence.Model;
 
+import com.nimbusds.jose.shaded.json.annotate.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -23,6 +24,7 @@ public class Item {
     private String address;
     private int phoneNr;
 
+    @JsonIgnore
     @ManyToOne()
     private User user;
 

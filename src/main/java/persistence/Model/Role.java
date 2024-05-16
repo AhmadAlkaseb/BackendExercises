@@ -1,11 +1,8 @@
 package persistence.Model;
 
-import com.nimbusds.jose.shaded.json.annotate.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -21,9 +18,9 @@ public class Role {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @JsonIgnore
-    @ManyToMany(mappedBy = "roles")
-    Set<User> users = new HashSet<>();
+    @JsonIgnore // Breaks the serialization loop
+    @ManyToMany(mappedBy = "roles", fetch = FetchType.EAGER)
+    private Set<User> users = new HashSet<>();
 
     public Role(String name) {
         this.name = name;
