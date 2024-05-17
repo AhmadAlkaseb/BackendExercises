@@ -28,7 +28,7 @@ public class ItemController {
                 .fullName(item.getFullName())
                 .address(item.getAddress())
                 .phoneNr(item.getPhoneNumber())
-                .postalCode(item.getPostalCode())
+                .postalCode(item.getZipCode())
                 .status(item.isStatus())
                 .userEmail(item.getUser().getEmail())
                 .build();
@@ -68,11 +68,20 @@ public class ItemController {
     public static Handler getById(ItemDAO dao) {
         return ctx -> {
             int id = Integer.parseInt(ctx.pathParam("id"));
-            Item foundItem = dao.getById(id);
-            ItemDTO dto = convertToDTO(foundItem);
-            if (dto != null) {
-                ctx.status(HttpStatus.OK).json(dto);
-            } else {
+            try {
+                Item foundItem = dao.getById(id);
+                if (foundItem != null) {
+                    ItemDTO dto = convertToDTO(foundItem);
+                    if (dto != null) {
+                        ctx.status(HttpStatus.OK).json(dto);
+                    }
+                } else {
+                    throw new ApiException(HttpStatus.NOT_FOUND.getCode(), "Item was not found: " + id, timestamp);
+                }
+            } catch (NumberFormatException e) {
+                // Handle invalid number format for id
+                ctx.status(HttpStatus.BAD_REQUEST.getCode()).json("Invalid id format: " + e.getMessage());
+            } catch (ApiException e) {
                 throw new ApiException(HttpStatus.NOT_FOUND.getCode(), "Item was not found: " + id, timestamp);
             }
         };

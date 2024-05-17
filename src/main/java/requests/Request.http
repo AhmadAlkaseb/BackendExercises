@@ -3,7 +3,7 @@ POST http://localhost:7007/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "hanni@email.dk",
+  "email": "test",
   "password": "1234"
 }
 
@@ -12,7 +12,7 @@ POST http://localhost:7007/api/auth/register
 Content-Type: application/json
 
 {
-  "email": "hanni@email.dk",
+  "email": "test",
   "password": "1234"
 }
 
@@ -20,11 +20,11 @@ Content-Type: application/json
 GET http://localhost:7007/api/items
 
 ### Get item by id
-GET http://localhost:7007/api/items/1
+GET http://localhost:7007/api/items/2
 
 ### Upload item
 POST http://localhost:7007/api/items/
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoiaGFubmlAZW1haWwuZGsiLCJleHAiOjE3MTU5NDAwMTAsImVtYWlsIjoiaGFubmlAZW1haWwuZGsiLCJyb2xlcyI6InVzZXIifQ.DyGSWbUKhDqRka6q8b965MCQX1eqzu49tzxxGc9z6xw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoidGVzdCIsImV4cCI6MTcxNTk0NTA2MSwiZW1haWwiOiJ0ZXN0Iiwicm9sZXMiOiJ1c2VyIn0.3XUti-oi37rapnyRjpzKtUgPIYAZRchiBwT4wLI7_gY
 
 {
   "title": "Vintage Chair",
@@ -32,16 +32,16 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoiaGFubmlAZ
   "price": 150.0,
   "fullName": "John Doe",
   "address": "123 Elm St",
-  "postalCode": 2800,
+  "zipCode": 2800,
   "phoneNumber": 12345678,
   "user": {
-     "email": "ahmad@email.dk"
+     "email": "test"
   }
 }
 
 ### Update item
-PUT http://localhost:7007/api/items/ahmad@email.dk
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoiaGFubmlAZW1haWwuZGsiLCJleHAiOjE3MTU5NDAwMTAsImVtYWlsIjoiaGFubmlAZW1haWwuZGsiLCJyb2xlcyI6InVzZXIifQ.DyGSWbUKhDqRka6q8b965MCQX1eqzu49tzxxGc9z6xw
+PUT http://localhost:7007/api/items/test
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoidGVzdCIsImV4cCI6MTcxNTk0NTA2MSwiZW1haWwiOiJ0ZXN0Iiwicm9sZXMiOiJ1c2VyIn0.3XUti-oi37rapnyRjpzKtUgPIYAZRchiBwT4wLI7_gY
 
 {
   "id": 2,
@@ -50,13 +50,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoiaGFubmlAZ
   "price": 150.0,
   "fullName": "John Doe",
   "address": "123 Elm St",
-  "postalCode": 2800,
+  "zipCode": 2800,
   "status": true,
   "phoneNumber": 12345678
 }
 
 ### Delete item
 DELETE http://localhost:7007/api/items/ahmad@email.dk
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoiaGFubmlAZW1haWwuZGsiLCJleHAiOjE3MTU5NDAwMTAsImVtYWlsIjoiaGFubmlAZW1haWwuZGsiLCJyb2xlcyI6InVzZXIifQ.DyGSWbUKhDqRka6q8b965MCQX1eqzu49tzxxGc9z6xw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoidGVzdCIsImV4cCI6MTcxNTk0NTA2MSwiZW1haWwiOiJ0ZXN0Iiwicm9sZXMiOiJ1c2VyIn0.3XUti-oi37rapnyRjpzKtUgPIYAZRchiBwT4wLI7_gY
 
-4
+3

@@ -1,7 +1,13 @@
 
-m
-java:S1602",Remove useless curly braces around statement(‚“‘ÔûÿÿÿÿJ$48d0e8d5-e1d9-4d46-baf9-f6e23ac397f1
-}
-java:S1128":Remove this unused import 'io.javalin.security.RouteRole'.(³¯“Ş8Øäÿ­ø1J$e3695fec-9f29-4986-8980-2abe4f0d59f5
+w
+java:S3740"/Provide the parametrized type for this generic.(¤¤í€øÿÿÿÿ8È¼—°ø1J$013d8308-4219-424d-9835-0a838aa09a66
+w
+java:S3740"/Provide the parametrized type for this generic.(¤¤í€øÿÿÿÿ8È¼—°ø1J$9aed82bd-2350-4fcb-bbff-91df17b1a18a
+t
+java:S1602",Remove useless curly braces around statement(‚“‘Ôûÿÿÿÿ8ç¼—°ø1J$25f74f7d-6fc4-4b2f-84b4-4b0e1f8d6679
+T
+java:S1128"7Remove this unused import 'controllers.ItemController'.(Ü“Ç’8Å±˜°ø1
+W
+java:S1128	":Remove this unused import 'io.javalin.security.RouteRole'.(³¯“Ş8Å±˜°ø1
 q
-java:S1068".Remove this unused "jsonMapper" private field.(¥“˜Ï8İ¨Ú÷1J$faed1346-befc-406e-a521-90da2e271923
+java:S1068".Remove this unused "jsonMapper" private field.(¥“˜Ï8ç¼—°ø1J$712c9029-5487-479f-a7b1-c90de4d5eee3

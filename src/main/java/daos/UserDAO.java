@@ -1,10 +1,19 @@
 package daos;
 
-import jakarta.persistence.*;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.persistence.TypedQuery;
 import persistence.model.Role;
 import persistence.model.User;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class UserDAO implements ISecurityDAO {
+
+    private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    private static String timestamp = dateFormat.format(new Date());
 
     private static UserDAO instance;
     private static EntityManagerFactory emf;
@@ -38,41 +47,47 @@ public class UserDAO implements ISecurityDAO {
 
 
     @Override
-    public User createUser(String username, String password) {
-        EntityManager em = emf.createEntityManager();
-        em.getTransaction().begin();
-        User user = new User(username, password);
-        Role userRole = em.find(Role.class, "user");
-        if (userRole == null) {
-            userRole = new Role("user");
-            em.persist(userRole);
+    public User createUser(String email, String password) {
+        try (EntityManager em = emf.createEntityManager()) {
+            em.getTransaction().begin();
+            User existingUser = em.createQuery("SELECT u FROM User u WHERE u.email = :email", User.class)
+                    .setParameter("email", email)
+                    .getResultStream()
+                    .findFirst()
+                    .orElse(null);
+
+            if (existingUser != null) {
+                return null;
+            }
+
+            User user = new User(email, password);
+            Role userRole = em.find(Role.class, "user");
+            if (userRole == null) {
+                userRole = new Role("user");
+                em.persist(userRole);
+            }
+            user.addRole(userRole);
+            em.persist(user);
+            em.getTransaction().commit();
+            return user;
         }
-        user.addRole(userRole);
-        em.persist(user);
-        em.getTransaction().commit();
-        em.close();
-        return user;
     }
 
     @Override
     public Role createRole(String role) {
-        EntityManager em = emf.createEntityManager();
-        try {
+        try (EntityManager em = emf.createEntityManager()) {
             em.getTransaction().begin();
             Role createdRole = new Role();
             createdRole.setName(role);
             em.persist(createdRole);
             em.getTransaction().commit();
             return createdRole;
-        } finally {
-            em.close();
         }
     }
 
     @Override
     public User addUserRole(String username, String role) {
-        EntityManager em = emf.createEntityManager();
-        try {
+        try (EntityManager em = emf.createEntityManager()) {
             em.getTransaction().begin();
             User foundUser = em.find(User.class, username);
             Role foundRole = em.find(Role.class, role);
@@ -80,8 +95,6 @@ public class UserDAO implements ISecurityDAO {
             em.merge(foundUser);
             em.getTransaction().commit();
             return foundUser;
-        } finally {
-            em.close();
         }
     }
 
@@ -90,24 +103,24 @@ public class UserDAO implements ISecurityDAO {
     }
 
     public User verifyUser(String email, String password) {
-        EntityManager em = emf.createEntityManager();
-        User user = em.find(User.class, email);
-        if (user == null) throw new EntityNotFoundException("No user found");
-        if (!user.verifyPassword(password)) throw new EntityNotFoundException("Wrong password");
-        return user;
+        try (EntityManager em = emf.createEntityManager()) {
+            User user = em.find(User.class, email);
+            if (user == null) {
+                return null;
+            }
+            if (!user.verifyPassword(password)) {
+                return null;
+            }
+            return user;
+        }
     }
 
 
     public User getByString(String email) {
-        EntityManager em = emf.createEntityManager();
-        try {
+        try (EntityManager em = emf.createEntityManager()) {
             TypedQuery<User> query = em.createQuery("SELECT u FROM User u WHERE u.email = :email", User.class);
             query.setParameter("email", email);
             return query.getSingleResult();
-        } catch (NoResultException e) {
-            return null;
-        } finally {
-            em.close();
         }
     }
 }

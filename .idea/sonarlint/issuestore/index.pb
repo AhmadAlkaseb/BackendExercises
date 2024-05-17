@@ -83,3 +83,15 @@ d
 :
 
 errors.txt,b\e\be0b779e0b7cd9993dbc1388356ed232bf4abec6
+>
+errors.txt.lck,9\3\9339d5232aa20a82bd69b02b04f7321039708680
+b
+2src/main/java/controllers/ISecurityController.java,0\c\0c5117765deedc79fba7944076da792cc3bf8815
+Y
+)src/main/java/persistence/model/User.java,4\5\45524deb480bb89ab90fc6e0f54a0e3c6482e97d
+Y
+)src/main/java/persistence/model/Item.java,2\4\24fa530d0e6b346fb79afe1e7906c4f85a6504cb
+b
+2src/main/java/persistence/model/ISecurityUser.java,c\6\c6ed43375b062205d8eeb3e8396c57a7818b8886
+X
+(src/main/java/persistence/model/Tag.java,5\f\5f5b61adffa5deb1d647873bf9cea99188aa5d02

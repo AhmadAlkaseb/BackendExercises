@@ -20,10 +20,10 @@ public class User implements ISecurityUser {
     private String email;
 
     @Column(nullable = false)
-    @JsonIgnore // Breaks the serialization loop
+    @JsonIgnore
     private String password;
 
-    @JsonIgnore // Breaks the serialization loop
+    @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_roles", joinColumns = {
             @JoinColumn(name = "user_email", referencedColumnName = "email")},
@@ -31,7 +31,7 @@ public class User implements ISecurityUser {
                     @JoinColumn(name = "role_name", referencedColumnName = "name")})
     private Set<Role> roles = new HashSet<>();
 
-    @JsonIgnore // Breaks the serialization loop
+    @JsonIgnore
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "user")
     private Set<Item> items = new HashSet<>();
 
@@ -41,7 +41,6 @@ public class User implements ISecurityUser {
         String salt = BCrypt.gensalt();
         this.password = BCrypt.hashpw(password, salt);
     }
-
 
     public void addItem(Item item) {
         items.add(item);

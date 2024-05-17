@@ -1,6 +1,7 @@
 package logger;
 
 import exceptions.ApiException;
+import exceptions.NotAuthorizedException;
 import io.javalin.http.Context;
 import io.javalin.http.Handler;
 
@@ -34,15 +35,23 @@ public class CustomLogger<T> {
             } catch (ApiException e) {
                 logException(ctx, e);
                 ctx.json("{\"status\": \"" + e.getStatusCode() + "\", \"message\": \"" + e.getMessage() + "\", \"timestamp\": \"" + e.getTimeStamp() + "\"}");
+            } catch (NotAuthorizedException e) {
+                logException(ctx, e);
+                ctx.json("{\"status\": \"" + e.getStatusCode() + "\", \"message\": \"" + e.getMessage() + "\", \"timestamp\": \"" + e.getTimeStamp() + "\"}");
             }
         };
     }
 
-    private void logException(Context ctx, ApiException e) {
+    private void logException(Context ctx, Exception e) {
         String logMessage = "Method: " + ctx.method() + ", ";
-        logMessage += "Status: " + e.getStatusCode() + ", ";
+        if (e instanceof ApiException) {
+            logMessage += "Status: " + ((ApiException) e).getStatusCode() + ", ";
+            logMessage += "Timestamp: " + ((ApiException) e).getTimeStamp() + ", ";
+        } else if (e instanceof NotAuthorizedException) {
+            logMessage += "Status: " + ((NotAuthorizedException) e).getStatusCode() + ", ";
+            logMessage += "Timestamp: " + ((NotAuthorizedException) e).getTimeStamp() + ", ";
+        }
         logMessage += "Message: " + e.getMessage() + ", ";
-        logMessage += "Timestamp: " + e.getTimeStamp() + ", ";
         logMessage += "IP Address: " + ctx.ip();
         logger.log(Level.SEVERE, logMessage);
     }

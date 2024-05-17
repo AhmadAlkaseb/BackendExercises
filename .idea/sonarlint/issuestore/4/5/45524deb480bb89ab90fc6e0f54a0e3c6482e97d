@@ -1,0 +1,9 @@
+
+g
+java:S1168?"+Return an empty collection instead of null.(¥¹ïJ$02586128-e549-4bc3-b5cf-02ee8e69d837
+s
+java:S1611B"2Remove the parentheses around the "role" parameter(·½ÛƒıÿÿÿÿJ$b68996f3-50d7-4e62-ba85-7f7f387b701b
+m
+java:S1602B",Remove useless curly braces around statement(·½ÛƒıÿÿÿÿJ$55168299-498e-4d0d-9028-8daee8c6a927
+}
+java:S1858C"A"getName" returns a string, there's no need to call "toString()".(®âŠŞJ$9c52634b-1708-4c69-92d6-3b4aaee409a3

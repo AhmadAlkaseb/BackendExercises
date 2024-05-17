@@ -1,8 +1,17 @@
 
-	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ıÔºÏûÿÿÿÿ8ğôû¬ø1J$37ec8d43-fcea-4464-a952-94c421abb5bd
-œ	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÏĞÇü8€õû¬ø1J$6f7dbc44-3d38-4788-b6fe-9b937fe0a39c
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ıÔºÏûÿÿÿÿ8¬‰Ô¯ø1J$ad15e6b4-2cbe-4999-8448-4da5cfa339a2
+œ	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÏĞÇü8È‰Ô¯ø1J$659659d1-4661-4db4-8cdf-e026a74189a8
 c
-java:S2326
-"T is not used in the class.(úëÊùÿÿÿÿ8‡õû¬ø1J$2cd2a9b5-71b1-4d6e-b521-99d04972ef30
+java:S2326"T is not used in the class.(úëÊùÿÿÿÿ8È‰Ô¯ø1J$17ca289c-de88-4dc6-9e01-90efa8e0cc31
 }
-java:S6213":Rename this variable to not match a restricted identifier.(¼µøÈ8“õû¬ø1J$935dd290-2548-4005-948b-a893b6b4a49c
+java:S6213":Rename this variable to not match a restricted identifier.(¼µøÈ8È‰Ô¯ø1J$09af731f-7039-47c3-a9b5-daa58df0124c
+Œ
+java:S2147&"DCombine this catch with the one at line 35, which has the same body.(×²Ôøÿÿÿÿ8şË‹°ø1J$6877dfcc-1d8c-452d-b511-5c40a9c4bf65
+t
+java:S6201/"RReplace this instanceof check and cast with 'instanceof ApiException apiexception'(ƒ¼¤àşÿÿÿÿ8˜˜ğ°ø1
+t
+java:S6201/"RReplace this instanceof check and cast with 'instanceof ApiException apiexception'(ƒ¼¤àşÿÿÿÿ8˜˜ğ°ø1
+ˆ
+java:S62012"fReplace this instanceof check and cast with 'instanceof NotAuthorizedException notauthorizedexception'(ŠüÊªÿÿÿÿÿ8˜˜ğ°ø1
+ˆ
+java:S62012"fReplace this instanceof check and cast with 'instanceof NotAuthorizedException notauthorizedexception'(ŠüÊªÿÿÿÿÿ8˜˜ğ°ø1

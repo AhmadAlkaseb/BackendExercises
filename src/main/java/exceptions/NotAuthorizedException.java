@@ -1,5 +1,8 @@
 package exceptions;
 
+import lombok.Getter;
+
+@Getter
 public class NotAuthorizedException extends RuntimeException {
     private int statusCode;
     private String timeStamp;

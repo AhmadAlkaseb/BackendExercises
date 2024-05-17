@@ -26,24 +26,19 @@ public class ItemDAO extends AbstractDAO<Item> {
     }
 
     public List<Item> getAll() {
-        EntityManager em = emf.createEntityManager();
-        try {
+        try (EntityManager em = emf.createEntityManager()){
             TypedQuery<Item> query = em.createQuery("SELECT h FROM Item h", Item.class);
             return query.getResultList();
-        } finally {
-            em.close();
         }
     }
 
     @Override
     public int delete(int id) {
-        EntityManager em = emf.createEntityManager();
-        try {
+        try (EntityManager em = emf.createEntityManager()){
             em.getTransaction().begin();
             Item itemFound = em.find(Item.class, id);
 
             if (itemFound != null) {
-                // Clear associations
                 User user = itemFound.getUser();
                 if (user != null) {
                     user.getItems().remove(itemFound);
@@ -54,8 +49,6 @@ public class ItemDAO extends AbstractDAO<Item> {
                 return 1;
             }
             return 0;
-        } finally {
-            em.close();
         }
     }
 }

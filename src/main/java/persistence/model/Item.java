@@ -20,10 +20,12 @@ public class Item {
     private String title;
     private String description;
     private double price;
-
+    @Column(name = "full_name")
     private String fullName;
     private String address;
-    private int postalCode;
+    @Column(name = "zip_code")
+    private int zipCode;
+    @Column(name = "phone_number")
     private int phoneNumber;
     @ColumnDefault("false")
     private boolean status;
@@ -32,8 +34,4 @@ public class Item {
     @ManyToOne()
     private User user;
 
-    public Item(String title, String address) {
-        this.title = title;
-        this.address = address;
-    }
 }

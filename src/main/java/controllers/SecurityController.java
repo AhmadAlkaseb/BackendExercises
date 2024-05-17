@@ -41,16 +41,13 @@ public class SecurityController implements ISecurityController {
     @Override
     public Handler register() {
         return (ctx) -> {
-            ObjectMapper objectMapper = new ObjectMapper();
-            ObjectNode returnObject = objectMapper.createObjectNode();
-            try {
-                UserDTO userInput = ctx.bodyAsClass(UserDTO.class);
-                User created = userDAO.createUser(userInput.getEmail(), userInput.getPassword());
-
+            UserDTO userInput = ctx.bodyAsClass(UserDTO.class);
+            User created = userDAO.createUser(userInput.getEmail(), userInput.getPassword());
+            if (created == null){
+                throw new NotAuthorizedException(HttpStatus.UNAUTHORIZED.getCode(), "Email is already taken. Try again. ", timestamp);
+            } else {
                 String token = createToken(new UserDTO(created));
                 ctx.status(HttpStatus.CREATED).json(new TokenDTO(token, created));
-            } catch (NotAuthorizedException e) {
-                throw new NotAuthorizedException(HttpStatus.UNPROCESSABLE_CONTENT.getCode(), "User already exists.", timestamp);
             }
         };
     }
@@ -58,17 +55,13 @@ public class SecurityController implements ISecurityController {
     @Override
     public Handler login() {
         return (ctx) -> {
-            ObjectMapper objectMapper = new ObjectMapper();
-            ObjectNode returnObject = objectMapper.createObjectNode(); // for sending json messages back to the client
-            try {
-                UserDTO user = ctx.bodyAsClass(UserDTO.class);
-
-                User verifiedUserEntity = userDAO.verifyUser(user.getEmail(), user.getPassword());
+            UserDTO user = ctx.bodyAsClass(UserDTO.class);
+            User verifiedUserEntity = userDAO.verifyUser(user.getEmail(), user.getPassword());
+            if (verifiedUserEntity == null) {
+                throw new NotAuthorizedException(HttpStatus.UNAUTHORIZED.getCode(), "Wrong login information. Try again please.", timestamp);
+            } else {
                 String token = createToken(new UserDTO(verifiedUserEntity));
                 ctx.status(200).json(new TokenDTO(token, verifiedUserEntity));
-
-            } catch (NotAuthorizedException e) {
-                throw new NotAuthorizedException(HttpStatus.UNAUTHORIZED.getCode(), "Wrong login information. Try again please.", timestamp);
             }
         };
     }

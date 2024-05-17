@@ -15,34 +15,27 @@ public abstract class AbstractDAO<T> implements InterfaceDAO<T> {
 
     @Override
     public T create(T entity) {
-        EntityManager em = emf.createEntityManager();
-        try {
+        try (EntityManager em = emf.createEntityManager()){
             em.getTransaction().begin();
             em.persist(entity);
             em.getTransaction().commit();
             return entity;
-        } finally {
-            em.close();
         }
     }
 
     @Override
     public int update(T entity) {
-        EntityManager em = emf.createEntityManager();
-        try {
+        try (EntityManager em = emf.createEntityManager()) {
             em.getTransaction().begin();
             em.merge(entity);
             em.getTransaction().commit();
             return 1;
-        } finally {
-            em.close();
         }
     }
 
     @Override
     public int delete(int id) {
-        EntityManager em = emf.createEntityManager();
-        try {
+        try (EntityManager em = emf.createEntityManager()) {
             em.getTransaction().begin();
 
             T entityToDelete = em.find(entityClass, id);
@@ -53,18 +46,13 @@ public abstract class AbstractDAO<T> implements InterfaceDAO<T> {
                 return 1;
             }
             return 0;
-        } finally {
-            em.close();
         }
     }
 
     @Override
     public T getById(int id) {
-        EntityManager em = emf.createEntityManager();
-        try {
+        try (EntityManager em = emf.createEntityManager()) {
             return em.find(entityClass, id);
-        } finally {
-            em.close();
         }
     }
 }

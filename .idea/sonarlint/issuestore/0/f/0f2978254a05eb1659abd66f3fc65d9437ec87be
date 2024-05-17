@@ -1,29 +1,21 @@
 
-˜	java:S117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶È£üÿÿÿÿ8¥’ñ®ø1J$e95dba3a-6dee-4416-b58f-eb9a4374681c
-“	java:S117O"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£‚éÚ8§’ñ®ø1J$6d7d0993-5aa2-45bc-a830-4fcf4cc6edef
-˜	java:S117P"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÀáÅøÿÿÿÿ8§’ñ®ø1J$d429e589-3a85-428a-91f1-24481f922a59
-“	java:S117l"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ÍÅõ8§’ñ®ø1J$276b7525-d67d-4965-b295-a42a6bf040f5
-“	java:S117l"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ÍÅõ8§’ñ®ø1J$c269b812-3b6e-493b-893a-2e756b7d11fd
-“	java:S117l"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ÍÅõ8§’ñ®ø1J$9645df14-5279-499f-b10b-aefe5ac3228d
-™	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì¨ñœÿÿÿÿÿ8§’ñ®ø1J$bce5691f-fdd6-4096-908c-22a667dfecb4
-”	java:S117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êåşš8§’ñ®ø1J$c4bb2ede-a4e5-4577-b051-4f2fb1e6e86f
-«
-java:S1488ƒ"gImmediately return this expression instead of assigning it to the temporary variable "serializedToken".(€¡¸Ò8©’ñ®ø1J$1e6680b2-f2fe-403e-a91f-ea97625e045f
+˜	java:S117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶È£üÿÿÿÿ8ïÌş°ø1J$6d80539d-a828-4d30-bef1-174cc7e65fa2
+“	java:S117H"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£‚éÚ8ïÌş°ø1J$a753d22a-fc79-407c-8189-0586100c7aeb
+˜	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÀáÅøÿÿÿÿ8ïÌş°ø1J$39bf3002-8ba2-4b1f-9db4-1666c153d1b0
+“	java:S117e"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ÍÅõ8ïÌş°ø1J$25e481e6-9a70-41b8-b7cf-ae0ec73acaac
+“	java:S117e"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ÍÅõ8ïÌş°ø1J$4986c23b-fdb2-4c8c-a315-084a4d27df68
+“	java:S117e"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ÍÅõ8ïÌş°ø1J$2acd4202-4fad-47ab-8207-10f377c2e6bb
+™	java:S117£"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì¨ñœÿÿÿÿÿ8ïÌş°ø1J$3c9fa419-c26d-45c6-abbe-e089e3724ee7
+”	java:S117¤"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êåşš8ïÌş°ø1J$8dcbc62b-f3df-4142-8851-b9e43b6cab94
+ª
+java:S1488|"gImmediately return this expression instead of assigning it to the temporary variable "serializedToken".(€¡¸Ò8ïÌş°ø1J$1bacabaa-eebe-4971-a269-9a11a591af50
 j
-java:S2885"'Make "dateFormat" an instance variable.(Øüì8ä’ñ®ø1J$8c9de816-7f28-42f0-98b4-71f9be1d7fc1
+java:S2885"'Make "dateFormat" an instance variable.(Øüì8ÿÌş°ø1J$8a21f784-8870-4914-b550-a28f464cdc9d
 t
-java:S1611+"1Remove the parentheses around the "ctx" parameter(ÚÆÌ‡8‚“ñ®ø1J$8ae50f20-4d13-47f5-813a-72bd368d9c9e
-ˆ
-java:S1117,"@Rename "objectMapper" which hides the field declared at line 39.(¡ôó‰ùÿÿÿÿ8¶Ëñ®ø1J$deb55bbf-7ac8-4153-b8e1-cfe901db6599
+java:S1611+"1Remove the parentheses around the "ctx" parameter(ÚÆÌ‡8Íş°ø1J$5e5dcd95-723e-4b59-82fe-7cc8ceedb75e
 t
-java:S1481-"1Remove this unused "returnObject" local variable.(¿ºíĞ8·Ëñ®ø1J$2b705e9a-e452-42e8-9e35-b03f90d18612
-t
-java:S1611<"1Remove the parentheses around the "ctx" parameter(ÚÆÌ‡8ºËñ®ø1J$1015647c-5fc6-4765-9da0-45fcabd4a0c9
-ˆ
-java:S1117="@Rename "objectMapper" which hides the field declared at line 39.(¡ôó‰ùÿÿÿÿ8»Ëñ®ø1J$1156d3f7-a2f3-401f-bb53-a4276a37c668
-y
-java:S1481>"1Remove this unused "returnObject" local variable.(Ÿ€Øîÿÿÿÿÿ8¾Ëñ®ø1J$3a1fd44a-9955-4b96-a50c-ec49ad26c863
-r	java:S106c"+Replace this use of System.out by a logger.(Ï±Èÿşÿÿÿÿ8ÆËñ®ø1J$4fa4736e-28cf-413c-95fc-21bade20786a
+java:S16119"1Remove the parentheses around the "ctx" parameter(ÚÆÌ‡8Íş°ø1J$6ef8b171-0fec-4dc2-9eb5-d64f70eac8e4
+r	java:S106\"+Replace this use of System.out by a logger.(Ï±Èÿşÿÿÿÿ8Íş°ø1J$4cdb6e1c-5c5d-4960-8943-4a10299bb5d9
 u
-java:S1611"1Remove the parentheses around the "ctx" parameter(ÚÆÌ‡8ÏËñ®ø1J$e12f8334-103e-4e39-814f-a91052f03f41
-m	java:S106¤"+Replace this use of System.out by a logger.(çĞ“g8ÓËñ®ø1J$dd7dd02d-79f9-4ccd-b455-9473f4a665f3
+java:S1611‡"1Remove the parentheses around the "ctx" parameter(ÚÆÌ‡8Íş°ø1J$28e6515b-ea56-418e-a4bb-cd60bc448367
+m	java:S106"+Replace this use of System.out by a logger.(çĞ“g8Íş°ø1J$3ec75f7c-623c-4393-a05c-c382e330e45c
