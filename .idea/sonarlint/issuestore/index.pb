@@ -70,8 +70,6 @@ Z
 *src/main/java/exceptions/ApiException.java,b\a\baa086a9c986834234fa32fab6e52b290367e8d2
 V
 &src/main/java/logger/CustomLogger.java,3\7\37ade37ec0cbdc9c4f6dfb0ede53ce2407b15bc6
-O
-src/main/java/logger/errors.txt,f\b\fbd518dd2618e35b9438849715fb1f8918f325f5
 ]
 -src/main/java/controllers/ItemController.java,8\f\8f87e5ca68e41c3170df6509c5599188a6f872ff
 a

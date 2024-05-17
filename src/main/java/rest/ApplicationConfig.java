@@ -11,7 +11,6 @@ import io.javalin.apibuilder.EndpointGroup;
 import io.javalin.http.HttpStatus;
 import jakarta.persistence.EntityManagerFactory;
 import persistence.HibernateConfig;
-import routes.Role;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -35,8 +34,7 @@ public class ApplicationConfig {
             config.routing.contextPath = "/api";
             config.plugins.enableCors(cors -> {
                 cors.add(it -> {
-                    it.anyHost();
-                    //it.allowedOrigins().add("https://cphbusinessprojekt.dk");
+                    it.allowHost("https://cphbusinessprojekt.dk");
                 });
             });
         });

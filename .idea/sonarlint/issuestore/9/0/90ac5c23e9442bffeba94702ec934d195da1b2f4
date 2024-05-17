@@ -1,27 +1,22 @@
 
 Û
-java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(Ðá™_8òÀ‚®ø1J$d2805629-954f-42d0-b04e-881d9c1d389e
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(Ðá™_8òÀ‚®ø1J$c6aeb3bd-9064-4486-90ca-fe32a50ef61a
 j
-java:S2885"'Make "dateFormat" an instance variable.(Øüžì8úÀ‚®ø1J$ecb469ce-0662-4eec-9fdf-101756751412
+java:S2885"'Make "dateFormat" an instance variable.(Øüžì8úÀ‚®ø1J$536c6eb9-d9ae-4301-899f-77f3b8f19ee8
 ~
-java:S1117 "6Rename "om" which hides the field declared at line 27.(´ØÍ­úÿÿÿÿ8¤Á‚®ø1J$470d2430-6e51-4145-bf80-7f571b936305
+java:S1117"6Rename "om" which hides the field declared at line 26.(´ØÍ­úÿÿÿÿ8¤Á‚®ø1J$905a584d-478b-4cf8-9381-484919618fc7
 o
-java:S1481 "'Remove this unused "om" local variable.(´ØÍ­úÿÿÿÿ8¥Á‚®ø1J$16a0e006-20cd-4296-8013-1880af4fda5a
+java:S1481"'Remove this unused "om" local variable.(´ØÍ­úÿÿÿÿ8¥Á‚®ø1J$bef4616a-6440-45e8-9c4b-f27f95026ffe
 ‰
-java:S1075#"ARefactor your code to get this URI from a customizable parameter.(®â±Éøÿÿÿÿ8§Á‚®ø1J$a166caa2-1ce1-4d60-ba0d-ed8db4f1e064
+java:S1075""ARefactor your code to get this URI from a customizable parameter.(®â±Éøÿÿÿÿ8§Á‚®ø1J$6c9d17a6-3e81-4a77-b9fd-3ee4d9c8eff2
 o
-java:S1602$",Remove useless curly braces around statement(ÛŒÔÀ8¨Á‚®ø1J$2aad3eab-a371-4292-b3c3-0a0c2dda0059
+java:S1602#",Remove useless curly braces around statement(ÛŒÔÀ8¨Á‚®ø1J$c769a06b-bce2-45a2-ae14-2db3cca119ae
 t
-java:S1602%",Remove useless curly braces around statement(Ôˆ–¾þÿÿÿÿ8©Á‚®ø1J$af9e87ae-371c-4b15-aaf0-d6f186036d36
-Ž
-java:S1612%"FReplace this lambda with method reference 'CorsPluginConfig::anyHost'.(Ôˆ–¾þÿÿÿÿ8ªÁ‚®ø1J$d506904d-0eee-426b-9ba7-df46af774d0e
-~	java:S125'"<This block of commented-out lines of code should be removed.(Ô´²—8ªÁ‚®ø1J$7c09b91d-2767-47bb-a8d8-63cbd526e002
+java:S1602$",Remove useless curly braces around statement(Ôˆ–¾þÿÿÿÿ8®Á‚®ø1J$d9cee879-dcd0-4532-84ef-e99e59d6aa36
 t
-java:S1602H",Remove useless curly braces around statement(î¹äÅûÿÿÿÿ8®Á‚®ø1J$6cbeb079-c856-4ae6-857b-48017946b49c
+java:S1602F",Remove useless curly braces around statement(î¹äÅûÿÿÿÿ8®Á‚®ø1J$9f8d4d20-c26f-4333-986d-0ada39c8cf87
 t
-java:S1602L",Remove useless curly braces around statement(­´Î£þÿÿÿÿ8®Á‚®ø1J$449c21aa-93a9-4642-9ec9-f0f9e49dcae5
-N
-java:S1602S",Remove useless curly braces around statement(šÍÜÿÿÿÿÿ8”è½®ø1
-L	java:S106\"+Replace this use of System.out by a logger.(ÅÈÂ½þÿÿÿÿ8˜è½®ø1
-J
-java:S1128"(Remove this unused import 'routes.Role'.(Ý‚•«øÿÿÿÿ8œè½®ø1
+java:S1602J",Remove useless curly braces around statement(­´Î£þÿÿÿÿ8”è½®ø1J$d002a9c2-724c-4aea-8fb1-2214a990ce3b
+t
+java:S1602Q",Remove useless curly braces around statement(šÍÜÿÿÿÿÿ8¢¶ø±ø1J$5c855359-8f3c-4600-98b5-139e192802c0
+r	java:S106Z"+Replace this use of System.out by a logger.(ÅÈÂ½þÿÿÿÿ8˜è½®ø1J$d1778e12-9112-4e6e-b3c9-dbdb7c8d350c
