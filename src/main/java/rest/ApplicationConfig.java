@@ -1,9 +1,9 @@
 package rest;
 
-import Controllers.ISecurityController;
-import Controllers.SecurityController;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import controllers.ISecurityController;
+import controllers.SecurityController;
 import dtos.UserDTO;
 import exceptions.ApiException;
 import io.javalin.Javalin;
@@ -11,11 +11,17 @@ import io.javalin.apibuilder.EndpointGroup;
 import io.javalin.http.HttpStatus;
 import jakarta.persistence.EntityManagerFactory;
 import persistence.HibernateConfig;
+import routes.Role;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 public class ApplicationConfig {
+    private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    private static String timestamp = dateFormat.format(new Date());
+
     private static EntityManagerFactory emf = HibernateConfig.getEntityManagerFactoryConfig(false);
     private ISecurityController securityController = new SecurityController(emf);
     private ObjectMapper om = new ObjectMapper();
@@ -29,7 +35,8 @@ public class ApplicationConfig {
             config.routing.contextPath = "/api";
             config.plugins.enableCors(cors -> {
                 cors.add(it -> {
-                    it.allowedOrigins().add("https://cphbusinessprojekt.dk");
+                    it.anyHost();
+                    //it.allowedOrigins().add("https://cphbusinessprojekt.dk");
                 });
             });
         });
@@ -91,7 +98,7 @@ public class ApplicationConfig {
                 if (securityController.authorize(user, allowedRoles))
                     handler.handle(ctx);
                 else
-                    throw new ApiException(HttpStatus.FORBIDDEN.getCode(), "Unauthorized with roles: " + allowedRoles);
+                    throw new ApiException(HttpStatus.FORBIDDEN.getCode(), "Unauthorized with roles: " + allowedRoles, timestamp);
             });
         });
         return instance;

@@ -1,8 +1,8 @@
 package persistence;
 
-import persistence.Model.Item;
-import persistence.Model.Role;
-import persistence.Model.User;
+import persistence.model.Item;
+import persistence.model.Role;
+import persistence.model.User;
 import jakarta.persistence.EntityManagerFactory;
 import lombok.NoArgsConstructor;
 import org.hibernate.SessionFactory;

@@ -1,7 +1,7 @@
 package daos;
 
-import persistence.Model.Role;
-import persistence.Model.User;
+import persistence.model.Role;
+import persistence.model.User;
 
 public interface ISecurityDAO {
     User getVerifiedUser(String username, String password);

@@ -1,5 +1,7 @@
 
 m
-java:S1602",Remove useless curly braces around statement(‚“‘ÔûÿÿÿÿJ$c47a70d0-0f13-4277-a3fc-848d842586f9
-K
-java:S1068".Remove this unused "jsonMapper" private field.(¥“˜Ï8İ¨Ú÷1
+java:S1602",Remove useless curly braces around statement(‚“‘ÔûÿÿÿÿJ$48d0e8d5-e1d9-4d46-baf9-f6e23ac397f1
+}
+java:S1128":Remove this unused import 'io.javalin.security.RouteRole'.(³¯“Ş8Øäÿ­ø1J$e3695fec-9f29-4986-8980-2abe4f0d59f5
+q
+java:S1068".Remove this unused "jsonMapper" private field.(¥“˜Ï8İ¨Ú÷1J$faed1346-befc-406e-a521-90da2e271923

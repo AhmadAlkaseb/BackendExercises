@@ -1,10 +1,10 @@
 package daos;
 
-import persistence.Model.Item;
+import persistence.model.Item;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.TypedQuery;
-import persistence.Model.User;
+import persistence.model.User;
 
 import java.util.List;
 

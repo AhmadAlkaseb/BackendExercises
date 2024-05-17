@@ -1,6 +1,6 @@
 package dtos;
 
-import persistence.Model.User;
+import persistence.model.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

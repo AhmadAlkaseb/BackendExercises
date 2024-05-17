@@ -1,8 +1,8 @@
 package daos;
 
 import jakarta.persistence.*;
-import persistence.Model.Role;
-import persistence.Model.User;
+import persistence.model.Role;
+import persistence.model.User;
 
 public class UserDAO implements ISecurityDAO {
 

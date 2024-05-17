@@ -1,6 +1,6 @@
 package dtos;
 
-import persistence.Model.User;
+import persistence.model.User;
 import lombok.*;
 
 import java.util.Set;

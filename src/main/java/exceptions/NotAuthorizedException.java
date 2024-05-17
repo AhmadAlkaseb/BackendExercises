@@ -1,10 +1,12 @@
 package exceptions;
 
-public class NotAuthorizedException extends Exception {
-    private final int statusCode;
+public class NotAuthorizedException extends RuntimeException {
+    private int statusCode;
+    private String timeStamp;
 
-    public NotAuthorizedException(int statusCode, String message) {
+    public NotAuthorizedException(int statusCode, String message, String timeStamp) {
         super(message);
         this.statusCode = statusCode;
+        this.timeStamp = timeStamp;
     }
 }

@@ -66,3 +66,20 @@ S
 #src/main/java/daos/AbstractDAO.java,a\8\a80b1f377d0f34a116bf7e32bbd58445cfb7e901
 Y
 )src/main/java/rest/ApplicationConfig.java,9\0\90ac5c23e9442bffeba94702ec934d195da1b2f4
+Z
+*src/main/java/exceptions/ApiException.java,b\a\baa086a9c986834234fa32fab6e52b290367e8d2
+V
+&src/main/java/logger/CustomLogger.java,3\7\37ade37ec0cbdc9c4f6dfb0ede53ce2407b15bc6
+O
+src/main/java/logger/errors.txt,f\b\fbd518dd2618e35b9438849715fb1f8918f325f5
+]
+-src/main/java/controllers/ItemController.java,8\f\8f87e5ca68e41c3170df6509c5599188a6f872ff
+a
+1src/main/java/controllers/SecurityController.java,0\f\0f2978254a05eb1659abd66f3fc65d9437ec87be
+N
+src/main/java/routes/Role.java,8\6\86698d9dfcc032062b9f21ece8f211e317cd6a09
+d
+4src/main/java/exceptions/NotAuthorizedException.java,d\1\d13db1af9ad4007f6e3c34b2161eb3cf906f25c0
+:
+
+errors.txt,b\e\be0b779e0b7cd9993dbc1388356ed232bf4abec6

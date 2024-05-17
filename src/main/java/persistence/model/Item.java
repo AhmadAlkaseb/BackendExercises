@@ -1,4 +1,4 @@
-package persistence.Model;
+package persistence.model;
 
 import com.nimbusds.jose.shaded.json.annotate.JsonIgnore;
 import jakarta.persistence.*;

@@ -1,0 +1,8 @@
+
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ıÔºÏûÿÿÿÿ8ğôû¬ø1J$37ec8d43-fcea-4464-a952-94c421abb5bd
+œ	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÏĞÇü8€õû¬ø1J$6f7dbc44-3d38-4788-b6fe-9b937fe0a39c
+c
+java:S2326
+"T is not used in the class.(úëÊùÿÿÿÿ8‡õû¬ø1J$2cd2a9b5-71b1-4d6e-b521-99d04972ef30
+}
+java:S6213":Rename this variable to not match a restricted identifier.(¼µøÈ8“õû¬ø1J$935dd290-2548-4005-948b-a893b6b4a49c

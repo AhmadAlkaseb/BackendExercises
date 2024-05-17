@@ -3,7 +3,7 @@ POST http://localhost:7007/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "ahmad@email.dkk",
+  "email": "hanni@email.dk",
   "password": "1234"
 }
 
@@ -12,7 +12,7 @@ POST http://localhost:7007/api/auth/register
 Content-Type: application/json
 
 {
-  "email": "ahmad@email.dkk",
+  "email": "hanni@email.dk",
   "password": "1234"
 }
 
@@ -24,7 +24,7 @@ GET http://localhost:7007/api/items/1
 
 ### Upload item
 POST http://localhost:7007/api/items/
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzdWIiOiJhaG1hZEBlbWFpbC5ka2siLCJleHAiOjE3MTU4NTg4NjAsImVtYWlsIjoiYWhtYWRAZW1haWwuZGtrIiwicm9sZXMiOiJ1c2VyIn0.-DTEgPPXHt3NXGuri2OkwnkeI3th6V2BAoFlBLD01aQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoiaGFubmlAZW1haWwuZGsiLCJleHAiOjE3MTU5NDAwMTAsImVtYWlsIjoiaGFubmlAZW1haWwuZGsiLCJyb2xlcyI6InVzZXIifQ.DyGSWbUKhDqRka6q8b965MCQX1eqzu49tzxxGc9z6xw
 
 {
   "title": "Vintage Chair",
@@ -41,7 +41,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzd
 
 ### Update item
 PUT http://localhost:7007/api/items/ahmad@email.dk
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzdWIiOiJhaG1hZEBlbWFpbC5ka2siLCJleHAiOjE3MTU4NTg4NjAsImVtYWlsIjoiYWhtYWRAZW1haWwuZGtrIiwicm9sZXMiOiJ1c2VyIn0.-DTEgPPXHt3NXGuri2OkwnkeI3th6V2BAoFlBLD01aQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoiaGFubmlAZW1haWwuZGsiLCJleHAiOjE3MTU5NDAwMTAsImVtYWlsIjoiaGFubmlAZW1haWwuZGsiLCJyb2xlcyI6InVzZXIifQ.DyGSWbUKhDqRka6q8b965MCQX1eqzu49tzxxGc9z6xw
 
 {
   "id": 2,
@@ -57,6 +57,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzd
 
 ### Delete item
 DELETE http://localhost:7007/api/items/ahmad@email.dk
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzdWIiOiJhaG1hZEBlbWFpbC5kayIsImV4cCI6MTcxNTg1MDk5NSwiZW1haWwiOiJhaG1hZEBlbWFpbC5kayIsInJvbGVzIjoidXNlciJ9.dyooOOgu33PlURNv2OyVQ11cBGhko86t5y-KUbJ72SU
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoiaGFubmlAZW1haWwuZGsiLCJleHAiOjE3MTU5NDAwMTAsImVtYWlsIjoiaGFubmlAZW1haWwuZGsiLCJyb2xlcyI6InVzZXIifQ.DyGSWbUKhDqRka6q8b965MCQX1eqzu49tzxxGc9z6xw
 
-11
+4

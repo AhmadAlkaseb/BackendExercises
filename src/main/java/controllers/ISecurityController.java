@@ -1,4 +1,4 @@
-package Controllers;
+package controllers;
 
 import dtos.UserDTO;
 import exceptions.NotAuthorizedException;

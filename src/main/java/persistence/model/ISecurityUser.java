@@ -1,4 +1,4 @@
-package persistence.Model;
+package persistence.model;
 
 import java.util.Set;
 

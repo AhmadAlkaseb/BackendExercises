@@ -1,7 +1,7 @@
 package routes;
 
 import persistence.HibernateConfig;
-import Controllers.SecurityController;
+import controllers.SecurityController;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.javalin.apibuilder.EndpointGroup;
 import io.javalin.security.RouteRole;
@@ -25,4 +25,3 @@ public class RouteUser {
     }
 }
 
-enum Role implements RouteRole {ANYONE, USER, ADMIN}

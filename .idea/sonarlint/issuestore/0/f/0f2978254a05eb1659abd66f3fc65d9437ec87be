@@ -1,0 +1,29 @@
+
+˜	java:S117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶È£üÿÿÿÿ8¥’ñ®ø1J$e95dba3a-6dee-4416-b58f-eb9a4374681c
+“	java:S117O"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£‚éÚ8§’ñ®ø1J$6d7d0993-5aa2-45bc-a830-4fcf4cc6edef
+˜	java:S117P"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÀáÅøÿÿÿÿ8§’ñ®ø1J$d429e589-3a85-428a-91f1-24481f922a59
+“	java:S117l"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ÍÅõ8§’ñ®ø1J$276b7525-d67d-4965-b295-a42a6bf040f5
+“	java:S117l"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ÍÅõ8§’ñ®ø1J$c269b812-3b6e-493b-893a-2e756b7d11fd
+“	java:S117l"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ÍÅõ8§’ñ®ø1J$9645df14-5279-499f-b10b-aefe5ac3228d
+™	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì¨ñœÿÿÿÿÿ8§’ñ®ø1J$bce5691f-fdd6-4096-908c-22a667dfecb4
+”	java:S117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êåşš8§’ñ®ø1J$c4bb2ede-a4e5-4577-b051-4f2fb1e6e86f
+«
+java:S1488ƒ"gImmediately return this expression instead of assigning it to the temporary variable "serializedToken".(€¡¸Ò8©’ñ®ø1J$1e6680b2-f2fe-403e-a91f-ea97625e045f
+j
+java:S2885"'Make "dateFormat" an instance variable.(Øüì8ä’ñ®ø1J$8c9de816-7f28-42f0-98b4-71f9be1d7fc1
+t
+java:S1611+"1Remove the parentheses around the "ctx" parameter(ÚÆÌ‡8‚“ñ®ø1J$8ae50f20-4d13-47f5-813a-72bd368d9c9e
+ˆ
+java:S1117,"@Rename "objectMapper" which hides the field declared at line 39.(¡ôó‰ùÿÿÿÿ8¶Ëñ®ø1J$deb55bbf-7ac8-4153-b8e1-cfe901db6599
+t
+java:S1481-"1Remove this unused "returnObject" local variable.(¿ºíĞ8·Ëñ®ø1J$2b705e9a-e452-42e8-9e35-b03f90d18612
+t
+java:S1611<"1Remove the parentheses around the "ctx" parameter(ÚÆÌ‡8ºËñ®ø1J$1015647c-5fc6-4765-9da0-45fcabd4a0c9
+ˆ
+java:S1117="@Rename "objectMapper" which hides the field declared at line 39.(¡ôó‰ùÿÿÿÿ8»Ëñ®ø1J$1156d3f7-a2f3-401f-bb53-a4276a37c668
+y
+java:S1481>"1Remove this unused "returnObject" local variable.(Ÿ€Øîÿÿÿÿÿ8¾Ëñ®ø1J$3a1fd44a-9955-4b96-a50c-ec49ad26c863
+r	java:S106c"+Replace this use of System.out by a logger.(Ï±Èÿşÿÿÿÿ8ÆËñ®ø1J$4fa4736e-28cf-413c-95fc-21bade20786a
+u
+java:S1611"1Remove the parentheses around the "ctx" parameter(ÚÆÌ‡8ÏËñ®ø1J$e12f8334-103e-4e39-814f-a91052f03f41
+m	java:S106¤"+Replace this use of System.out by a logger.(çĞ“g8ÓËñ®ø1J$dd7dd02d-79f9-4ccd-b455-9473f4a665f3

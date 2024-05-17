@@ -1,6 +1,8 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ü‚ùıúÿÿÿÿ8£«Šˆø1J$37dca4b2-3148-4f8a-85be-71ea51a7983c
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ü‚ùıúÿÿÿÿ8æÊ«ø1J$701aaca2-0e96-4646-a9ab-befe37039990
 }
-java:S1118":Add a private constructor to hide the implicit public one.(Ì½ÍÒ8£«Šˆø1J$f37046e2-a443-489e-b95a-9a0ccf2f9b38
+java:S1118":Add a private constructor to hide the implicit public one.(Ì½ÍÒ8†Ê«ø1J$4b97d281-2642-401a-b372-84d7bc0c3192
+j
+java:S2885"'Make "dateFormat" an instance variable.(Øüì8†Ê«ø1J$70326f71-a1f6-4daf-bac4-1dca00575193
 m
-java:S14813"*Remove this unused "email" local variable.(ñç“Ç8Ò«Šˆø1J$041056b8-11f9-4df7-80dc-75ea35caf126
+java:S14816"*Remove this unused "email" local variable.(ñç“Ç8Ê«ø1J$eda07883-1f38-47ab-a641-359a0a449a4c

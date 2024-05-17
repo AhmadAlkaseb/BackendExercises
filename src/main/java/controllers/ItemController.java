@@ -1,20 +1,23 @@
-package Controllers;
+package controllers;
 
 import daos.ItemDAO;
 import daos.UserDAO;
 import dtos.ItemDTO;
+import exceptions.ApiException;
 import io.javalin.http.Handler;
 import io.javalin.http.HttpStatus;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import persistence.HibernateConfig;
-import persistence.Model.Item;
-import persistence.Model.User;
+import persistence.model.Item;
+import persistence.model.User;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class ItemController {
+
+    private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    private static String timestamp = dateFormat.format(new Date());
 
     public static ItemDTO convertToDTO(Item item) {
         return ItemDTO.builder()
@@ -39,7 +42,7 @@ public class ItemController {
                 dtoList.add(convertToDTO(i));
             }
             if (dtoList.isEmpty()) {
-                ctx.status(HttpStatus.NOT_FOUND).result("No items were found.");
+                throw new ApiException(HttpStatus.NOT_FOUND.getCode(), "No items were found.", timestamp);
             } else {
                 ctx.status(HttpStatus.OK).json(dtoList);
             }
@@ -56,7 +59,7 @@ public class ItemController {
                 dao.delete(foundItem.getId());
                 ctx.status(HttpStatus.OK).json(dto);
             } else {
-                ctx.status(HttpStatus.NOT_FOUND).result("Item was not found.");
+                throw new ApiException(HttpStatus.NOT_FOUND.getCode(), "Item was not found: " + id, timestamp);
             }
         };
     }
@@ -70,7 +73,7 @@ public class ItemController {
             if (dto != null) {
                 ctx.status(HttpStatus.OK).json(dto);
             } else {
-                ctx.status(HttpStatus.NOT_FOUND).result("The item you are looking for does not exist.");
+                throw new ApiException(HttpStatus.NOT_FOUND.getCode(), "Item was not found: " + id, timestamp);
             }
         };
     }
@@ -83,7 +86,7 @@ public class ItemController {
             if (dto != null) {
                 ctx.status(HttpStatus.OK).json(dto);
             } else {
-                ctx.status(HttpStatus.INTERNAL_SERVER_ERROR).result("Couldn't create the item with the given data.");
+                throw new ApiException(HttpStatus.INTERNAL_SERVER_ERROR.getCode(), "Couldn't create item.", timestamp);
             }
         };
     }
@@ -100,10 +103,10 @@ public class ItemController {
                     ItemDTO dto = convertToDTO(item);
                     ctx.json(dto);
                 } else {
-                    ctx.status(HttpStatus.NOT_FOUND).result("Item not found.");
+                    throw new ApiException(HttpStatus.NOT_FOUND.getCode(), "Item not found for id: " + item.getId(), timestamp);
                 }
             } else {
-                ctx.status(HttpStatus.NOT_FOUND).result("User not found.");
+                throw new ApiException(HttpStatus.NOT_FOUND.getCode(), "User not found for email: " + user.getEmail(), timestamp);
             }
         };
     }
