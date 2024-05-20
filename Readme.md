@@ -245,7 +245,7 @@ User & Admin
 [Tryk her](https://cphbusinessprojekt.dk/)  
 
 **Projektbeskrivelsen**  
-[Se projektbeskrivelsen på Moodle](https://github.com/dat3Cph/material/blob/sem2024spring/flowFrontend/week5-project/miniproject.md)  
+[Tryk her](https://github.com/dat3Cph/material/blob/sem2024spring/flowFrontend/week5-project/miniproject.md)  
 
 **Eksamensspørgsmål**  
-[Se eksamensspørgsmål på Google-docs](https://docs.google.com/document/d/16wdDaEkcoUTti7GsFC0CHU0pBQGzmmDIOXkZgNhGON8/edit)  
+[Tryk her](https://docs.google.com/document/d/16wdDaEkcoUTti7GsFC0CHU0pBQGzmmDIOXkZgNhGON8/edit)  
