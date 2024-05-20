@@ -81,8 +81,6 @@ d
 :
 
 errors.txt,b\e\be0b779e0b7cd9993dbc1388356ed232bf4abec6
->
-errors.txt.lck,9\3\9339d5232aa20a82bd69b02b04f7321039708680
 b
 2src/main/java/controllers/ISecurityController.java,0\c\0c5117765deedc79fba7944076da792cc3bf8815
 Y
