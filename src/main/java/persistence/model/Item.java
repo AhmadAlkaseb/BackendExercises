@@ -5,10 +5,12 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
 
+import java.util.List;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-@Setter
+@Setteritems
 @ToString
 @Entity
 @Table(name = "items")
@@ -33,5 +35,10 @@ public class Item {
     @JsonIgnore
     @ManyToOne()
     private User user;
+
+    @ElementCollection
+    @CollectionTable(name = "item_tags", joinColumns = @JoinColumn(name = "item_id"))
+    @Column(name = "tag")
+    private List<String> tags;
 
 }

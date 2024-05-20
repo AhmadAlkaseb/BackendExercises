@@ -18,4 +18,3 @@ public class Tag {
     @Column(nullable = false)
     private String id;
 }
-

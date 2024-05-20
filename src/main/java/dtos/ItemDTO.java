@@ -2,6 +2,8 @@ package dtos;
 
 import lombok.*;
 
+import java.util.List;
+
 @Getter
 @Setter
 @Builder
@@ -18,4 +20,5 @@ public class ItemDTO {
     private int postalCode;
     private boolean status;
     private String userEmail;
+    private List<String> tags;
 }
