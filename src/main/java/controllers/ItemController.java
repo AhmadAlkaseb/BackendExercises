@@ -49,6 +49,23 @@ public class ItemController {
         };
     }
 
+
+    public static Handler getAllByEmail(ItemDAO dao) {
+        return ctx -> {
+            String email = ctx.pathParam("user_id");
+            List<Item> itemList = dao.getAllByEmail(email);
+            List<ItemDTO> dtoList = new ArrayList<>();
+            for (Item i : itemList) {
+                dtoList.add(convertToDTO(i));
+            }
+            if (dtoList.isEmpty()) {
+                throw new ApiException(HttpStatus.NOT_FOUND.getCode(), "No items were found.", timestamp);
+            } else {
+                ctx.status(HttpStatus.OK).json(dtoList);
+            }
+        };
+    }
+
     public static Handler delete(ItemDAO dao) {
         return ctx -> {
             String email = ctx.pathParam("user_id");

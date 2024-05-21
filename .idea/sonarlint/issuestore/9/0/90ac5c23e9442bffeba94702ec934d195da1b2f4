@@ -11,6 +11,11 @@ java:S1481"'Remove this unused "om" local variable.(´ØÍ­úÿÿÿÿ8¥Á‚®ø1J$c597187
 java:S1075""ARefactor your code to get this URI from a customizable parameter.(®â±Éøÿÿÿÿ8§Á‚®ø1J$7ac65e61-7f0f-49b4-bb51-874f653f43df
 o
 java:S1602#",Remove useless curly braces around statement(ÛŒÔÀ8¨Á‚®ø1J$b4ecb804-897e-4ca4-ab39-31b83e03223a
+N
+java:S1602$",Remove useless curly braces around statement(Ôˆ–¾þÿÿÿÿ8ÞõÑÐù1
+h
+java:S1612$"FReplace this lambda with method reference 'CorsPluginConfig::anyHost'.(Ôˆ–¾þÿÿÿÿ8àõÑÐù1
+W	java:S125&"<This block of commented-out lines of code should be removed.(ªÆñ@8äõÑÐù1
 t
 java:S1602G",Remove useless curly braces around statement(î¹äÅûÿÿÿÿ8®Á‚®ø1J$f22f3829-456b-4f55-8dd6-33a14bb0d6ba
 N

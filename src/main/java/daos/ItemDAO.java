@@ -1,9 +1,9 @@
 package daos;
 
-import persistence.model.Item;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.TypedQuery;
+import persistence.model.Item;
 import persistence.model.User;
 
 import java.util.List;
@@ -26,15 +26,24 @@ public class ItemDAO extends AbstractDAO<Item> {
     }
 
     public List<Item> getAll() {
-        try (EntityManager em = emf.createEntityManager()){
+        try (EntityManager em = emf.createEntityManager()) {
             TypedQuery<Item> query = em.createQuery("SELECT h FROM Item h", Item.class);
+            return query.getResultList();
+        }
+    }
+
+
+    public List<Item> getAllByEmail(String email) {
+        try (EntityManager em = emf.createEntityManager()) {
+            TypedQuery<Item> query = em.createQuery("SELECT h FROM Item h WHERE h.user.email =:email", Item.class);
+            query.setParameter("email", email);
             return query.getResultList();
         }
     }
 
     @Override
     public int delete(int id) {
-        try (EntityManager em = emf.createEntityManager()){
+        try (EntityManager em = emf.createEntityManager()) {
             em.getTransaction().begin();
             Item itemFound = em.find(Item.class, id);
 

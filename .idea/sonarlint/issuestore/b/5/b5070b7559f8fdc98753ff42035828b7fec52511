@@ -1,15 +1,17 @@
 
 w
-java:S3740"/Provide the parametrized type for this generic.(¤¤í€øÿÿÿÿ8û×ë¯ø1J$eaa78b93-e584-4985-9c2a-fd0f3a3fd65f
+java:S3740"/Provide the parametrized type for this generic.(¤¤í€øÿÿÿÿ8û×ë¯ø1J$283b7dd4-e73c-4edb-bba5-29fd759e28cd
 w
-java:S3740"/Provide the parametrized type for this generic.(¤¤í€øÿÿÿÿ8û×ë¯ø1J$a652e780-4dce-43ac-8d8e-df5be6c120c1
+java:S3740"/Provide the parametrized type for this generic.(¤¤í€øÿÿÿÿ8û×ë¯ø1J$a246dd6a-2727-4cbe-804f-8477300d3797
+“
+java:S1192 "KDefine a constant instead of duplicating this literal "/{user_id}" 3 times.(’æğıÿÿÿÿ8·îŞĞù1J$3c934c9f-a795-44d9-a81d-ad9f8893fbef
 l
-java:S3010"$Remove this assignment of "itemDAO".(Æ©¹ùÿÿÿÿ8‹Øë¯ø1J$0f40d10b-c31d-4f25-aa58-4a9153b258bf
+java:S3010"$Remove this assignment of "itemDAO".(Æ©¹ùÿÿÿÿ8‹Øë¯ø1J$a101bf47-93db-4795-bd90-fb792db49234
 g
-java:S3010"$Remove this assignment of "userDAO".(ŸÎÿò8‹Øë¯ø1J$80deda05-ff27-466e-89a6-292933b751d6
+java:S3010"$Remove this assignment of "userDAO".(ŸÎÿò8‹Øë¯ø1J$210ee1ae-9714-47fe-a2a9-cb82ef2adfbf
 }
-java:S2209"5Change this instance-reference to a static reference.(Æ©¹ùÿÿÿÿ8‹Øë¯ø1J$88485693-1f39-485c-9eda-70ffc4443321
+java:S2209"5Change this instance-reference to a static reference.(Æ©¹ùÿÿÿÿ8‹Øë¯ø1J$ca9ca739-e79f-4ffb-83c9-a5bf7d6d0b82
 x
-java:S2209"5Change this instance-reference to a static reference.(ŸÎÿò8‹Øë¯ø1J$44ab6634-dfe7-4092-ad50-7a1fe0722c24
+java:S2209"5Change this instance-reference to a static reference.(ŸÎÿò8‹Øë¯ø1J$11621a6a-b2ba-4e67-be57-508eeb1f1bd0
 t
-java:S1602",Remove useless curly braces around statement(‚“‘Ôûÿÿÿÿ8‹Øë¯ø1J$a16a467c-bf17-4e9f-bf10-29769908db6b
+java:S1602",Remove useless curly braces around statement(‚“‘Ôûÿÿÿÿ8‹Øë¯ø1J$b43634d7-8add-4c35-b136-14af45c292ff
