@@ -16,7 +16,7 @@ cph-lh225@cphbusiness.dk
 cph-yb48@cphbusiness.dk  
 @Badranyoussef  
 
-### Endpoints documentation 
+### API Endpoints documentation 
 
 ### Path: .../api/auth
 <details>
