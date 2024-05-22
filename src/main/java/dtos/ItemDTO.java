@@ -1,8 +1,9 @@
 package dtos;
 
 import lombok.*;
-
-import java.util.List;
+import persistence.model.Tag;
+import persistence.model.User;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -19,6 +20,6 @@ public class ItemDTO {
     private int phoneNr;
     private int postalCode;
     private boolean status;
-    private String userEmail;
-    private List<String> tags;
+    private User user;
+    private String[] tags;
 }

@@ -7,12 +7,12 @@ import exceptions.ApiException;
 import io.javalin.http.Handler;
 import io.javalin.http.HttpStatus;
 import persistence.model.Item;
+import persistence.model.Tag;
 import persistence.model.User;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class ItemController {
 
@@ -30,7 +30,26 @@ public class ItemController {
                 .phoneNr(item.getPhoneNumber())
                 .postalCode(item.getZipCode())
                 .status(item.isStatus())
-                .userEmail(item.getUser().getEmail())
+                .user(item.getUser())
+                .build();
+    }
+
+    public static Item convertToItem(ItemDTO dto) {
+
+        Set<Tag> tags = Arrays.stream(dto.getTags()).collect(Collectors.toSet())
+                .stream().map(tag -> new Tag(tag)).collect(Collectors.toSet());
+
+        return Item.builder()
+                .title(dto.getTitle())
+                .description(dto.getDescription())
+                .price(dto.getPrice())
+                .fullName(dto.getFullName())
+                .address(dto.getAddress())
+                .phoneNumber(dto.getPhoneNr())
+                .zipCode(dto.getPostalCode())
+                .status(dto.isStatus())
+                .user(dto.getUser())
+                .tags(tags)
                 .build();
     }
 
@@ -89,10 +108,9 @@ public class ItemController {
 
     public static Handler create(ItemDAO dao) {
         return ctx -> {
-            Item item = ctx.bodyAsClass(Item.class);
-            Item createdItem = dao.create(item);
-            ItemDTO dto = convertToDTO(createdItem);
-            if (dto != null) {
+            ItemDTO dto = ctx.bodyAsClass(ItemDTO.class);
+            Item createdItem = dao.create(convertToItem(dto));
+            if (createdItem != null) {
                 ctx.status(HttpStatus.OK).json(dto);
             } else {
                 throw new ApiException(HttpStatus.INTERNAL_SERVER_ERROR.getCode(), "Couldn't create item.", timestamp);

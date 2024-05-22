@@ -79,7 +79,7 @@ public class SecurityController implements ISecurityController {
         } else {
             ISSUER = "LAHY";
             TOKEN_EXPIRE_TIME = "1800000";
-            SECRET_KEY = "secretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecret";
+            SECRET_KEY = "5465726d6432637344764c58774e70377958636356376b7846554d63695463585979697972485465";
         }
         return createToken(user, ISSUER, TOKEN_EXPIRE_TIME, SECRET_KEY);
     }
@@ -161,7 +161,7 @@ public class SecurityController implements ISecurityController {
 
     public UserDTO verifyToken(String token) {
         boolean IS_DEPLOYED = (System.getenv("DEPLOYED") != null);
-        String SECRET = IS_DEPLOYED ? System.getenv("SECRET_KEY") : "secretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecret";
+        String SECRET = IS_DEPLOYED ? System.getenv("SECRET_KEY") : "5465726d6432637344764c58774e70377958636356376b7846554d63695463585979697972485465";
 
         try {
             if (tokenIsValid(token, SECRET) && tokenNotExpired(token)) {

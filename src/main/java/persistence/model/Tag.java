@@ -1,10 +1,10 @@
 package persistence.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,7 +14,16 @@ import lombok.*;
 @Entity
 @Table(name = "tags")
 public class Tag {
+
     @Id
     @Column(nullable = false)
-    private String id;
+    private String title;
+
+    @ManyToMany(mappedBy = "tags")
+    private Set<Item> item =  new HashSet<>();
+
+    public Tag(String title) {
+        this.title = title;
+    }
+
 }

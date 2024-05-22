@@ -5,14 +5,17 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-@Setteritems
+@Setter
 @ToString
 @Entity
+@Builder
 @Table(name = "items")
 public class Item {
     @Id
@@ -36,9 +39,11 @@ public class Item {
     @ManyToOne()
     private User user;
 
-    @ElementCollection
-    @CollectionTable(name = "item_tags", joinColumns = @JoinColumn(name = "item_id"))
-    @Column(name = "tag")
-    private List<String> tags;
-
+//    @ManyToMany(cascade = CascadeType.PERSIST)
+//    @JoinTable(
+//            name = "items_tags",
+//            joinColumns = @JoinColumn(name = "item_id"),
+//            inverseJoinColumns = @JoinColumn(name = "tag_title")
+//    )
+//    private Set<Tag> tags = new HashSet<>();
 }

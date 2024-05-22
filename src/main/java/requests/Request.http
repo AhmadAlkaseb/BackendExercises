@@ -24,7 +24,7 @@ GET http://localhost:7007/api/items/2
 
 ### Upload item
 POST http://localhost:7007/api/items/
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoidGVzdCIsImV4cCI6MTcxNTk0NTA2MSwiZW1haWwiOiJ0ZXN0Iiwicm9sZXMiOiJ1c2VyIn0.3XUti-oi37rapnyRjpzKtUgPIYAZRchiBwT4wLI7_gY
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoidGVzdCIsImV4cCI6MTcxNjM3NTQyNywiZW1haWwiOiJ0ZXN0Iiwicm9sZXMiOiJ1c2VyIn0.kGt9ZmuQK_tRrYG8AJumQq_79svRFhMXw1BiN9NahK0
 
 {
   "title": "Vintage Chair",
@@ -32,12 +32,16 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoidGVzdCIsI
   "price": 150.0,
   "fullName": "John Doe",
   "address": "123 Elm St",
-  "zipCode": 2800,
-  "phoneNumber": 12345678,
+  "postalCode": 2800,
+  "phoneNr": 12345678,
   "user": {
-     "email": "test"
-  }
+    "email": "test"
+  },
+  "tags": [
+    "testettte"
+  ]
 }
+
 
 ### Update item
 PUT http://localhost:7007/api/items/test
