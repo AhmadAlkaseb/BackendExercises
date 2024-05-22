@@ -27,7 +27,7 @@ public class Item {
     private int zipCode;
     @Column(name = "phone_number")
     private int phoneNumber;
-    @ColumnDefault("true")
+    @ColumnDefault("false")
     private boolean status;
 
     @JsonIgnore
