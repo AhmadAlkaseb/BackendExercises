@@ -1,1 +1,0 @@
-Method: POST, Status: 401, Timestamp: 2024-05-22 12:02:26, Message: Email is already taken. Try again. , IP Address: 127.0.0.1

@@ -12,7 +12,7 @@ POST http://localhost:7007/api/auth/register
 Content-Type: application/json
 
 {
-  "email": "test",
+  "email": "youssef",
   "password": "1234"
 }
 
@@ -24,10 +24,10 @@ GET http://localhost:7007/api/items/2
 
 ### Upload item
 POST http://localhost:7007/api/items/
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoidGVzdCIsImV4cCI6MTcxNjM3NTQyNywiZW1haWwiOiJ0ZXN0Iiwicm9sZXMiOiJ1c2VyIn0.kGt9ZmuQK_tRrYG8AJumQq_79svRFhMXw1BiN9NahK0
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoidGVzdCIsImV4cCI6MTcxNjM4MDMyMCwiZW1haWwiOiJ0ZXN0Iiwicm9sZXMiOiJ1c2VyIn0.xRFRv_S5PB-MbE671k-PomDKoVrROwX8aSbM2o1XpwE
 
 {
-  "title": "Vintage Chair",
+  "title": "Youssef",
   "description": "A great vintage chair",
   "price": 150.0,
   "fullName": "John Doe",
@@ -45,11 +45,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoidGVzdCIsI
 
 ### Update item
 PUT http://localhost:7007/api/items/test
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoidGVzdCIsImV4cCI6MTcxNTk0NTA2MSwiZW1haWwiOiJ0ZXN0Iiwicm9sZXMiOiJ1c2VyIn0.3XUti-oi37rapnyRjpzKtUgPIYAZRchiBwT4wLI7_gY
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoidGVzdCIsImV4cCI6MTcxNjM4MDQ1MywiZW1haWwiOiJ0ZXN0Iiwicm9sZXMiOiJ1c2VyIn0.wousOLW9nSXjvDTebT1HCru81zD5ftpBTBpDu8oq14s
 
 {
   "id": 2,
-  "title": "Vintage Chairr",
+  "title": "PESTO",
   "description": "A great vintage chair",
   "price": 150.0,
   "fullName": "John Doe",
@@ -60,7 +60,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoidGVzdCIsI
 }
 
 ### Delete item
-DELETE http://localhost:7007/api/items/ahmad@email.dk
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoidGVzdCIsImV4cCI6MTcxNTk0NTA2MSwiZW1haWwiOiJ0ZXN0Iiwicm9sZXMiOiJ1c2VyIn0.3XUti-oi37rapnyRjpzKtUgPIYAZRchiBwT4wLI7_gY
+DELETE http://localhost:7007/api/items/test
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoidGVzdCIsImV4cCI6MTcxNjM4MDQ1MywiZW1haWwiOiJ0ZXN0Iiwicm9sZXMiOiJ1c2VyIn0.wousOLW9nSXjvDTebT1HCru81zD5ftpBTBpDu8oq14s
 
-3
+2
+

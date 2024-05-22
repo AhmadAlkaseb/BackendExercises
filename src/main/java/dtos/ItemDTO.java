@@ -1,9 +1,7 @@
 package dtos;
 
 import lombok.*;
-import persistence.model.Tag;
 import persistence.model.User;
-import java.util.Set;
 
 @Getter
 @Setter

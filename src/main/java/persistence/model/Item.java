@@ -37,13 +37,7 @@ public class Item {
 
     @JsonIgnore
     @ManyToOne()
+//    @JoinColumn(name = "user_email") // bruger user id som fremmednøgle
     private User user;
 
-//    @ManyToMany(cascade = CascadeType.PERSIST)
-//    @JoinTable(
-//            name = "items_tags",
-//            joinColumns = @JoinColumn(name = "item_id"),
-//            inverseJoinColumns = @JoinColumn(name = "tag_title")
-//    )
-//    private Set<Tag> tags = new HashSet<>();
 }

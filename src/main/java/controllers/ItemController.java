@@ -7,7 +7,6 @@ import exceptions.ApiException;
 import io.javalin.http.Handler;
 import io.javalin.http.HttpStatus;
 import persistence.model.Item;
-import persistence.model.Tag;
 import persistence.model.User;
 
 import java.text.SimpleDateFormat;
@@ -36,9 +35,6 @@ public class ItemController {
 
     public static Item convertToItem(ItemDTO dto) {
 
-        Set<Tag> tags = Arrays.stream(dto.getTags()).collect(Collectors.toSet())
-                .stream().map(tag -> new Tag(tag)).collect(Collectors.toSet());
-
         return Item.builder()
                 .title(dto.getTitle())
                 .description(dto.getDescription())
@@ -49,7 +45,6 @@ public class ItemController {
                 .zipCode(dto.getPostalCode())
                 .status(dto.isStatus())
                 .user(dto.getUser())
-                .tags(tags)
                 .build();
     }
 
