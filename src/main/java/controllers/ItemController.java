@@ -7,7 +7,6 @@ import exceptions.ApiException;
 import io.javalin.http.Handler;
 import io.javalin.http.HttpStatus;
 import persistence.model.Item;
-import persistence.model.Tag;
 import persistence.model.User;
 
 import java.text.SimpleDateFormat;
@@ -49,7 +48,6 @@ public class ItemController {
                 .zipCode(dto.getPostalCode())
                 .status(dto.isStatus())
                 .user(dto.getUser())
-                .tags(tags)
                 .build();
     }
 
