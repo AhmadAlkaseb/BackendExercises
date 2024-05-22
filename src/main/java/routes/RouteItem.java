@@ -28,8 +28,9 @@ public class RouteItem {
         return () -> {
             path("/items", () -> {
                 before(securityController.authenticate());
-                get("/",customLogger.handleExceptions(ItemController.getAll(itemDAO)), Role.ANYONE);
-                get("/{id}",customLogger.handleExceptions(ItemController.getById(itemDAO)), Role.ANYONE);
+                get("/", customLogger.handleExceptions(ItemController.getAll(itemDAO)), Role.ANYONE);
+                get("/{id}", customLogger.handleExceptions(ItemController.getById(itemDAO)), Role.ANYONE);
+                get("/personal/{user_id}", customLogger.handleExceptions(ItemController.getAllByEmail(itemDAO)), Role.USER, Role.ADMIN);
                 post("/", customLogger.handleExceptions(ItemController.create(itemDAO)), Role.USER, Role.ADMIN);
                 put("/{user_id}", customLogger.handleExceptions(ItemController.update(itemDAO, userDAO)), Role.USER, Role.ADMIN);
                 delete("/{user_id}", customLogger.handleExceptions(ItemController.delete(itemDAO)), Role.USER, Role.ADMIN);

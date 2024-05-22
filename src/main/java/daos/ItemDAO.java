@@ -25,6 +25,14 @@ public class ItemDAO extends AbstractDAO<Item> {
         return instance;
     }
 
+    public List<Item> getAllByEmail(String email) {
+        try (EntityManager em = emf.createEntityManager()) {
+            TypedQuery<Item> query = em.createQuery("SELECT h FROM Item h WHERE h.user.email =:email", Item.class);
+            query.setParameter("email", email);
+            return query.getResultList();
+        }
+    }
+
     public List<Item> getAll() {
         try (EntityManager em = emf.createEntityManager()){
             TypedQuery<Item> query = em.createQuery("SELECT h FROM Item h", Item.class);

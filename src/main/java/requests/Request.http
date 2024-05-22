@@ -22,6 +22,10 @@ GET http://localhost:7007/api/items
 ### Get item by id
 GET http://localhost:7007/api/items/1
 
+### Get items by email
+GET http://localhost:7007/api/items/personal/test
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoidGVzdCIsImV4cCI6MTcxNjM4NTg3MywiZW1haWwiOiJ0ZXN0Iiwicm9sZXMiOiJ1c2VyIn0.MEVudpFtK29T_LZ-doRGWAqJ0bkbsxZVbIzCZtBM4AI
+
 ### Upload item
 POST http://localhost:7007/api/items/
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoidGVzdCIsImV4cCI6MTcxNTk0NTA2MSwiZW1haWwiOiJ0ZXN0Iiwicm9sZXMiOiJ1c2VyIn0.3XUti-oi37rapnyRjpzKtUgPIYAZRchiBwT4wLI7_gY

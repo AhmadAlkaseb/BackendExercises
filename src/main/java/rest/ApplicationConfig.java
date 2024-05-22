@@ -64,7 +64,7 @@ public class ApplicationConfig {
 
     public ApplicationConfig setExceptionHandlers() {
         app.exception(Exception.class, (e, ctx) -> {
-            ObjectNode node = om.createObjectNode().put("errorMessage", e.getMessage());
+            ObjectNode node = om.createObjectNode().put("errorMessage from application config", e.getMessage());
             ctx.status(500).json(node);
         });
 

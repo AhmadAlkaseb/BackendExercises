@@ -59,3 +59,16 @@ b
 2src/main/java/persistence/model/ISecurityUser.java,c\6\c6ed43375b062205d8eeb3e8396c57a7818b8886
 X
 (src/main/java/persistence/model/Tag.java,5\f\5f5b61adffa5deb1d647873bf9cea99188aa5d02
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+>
+.gitattributes,2\4\24139dae656713ba861751fb2c2ac38839349a7a
+S
+#src/main/java/routes/RouteItem.java,b\5\b5070b7559f8fdc98753ff42035828b7fec52511
+O
+src/main/java/daos/ItemDAO.java,3\e\3e2105febfcea3a330e160fc5b5b395af634bba0
+Y
+)src/main/java/rest/ApplicationConfig.java,9\0\90ac5c23e9442bffeba94702ec934d195da1b2f4
+O
+src/main/java/routes/Route.java,6\2\623a855d8af03aff347d1cce47ec3da6e95582b7
