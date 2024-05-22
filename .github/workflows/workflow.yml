@@ -1,7 +1,7 @@
 name: API JAVALIN WORKFLOW
 on:
   push:
-    branches: [ main ]
+    branches: [ AhmadAlkaseb-patch-1 ]
 jobs:
   build:
     runs-on: ubuntu-latest
