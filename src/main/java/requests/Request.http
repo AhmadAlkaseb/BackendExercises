@@ -28,7 +28,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoidGVzdCIsI
 
 ### Upload item
 POST http://localhost:7007/api/items/
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoidGVzdCIsImV4cCI6MTcxNTk0NTA2MSwiZW1haWwiOiJ0ZXN0Iiwicm9sZXMiOiJ1c2VyIn0.3XUti-oi37rapnyRjpzKtUgPIYAZRchiBwT4wLI7_gY
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoidGVzdCIsImV4cCI6MTcxNjM4Njg1MSwiZW1haWwiOiJ0ZXN0Iiwicm9sZXMiOiJ1c2VyIn0.AzgbznyBc2q6rZw5HxzBHvn_nm-fjIYJGxA6cSzj4EA
 
 {
   "title": "Vintage Chair",

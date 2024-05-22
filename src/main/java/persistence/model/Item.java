@@ -28,7 +28,7 @@ public class Item {
     @Column(name = "phone_number")
     private int phoneNumber;
     @ColumnDefault("true")
-    private boolean status;
+    private boolean status = true;
 
     @JsonIgnore
     @ManyToOne()
