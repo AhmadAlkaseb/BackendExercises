@@ -1,10 +1,0 @@
-
-˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïà™Èşÿÿÿÿ8ä¶ù°ø1J$c277c82b-5d8a-4fa0-af54-112b4b4f88cf
-Ü
-java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ıÑ±¯8ä¶ù°ø1J$ed746cd7-c507-499d-b752-23d81a7a590a
-j
-java:S2885"'Make "dateFormat" an instance variable.(Øüì8ô¶ù°ø1J$38b488c0-8952-4a8e-a8ff-3467dcf3bc51
-[
-java:S1172e"9Remove these unused method parameters "username", "role".(«§±öúÿÿÿÿ8²ä±ø1
-p
-java:S1068"-Remove this unused "timestamp" private field.(óÂºû8ş¶ù°ø1J$78f0bbf4-45b0-4cd3-be93-fcf0ea5aaa01

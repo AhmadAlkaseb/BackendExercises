@@ -1,12 +1,8 @@
 
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-R
-"src/main/java/Application/App.java,1\a\1a72780f1aac34bd41f1a093edd91f463436f6b0
 ^
 .src/main/java/Persistence/HibernateConfig.java,4\b\4b066ae9bd64c1fa6808beca2fd0465b2319bb6b
-Y
-)src/main/java/ReST/ApplicationConfig.java,9\4\942c6f17133087e70b91dbdc688e23dc021cf4fa
 S
 #src/main/java/Requests/Request.http,f\2\f276892c2b22ca591c712b81ac30f8b91216538e
 N
@@ -18,14 +14,8 @@ N
 Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
 J
 dependency-reduced-pom.xml,8\a\8a88dfd5af6f2db5a5431581b56e901f5f143d92
-R
-"src/main/java/application/App.java,4\c\4cb71d5dc0dadb4ceaad3433e81d1ba02999d24e
-S
-#src/main/java/Routes/RouteUser.java,e\6\e65086700d2261371a2679f1308cd870861e8880
 a
 1src/main/java/Controllers/SecurityController.java,c\0\c0879f6dfd70d247c7d5de84a71dd3dfa780bed9
-O
-src/main/java/Routes/Route.java,b\f\bf84db7341d2adf1a2fae6136fc96c863fa679d0
 O
 src/main/java/DTOs/UserDTO.java,8\b\8bc2246a8e5d898a80de11afd42cd28d36d1cf29
 Y
@@ -38,22 +28,12 @@ S
 #src/main/java/requests/Request.http,a\9\a952bea372e0ef3b7125688854677a4b0f7bd893
 b
 2src/main/java/persistence/Model/ISecurityUser.java,f\c\fc8b34bcde04acd1f0e333054bff250e36dd781e
-S
-#src/main/java/routes/RouteUser.java,f\8\f8eed3800019fea4b3ab2801569c1e0f9502cc3e
-O
-src/main/java/routes/Route.java,6\2\623a855d8af03aff347d1cce47ec3da6e95582b7
-S
-#src/main/java/routes/RouteItem.java,b\5\b5070b7559f8fdc98753ff42035828b7fec52511
 ]
 -src/main/java/Controllers/ItemController.java,b\6\b6a9b8d35522f1e200bbe3604155b87dc5a6ccf0
 Y
 )src/main/java/persistence/Model/Item.java,9\f\9fb8b7bee271ba903d0780a687d067dc4120c53f
-O
-src/main/java/daos/ItemDAO.java,3\e\3e2105febfcea3a330e160fc5b5b395af634bba0
 Y
 )src/main/java/persistence/Model/User.java,3\6\361e224c20581ee358a6ca842b7d3af64377de55
-O
-src/main/java/daos/UserDAO.java,1\6\167230c874bd75e9b1c86c28c6ca435a9fb3c851
 b
 2src/main/java/Controllers/ISecurityController.java,a\d\adad0700a3f1f96546c117c6403ebf2d2a090925
 ^
@@ -62,22 +42,10 @@ Y
 )src/main/java/persistence/Model/Role.java,d\7\d78a33fa0f495cf322b4ffbc2c6e26f65e2b34c8
 O
 src/main/java/dtos/ItemDTO.java,9\0\90fd35f3fe53f9eceb5e209fd014c586d624f9d3
-S
-#src/main/java/daos/AbstractDAO.java,a\8\a80b1f377d0f34a116bf7e32bbd58445cfb7e901
-Y
-)src/main/java/rest/ApplicationConfig.java,9\0\90ac5c23e9442bffeba94702ec934d195da1b2f4
-Z
-*src/main/java/exceptions/ApiException.java,b\a\baa086a9c986834234fa32fab6e52b290367e8d2
-V
-&src/main/java/logger/CustomLogger.java,3\7\37ade37ec0cbdc9c4f6dfb0ede53ce2407b15bc6
 ]
 -src/main/java/controllers/ItemController.java,8\f\8f87e5ca68e41c3170df6509c5599188a6f872ff
 a
 1src/main/java/controllers/SecurityController.java,0\f\0f2978254a05eb1659abd66f3fc65d9437ec87be
-N
-src/main/java/routes/Role.java,8\6\86698d9dfcc032062b9f21ece8f211e317cd6a09
-d
-4src/main/java/exceptions/NotAuthorizedException.java,d\1\d13db1af9ad4007f6e3c34b2161eb3cf906f25c0
 :
 
 errors.txt,b\e\be0b779e0b7cd9993dbc1388356ed232bf4abec6
