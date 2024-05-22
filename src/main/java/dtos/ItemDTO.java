@@ -19,5 +19,4 @@ public class ItemDTO {
     private int postalCode;
     private boolean status;
     private User user;
-    private String[] tags;
 }
