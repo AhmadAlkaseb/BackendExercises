@@ -24,7 +24,7 @@ GET http://localhost:7007/api/items/test
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoidGVzdCIsImV4cCI6MTcxNjI3OTIwOSwiZW1haWwiOiJ0ZXN0Iiwicm9sZXMiOiJ1c2VyIn0.mGLXTq3737N36WEzFIG8majVz6qV5VBT1lbNGNiHxEw
 
 ### Get item by id
-GET http://localhost:7007/api/items/2
+GET http://localhost:7007/api/items/3
 
 ### Upload item
 POST http://localhost:7007/api/items/
