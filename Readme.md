@@ -211,9 +211,6 @@ User & Admin
 
 ### Links
 
-**Backend repository**  
-[Tryk her](https://github.com/AhmadAlkaseb/WebShopBackend)  
-
 **Frontend repository**  
 [Tryk her](https://github.com/AhmadAlkaseb/WebShopFrontend)
 
