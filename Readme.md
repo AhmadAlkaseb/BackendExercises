@@ -214,7 +214,7 @@ User & Admin
 **Frontend repository**  
 [Tryk her](https://github.com/AhmadAlkaseb/WebShopFrontend)
 
-**API Hjemmesiden**  
+**API hjemmesiden**  
 [Tryk her](https://api.cphbusinessprojekt.dk)  
 
 **Eksamensspørgsmål**  
