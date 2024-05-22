@@ -214,11 +214,8 @@ User & Admin
 **Frontend repository**  
 [Tryk her](https://github.com/AhmadAlkaseb/WebShopFrontend)
 
-**PowerPoint Design**  
-[Tryk her](https://docs.google.com/presentation/d/1tMKkrRPzy8CNIkY6ZMPVO2yr8kHRrLsOsiXY3-lI6dY/edit#slide=id.p) 
-
 **Hjemmesiden**  
-[Tryk her](https://cphbusinessprojekt.dk/)  
+[Tryk her](https://api.cphbusinessprojekt.dk)  
 
 **Projektbeskrivelsen**  
 [Tryk her](https://github.com/dat3Cph/material/blob/sem2024spring/flowFrontend/week5-project/miniproject.md)  
