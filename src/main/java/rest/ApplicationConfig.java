@@ -9,6 +9,7 @@ import exceptions.ApiException;
 import io.javalin.Javalin;
 import io.javalin.apibuilder.EndpointGroup;
 import io.javalin.http.HttpStatus;
+import io.javalin.security.RouteRole;
 import jakarta.persistence.EntityManagerFactory;
 import persistence.HibernateConfig;
 
@@ -81,7 +82,15 @@ public class ApplicationConfig {
     public ApplicationConfig checkSecurityRoles() {
         app.updateConfig(config -> {
             config.accessManager((handler, ctx, permittedRoles) -> {
+                for (RouteRole s : permittedRoles) {
+                    System.out.println(s);
+                }
                 Set<String> allowedRoles = permittedRoles.stream().map(role -> role.toString().toUpperCase()).collect(Collectors.toSet());
+
+                for (String s : allowedRoles) {
+                    System.out.println("roles to pass by "+s);
+                }
+
                 if (allowedRoles.contains("ANYONE") || ctx.method().toString().equals("OPTIONS")) {
                     handler.handle(ctx);
                     return;
@@ -89,15 +98,18 @@ public class ApplicationConfig {
 
                 UserDTO user = ctx.attribute("user");
                 System.out.println("USER IN CHECK_SEC_ROLES: " + user);
-                if (user == null)
+                if (user == null) {
                     ctx.status(HttpStatus.FORBIDDEN)
                             .json(om.createObjectNode()
                                     .put("msg", "Not authorized. No username were added from the token"));
+                    return;
+                }
 
-                if (securityController.authorize(user, allowedRoles))
+                if (securityController.authorize(user, allowedRoles)) {
                     handler.handle(ctx);
-                else
+                } else {
                     throw new ApiException(HttpStatus.FORBIDDEN.getCode(), "Unauthorized with roles: " + allowedRoles, timestamp);
+                }
             });
         });
         return instance;

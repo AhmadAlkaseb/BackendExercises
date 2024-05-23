@@ -91,16 +91,23 @@ public class UserDAO implements ISecurityDAO {
             em.getTransaction().begin();
             User foundUser = em.find(User.class, username);
             Role foundRole = em.find(Role.class, role);
+
+            // Check if either the user or the role was not found
+            if (foundUser == null || foundRole == null) {
+                em.getTransaction().rollback();
+                return null;
+            }
+
             foundUser.addRole(foundRole);
             em.merge(foundUser);
             em.getTransaction().commit();
             return foundUser;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         }
     }
 
-    public User addRoleToUser(String username, String role) {
-        return null;
-    }
 
     public User verifyUser(String email, String password) {
         try (EntityManager em = emf.createEntityManager()) {

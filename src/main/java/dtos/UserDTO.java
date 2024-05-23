@@ -25,4 +25,8 @@ public class UserDTO {
         this.email = email;
         this.roles = roleSet;
     }
+
+    public Set<String> getRoles() {
+        return roles;
+    }
 }

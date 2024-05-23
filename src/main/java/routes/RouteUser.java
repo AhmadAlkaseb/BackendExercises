@@ -1,13 +1,11 @@
 package routes;
 
-import controllers.ItemController;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import controllers.SecurityController;
+import io.javalin.apibuilder.EndpointGroup;
+import jakarta.persistence.EntityManagerFactory;
 import logger.CustomLogger;
 import persistence.HibernateConfig;
-import controllers.SecurityController;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import io.javalin.apibuilder.EndpointGroup;
-import io.javalin.security.RouteRole;
-import jakarta.persistence.EntityManagerFactory;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
 
@@ -23,6 +21,7 @@ public class RouteUser {
                 before(securityController.authenticate());
                 post("/login", customLogger.handleExceptions(securityController.login()), Role.ANYONE);
                 post("/register", customLogger.handleExceptions(securityController.register()), Role.ANYONE);
+                post("/addroletouser", customLogger.handleExceptions(securityController.addRoleToUser()), Role.ADMIN);
             });
         };
     }

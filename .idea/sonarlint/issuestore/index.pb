@@ -72,3 +72,13 @@ Y
 )src/main/java/rest/ApplicationConfig.java,9\0\90ac5c23e9442bffeba94702ec934d195da1b2f4
 O
 src/main/java/routes/Route.java,6\2\623a855d8af03aff347d1cce47ec3da6e95582b7
+O
+src/main/java/daos/UserDAO.java,1\6\167230c874bd75e9b1c86c28c6ca435a9fb3c851
+S
+#src/main/java/routes/RouteUser.java,f\8\f8eed3800019fea4b3ab2801569c1e0f9502cc3e
+S
+#src/main/java/dtos/UserRoleDTO.java,5\a\5aaa601136913170c128dab4ed557153964ddba4
+R
+"src/main/java/application/App.java,4\c\4cb71d5dc0dadb4ceaad3433e81d1ba02999d24e
+O
+src/main/java/dtos/UserDTO.java,a\6\a672245897e37c0c72abb7a032ad4d58953697ca

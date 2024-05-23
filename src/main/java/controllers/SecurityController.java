@@ -10,6 +10,7 @@ import com.nimbusds.jwt.SignedJWT;
 import daos.UserDAO;
 import dtos.TokenDTO;
 import dtos.UserDTO;
+import dtos.UserRoleDTO;
 import exceptions.ApiException;
 import exceptions.NotAuthorizedException;
 import io.javalin.http.Handler;
@@ -21,8 +22,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
-import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.stream.Collectors;
 
 public class SecurityController implements ISecurityController {
@@ -38,12 +39,26 @@ public class SecurityController implements ISecurityController {
 
     ObjectMapper objectMapper = new ObjectMapper();
 
+    public Handler addRoleToUser() {
+        return (ctx) -> {
+            UserRoleDTO user = ctx.bodyAsClass(UserRoleDTO.class);
+            User updatedUser = userDAO.addUserRole(user.getEmail(), user.getRole());
+
+
+            if (updatedUser == null) {
+                throw new NotAuthorizedException(HttpStatus.UNAUTHORIZED.getCode(), "Try again. Something went wrong. ", timestamp);
+            } else {
+                ctx.status(HttpStatus.CREATED).json(updatedUser);
+            }
+        };
+    }
+
     @Override
     public Handler register() {
         return (ctx) -> {
             UserDTO userInput = ctx.bodyAsClass(UserDTO.class);
             User created = userDAO.createUser(userInput.getEmail(), userInput.getPassword());
-            if (created == null){
+            if (created == null) {
                 throw new NotAuthorizedException(HttpStatus.UNAUTHORIZED.getCode(), "Email is already taken. Try again. ", timestamp);
             } else {
                 String token = createToken(new UserDTO(created));
@@ -86,16 +101,20 @@ public class SecurityController implements ISecurityController {
 
     @Override
     public boolean authorize(UserDTO user, Set<String> allowedRoles) {
-        AtomicBoolean hasAccess = new AtomicBoolean(false); // Since we update this in a lambda expression, we need to use an AtomicBoolean
-        if (user != null) {
-            user.getRoles().stream().forEach(role -> {
-                System.out.println(role);
-                if (allowedRoles.contains(role.toUpperCase())) {
-                    hasAccess.set(true);
-                }
-            });
+        if (user == null || user.getRoles() == null) {
+            return false;
         }
-        return hasAccess.get();
+
+        Set<String> roles = user.getRoles();
+        System.out.println("User roles: " + roles);
+
+        for (String role : roles) {
+            System.out.println("User role: " + role);
+            if (allowedRoles.contains(role.toUpperCase())) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private String createToken(UserDTO user, String ISSUER, String TOKEN_EXPIRE_TIME, String SECRET_KEY) {
@@ -103,13 +122,8 @@ public class SecurityController implements ISecurityController {
             JWTClaimsSet.Builder claimsSetBuilder = new JWTClaimsSet.Builder()
                     .subject(user.getEmail())
                     .issuer(ISSUER)
-                    .claim("email", user.getEmail());
-
-            Set<String> roles = user.getRoles();
-            for (String role : roles) {
-                roles.add(role);
-                claimsSetBuilder.claim("roles", role);
-            }
+                    .claim("email", user.getEmail())
+                    .claim("roles", user.getRoles()); // Store roles as a set
 
             JWTClaimsSet claimsSet = claimsSetBuilder
                     .expirationTime(new Date(new Date().getTime() + Integer.parseInt(TOKEN_EXPIRE_TIME)))
@@ -129,6 +143,7 @@ public class SecurityController implements ISecurityController {
             throw new ApiException(HttpStatus.INTERNAL_SERVER_ERROR.getCode(), "Could not create token", timestamp);
         }
     }
+
 
     public Handler authenticate() {
         ObjectNode returnObject = objectMapper.createObjectNode();
@@ -197,12 +212,15 @@ public class SecurityController implements ISecurityController {
 
     public UserDTO getUserWithRolesFromToken(String token) throws ParseException {
         SignedJWT jwt = SignedJWT.parse(token);
-        String roles = jwt.getJWTClaimsSet().getClaim("roles").toString();
-        String username = jwt.getJWTClaimsSet().getClaim("email").toString();
+        // Get the roles claim as an array
+        List<String> rolesList = (List<String>) jwt.getJWTClaimsSet().getClaim("roles");
+        String email = jwt.getJWTClaimsSet().getClaim("email").toString();
 
-        Set<String> rolesSet = Arrays
-                .stream(roles.split(","))
+        Set<String> rolesSet = rolesList.stream()
+                .map(String::trim)
                 .collect(Collectors.toSet());
-        return new UserDTO(username, rolesSet);
+
+        return new UserDTO(email, rolesSet);
     }
+
 }
