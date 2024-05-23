@@ -7,7 +7,9 @@ import com.nimbusds.jose.crypto.MACSigner;
 import com.nimbusds.jose.crypto.MACVerifier;
 import com.nimbusds.jwt.JWTClaimsSet;
 import com.nimbusds.jwt.SignedJWT;
+import daos.ItemDAO;
 import daos.UserDAO;
+import dtos.ItemDTO;
 import dtos.TokenDTO;
 import dtos.UserDTO;
 import dtos.UserRoleDTO;
@@ -16,14 +18,13 @@ import exceptions.NotAuthorizedException;
 import io.javalin.http.Handler;
 import io.javalin.http.HttpStatus;
 import jakarta.persistence.EntityManagerFactory;
+import persistence.model.Item;
+import persistence.model.Role;
 import persistence.model.User;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class SecurityController implements ISecurityController {
@@ -43,12 +44,32 @@ public class SecurityController implements ISecurityController {
         return (ctx) -> {
             UserRoleDTO user = ctx.bodyAsClass(UserRoleDTO.class);
             User updatedUser = userDAO.addUserRole(user.getEmail(), user.getRole());
-
-
             if (updatedUser == null) {
                 throw new NotAuthorizedException(HttpStatus.UNAUTHORIZED.getCode(), "Try again. Something went wrong. ", timestamp);
             } else {
                 ctx.status(HttpStatus.CREATED).json(updatedUser);
+            }
+        };
+    }
+
+    public Handler getAllUsers(UserDAO dao) {
+        return ctx -> {
+            List<User> users = dao.getAllUsers();
+            if (users.isEmpty()) {
+                throw new ApiException(HttpStatus.NOT_FOUND.getCode(), "No users were found.", timestamp);
+            } else {
+                ctx.status(HttpStatus.OK).json(users);
+            }
+        };
+    }
+
+    public Handler getAllRoles(UserDAO dao) {
+        return ctx -> {
+            List<Role> roles = dao.getAllRoles();
+            if (roles.isEmpty()) {
+                throw new ApiException(HttpStatus.NOT_FOUND.getCode(), "No roles were found.", timestamp);
+            } else {
+                ctx.status(HttpStatus.OK).json(roles);
             }
         };
     }

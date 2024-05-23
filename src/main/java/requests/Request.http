@@ -73,3 +73,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoiYWRtaW4iL
 "email": "ahmadalkaseb@email.dk",
 "role": "admin"
 }
+
+### Get all roles
+GET http://localhost:7007/api/auth/roles
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoiYWRtaW4iLCJleHAiOjE3MTY0NzIwODMsImVtYWlsIjoiYWRtaW4iLCJyb2xlcyI6WyJhZG1pbiIsInVzZXIiXX0.Pw-tASDC3g2bHDtJIuNC_YUSRn_aWkfC02RMTavqIp0
+
+### Get all users
+GET http://localhost:7007/api/auth/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoiYWRtaW4iLCJleHAiOjE3MTY0NzIwODMsImVtYWlsIjoiYWRtaW4iLCJyb2xlcyI6WyJhZG1pbiIsInVzZXIiXX0.Pw-tASDC3g2bHDtJIuNC_YUSRn_aWkfC02RMTavqIp0

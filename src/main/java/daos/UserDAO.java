@@ -9,6 +9,7 @@ import persistence.model.User;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class UserDAO implements ISecurityDAO {
 
@@ -108,6 +109,19 @@ public class UserDAO implements ISecurityDAO {
         }
     }
 
+    public List<User> getAllUsers() {
+        try (EntityManager em = emf.createEntityManager()) {
+            TypedQuery<User> query = em.createQuery("SELECT u FROM User u", User.class);
+            return query.getResultList();
+        }
+    }
+
+    public List<Role> getAllRoles() {
+        try (EntityManager em = emf.createEntityManager()) {
+            TypedQuery<Role> query = em.createQuery("SELECT r FROM Role r", Role.class);
+            return query.getResultList();
+        }
+    }
 
     public User verifyUser(String email, String password) {
         try (EntityManager em = emf.createEntityManager()) {
