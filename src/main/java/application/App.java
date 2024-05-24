@@ -8,7 +8,7 @@ public class App {
         ApplicationConfig app = ApplicationConfig.getInstance();
         app.initiateServer()
                 .startServer(7007)
-                //.setExceptionHandlers()
+                .setExceptionHandlers()
                 .checkSecurityRoles()
                 .setRoute(Route.addRoutes());
     }

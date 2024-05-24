@@ -102,7 +102,7 @@ public class SecurityController implements ISecurityController {
     @Override
     public Handler deleteUser() {
         return (ctx) -> {
-            String email = ctx.formParam("email");
+            String email = ctx.bodyAsClass(String.class);
             User deletedUser = userDAO.deleteUser(email);
             if (deletedUser == null) {
                 throw new NotAuthorizedException(HttpStatus.UNAUTHORIZED.getCode(), "User not found. ", timestamp);

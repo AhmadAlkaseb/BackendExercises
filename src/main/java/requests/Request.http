@@ -84,8 +84,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoiYWRtaW4iL
 
 ### Slet en bruger
 DELETE http://localhost:7007/api/auth/delete
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoiYWRtaW4iLCJleHAiOjE3MTY1NDYxOTEsImVtYWlsIjoiYWRtaW4iLCJyb2xlcyI6WyJhZG1pbiIsInVzZXIiXX0.axw91ddATtMjyzB45z9YP6nZ6t2OS1-xKG4rDC3duEE
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoiYWRtaW4iLCJleHAiOjE3MTY1NDkzMzMsImVtYWlsIjoiYWRtaW4iLCJyb2xlcyI6WyJhZG1pbiIsInVzZXIiXX0.AYx-zz5ZcQVz4axlFgExllw-xS3GfUia4ywHmr0Q0W0
 
-{
-  "email": "testt"
-}
+"sd"
