@@ -109,6 +109,19 @@ public class UserDAO implements ISecurityDAO {
         }
     }
 
+    @Override
+    public User deleteUser(String username) {
+        try (EntityManager em = emf.createEntityManager()) {
+            em.getTransaction().begin();
+            User foundUser = em.find(User.class, username);
+            em.remove(foundUser);
+            em.getTransaction().commit();
+            return foundUser;
+        }catch (EntityNotFoundException e) {
+            throw new EntityNotFoundException("No user found with username: " + username);
+        }
+    }
+
     public List<User> getAllUsers() {
         try (EntityManager em = emf.createEntityManager()) {
             TypedQuery<User> query = em.createQuery("SELECT u FROM User u", User.class);

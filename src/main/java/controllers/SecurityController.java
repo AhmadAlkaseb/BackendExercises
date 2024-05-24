@@ -7,9 +7,7 @@ import com.nimbusds.jose.crypto.MACSigner;
 import com.nimbusds.jose.crypto.MACVerifier;
 import com.nimbusds.jwt.JWTClaimsSet;
 import com.nimbusds.jwt.SignedJWT;
-import daos.ItemDAO;
 import daos.UserDAO;
-import dtos.ItemDTO;
 import dtos.TokenDTO;
 import dtos.UserDTO;
 import dtos.UserRoleDTO;
@@ -18,7 +16,6 @@ import exceptions.NotAuthorizedException;
 import io.javalin.http.Handler;
 import io.javalin.http.HttpStatus;
 import jakarta.persistence.EntityManagerFactory;
-import persistence.model.Item;
 import persistence.model.Role;
 import persistence.model.User;
 
@@ -98,6 +95,19 @@ public class SecurityController implements ISecurityController {
             } else {
                 String token = createToken(new UserDTO(verifiedUserEntity));
                 ctx.status(200).json(new TokenDTO(token, verifiedUserEntity));
+            }
+        };
+    }
+
+    @Override
+    public Handler deleteUser() {
+        return (ctx) -> {
+            String email = ctx.formParam("email");
+            User deletedUser = userDAO.deleteUser(email);
+            if (deletedUser == null) {
+                throw new NotAuthorizedException(HttpStatus.UNAUTHORIZED.getCode(), "User not found. ", timestamp);
+            } else {
+                ctx.status(HttpStatus.OK).json(deletedUser);
             }
         };
     }
@@ -243,5 +253,4 @@ public class SecurityController implements ISecurityController {
 
         return new UserDTO(email, rolesSet);
     }
-
 }
