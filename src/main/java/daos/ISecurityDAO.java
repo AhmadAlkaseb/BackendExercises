@@ -11,4 +11,6 @@ public interface ISecurityDAO {
     Role createRole(String role);
 
     User addUserRole(String username, String role);
+
+    User deleteUser(String username);
 }

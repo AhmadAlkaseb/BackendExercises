@@ -11,6 +11,9 @@ import java.util.Set;
 public interface ISecurityController {
     Handler register(); // creates a new User
     Handler login(); // logs in a user and returns a token
+
+    Handler deleteUser();
+
     String createToken(UserDTO user); // creates a token based on the UserDTO, sercret and expiration time
     boolean authorize(UserDTO user, Set<String> allowedRoles); // checks if the user has the required roles
     Handler authenticate(); // checks if the token is valid and adds the user (with roles) to the context

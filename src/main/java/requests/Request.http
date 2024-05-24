@@ -80,4 +80,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoiYWRtaW4iL
 
 ### Get all users
 GET http://localhost:7007/api/auth/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoiYWRtaW4iLCJleHAiOjE3MTY0NzIwODMsImVtYWlsIjoiYWRtaW4iLCJyb2xlcyI6WyJhZG1pbiIsInVzZXIiXX0.Pw-tASDC3g2bHDtJIuNC_YUSRn_aWkfC02RMTavqIp0
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoiYWRtaW4iLCJleHAiOjE3MTY1NDY4MjQsImVtYWlsIjoiYWRtaW4iLCJyb2xlcyI6WyJhZG1pbiIsInVzZXIiXX0.sMoTY8zlGOVWMuxnE3oVtBV7cNGKLwnA3twhrhOw71g
+
+### Slet en bruger
+DELETE http://localhost:7007/api/auth/delete
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoiYWRtaW4iLCJleHAiOjE3MTY1NDkzMzMsImVtYWlsIjoiYWRtaW4iLCJyb2xlcyI6WyJhZG1pbiIsInVzZXIiXX0.AYx-zz5ZcQVz4axlFgExllw-xS3GfUia4ywHmr0Q0W0
+
+"sd"
