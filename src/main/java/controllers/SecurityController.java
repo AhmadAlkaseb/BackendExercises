@@ -21,7 +21,9 @@ import persistence.model.User;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Date;
+import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class SecurityController implements ISecurityController {
@@ -36,6 +38,18 @@ public class SecurityController implements ISecurityController {
     }
 
     ObjectMapper objectMapper = new ObjectMapper();
+
+    public Handler banUser() {
+        return (ctx) -> {
+            String email = ctx.bodyAsClass(String.class);
+            User bannedUser = userDAO.banUser(email);
+            if (bannedUser == null) {
+                throw new NotAuthorizedException(HttpStatus.UNAUTHORIZED.getCode(), "User not found. ", timestamp);
+            } else {
+                ctx.status(HttpStatus.OK).json(bannedUser);
+            }
+        };
+    }
 
     public Handler addRoleToUser() {
         return (ctx) -> {
@@ -92,6 +106,8 @@ public class SecurityController implements ISecurityController {
             User verifiedUserEntity = userDAO.verifyUser(user.getEmail(), user.getPassword());
             if (verifiedUserEntity == null) {
                 throw new NotAuthorizedException(HttpStatus.UNAUTHORIZED.getCode(), "Wrong login information. Try again please.", timestamp);
+            } else if (verifiedUserEntity.isBanned() == true) {
+                throw new NotAuthorizedException(HttpStatus.UNAUTHORIZED.getCode(), "You have been locked out from the system. Please contact system. ", timestamp);
             } else {
                 String token = createToken(new UserDTO(verifiedUserEntity));
                 ctx.status(200).json(new TokenDTO(token, verifiedUserEntity));

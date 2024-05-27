@@ -27,6 +27,7 @@ public class RouteUser {
                 get("/users", customLogger.handleExceptions(securityController.getAllUsers(userDAO)), Role.ADMIN);
                 get("/roles", customLogger.handleExceptions(securityController.getAllRoles(userDAO)), Role.ADMIN);
                 delete("/delete", customLogger.handleExceptions(securityController.deleteUser()), Role.ADMIN);
+                post("/banuser", customLogger.handleExceptions(securityController.banUser()), Role.ADMIN);
             });
         };
     }

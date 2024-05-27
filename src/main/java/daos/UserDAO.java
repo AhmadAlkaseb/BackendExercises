@@ -109,6 +109,19 @@ public class UserDAO implements ISecurityDAO {
         }
     }
 
+    public User banUser(String username) {
+        try (EntityManager em = emf.createEntityManager()) {
+            em.getTransaction().begin();
+            User foundUser = em.find(User.class, username);
+            foundUser.setBanned(true);
+            em.merge(foundUser);
+            em.getTransaction().commit();
+            return foundUser;
+        } catch (EntityNotFoundException e) {
+            throw new EntityNotFoundException("No user found with username: " + username);
+        }
+    }
+
     @Override
     public User deleteUser(String username) {
         try (EntityManager em = emf.createEntityManager()) {
@@ -117,7 +130,7 @@ public class UserDAO implements ISecurityDAO {
             em.remove(foundUser);
             em.getTransaction().commit();
             return foundUser;
-        }catch (EntityNotFoundException e) {
+        } catch (EntityNotFoundException e) {
             throw new EntityNotFoundException("No user found with username: " + username);
         }
     }

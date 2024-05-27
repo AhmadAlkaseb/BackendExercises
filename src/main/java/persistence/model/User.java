@@ -2,8 +2,10 @@ package persistence.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.*;
-
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.hibernate.annotations.ColumnDefault;
 import org.mindrot.jbcrypt.BCrypt;
 
 import java.util.HashSet;
@@ -22,6 +24,9 @@ public class User implements ISecurityUser {
     @Column(nullable = false)
     @JsonIgnore
     private String password;
+
+    @ColumnDefault("false")
+    private boolean isBanned = false;
 
     @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
