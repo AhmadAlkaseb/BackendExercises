@@ -269,4 +269,16 @@ public class SecurityController implements ISecurityController {
 
         return new UserDTO(email, rolesSet);
     }
+
+    public Handler unBanUser() {
+        return (ctx) -> {
+            String email = ctx.bodyAsClass(String.class);
+            User unBannedUser = userDAO.unBanUser(email);
+            if (unBannedUser == null) {
+                throw new NotAuthorizedException(HttpStatus.UNAUTHORIZED.getCode(), "User not found. ", timestamp);
+            } else {
+                ctx.status(HttpStatus.OK).json(unBannedUser);
+            }
+        };
+    }
 }
