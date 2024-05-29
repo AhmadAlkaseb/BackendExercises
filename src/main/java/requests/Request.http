@@ -3,7 +3,7 @@ POST http://localhost:7007/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "banuser1",
+  "email": "ahmadalkaseb@email.dk",
   "password": "1234"
 }
 
@@ -93,3 +93,9 @@ POST http://localhost:7007/api/auth/banuser
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoiYWRtaW4iLCJleHAiOjE3MTY4MjQ5OTQsImVtYWlsIjoiYWRtaW4iLCJyb2xlcyI6WyJhZG1pbiIsInVzZXIiXX0.L-x5UO6LNuQMvWPYoBLi1w6MWYER7q8esZuzZCl5GbY
 
 "banuser1"
+
+### Ban of an user
+POST http://localhost:7007/api/auth/unbanuser
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMQUhZIiwic3ViIjoiYWhtYWRhbGthc2ViQGVtYWlsLmRrIiwiZXhwIjoxNzE2OTcyNDM0LCJlbWFpbCI6ImFobWFkYWxrYXNlYkBlbWFpbC5kayIsInJvbGVzIjpbImFkbWluIiwidXNlciJdfQ.ccokZf3jC-mS5vR8HPxue-XPYmTYMJGoFGg4CoYCbMg
+
+"youssef@gmail.com"
