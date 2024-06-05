@@ -35,8 +35,8 @@ public class ApplicationConfig {
             config.routing.contextPath = "/api";
             config.plugins.enableCors(cors -> {
                 cors.add(it -> {
-                    //it.anyHost();
-                    it.allowHost("https://cphbusinessprojekt.dk");
+                    it.anyHost();
+//                    it.allowHost("https://cphbusinessprojekt.dk");
                 });
             });
         });
