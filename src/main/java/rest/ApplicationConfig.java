@@ -36,6 +36,7 @@ public class ApplicationConfig {
             config.plugins.enableCors(cors -> {
                 cors.add(it -> {
                     it.anyHost();
+                    
                     //it.allowHost("https://cphbusinessprojekt.dk");
                 });
             });
