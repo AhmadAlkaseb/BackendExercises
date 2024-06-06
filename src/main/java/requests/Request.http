@@ -3,7 +3,7 @@ POST http://localhost:7007/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "ahmadalkaseb@email.dk",
+  "email": "1ahmadalkaseb@email.dk",
   "password": "1234"
 }
 
@@ -12,7 +12,7 @@ POST http://localhost:7007/api/auth/register
 Content-Type: application/json
 
 {
-  "email": "banuser1",
+  "email": "user1",
   "password": "1234"
 }
 
